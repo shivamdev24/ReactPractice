@@ -6,13 +6,14 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Layout from "./Layout";
+import AboutUs from "./pages/AboutUs";
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
     // {
     //     path: "/",
     //     element: <SlideShow />,
-        
+
     // },
     {
         path: "/",
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/aboutUs",
+                element: <AboutUs />,
             },
         ],
     },

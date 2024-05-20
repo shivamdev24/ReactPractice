@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/img/logo.png";
+import Logodark from '../assets/img/logo-dark.png'
+
+
 
 const navlink = [
     {
@@ -9,7 +13,7 @@ const navlink = [
     },
     {
         title: "ABOUT US",
-        to: "/",
+        to: "/aboutUs",
         svg: "",
     },
     {
@@ -96,9 +100,15 @@ export default function Navbar() {
         >
             <div className="flex md:justify-around justify-between px-5 p-6 items-center">
                 <div className="font-3xl">
-                    <span className="text-3xl font-bold">
-                        <span className="text-blue-500">Your</span>Logo.
-                    </span>
+                    {isTop ? (
+                        <>
+                            <img src={Logo} alt="" />
+                        </>
+                    ) : (
+                        <>
+                            <img src={Logodark} alt="" />
+                        </>
+                    )}
                 </div>
                 <div className="lg:hidden block">
                     <svg
@@ -125,7 +135,7 @@ export default function Navbar() {
                                 onMouseLeave={handleMouseLeave}
                             >
                                 <Link
-                                    className="flex gap-1 p-3 font-semibold hover:text-blue-500 duration-300"
+                                    className="flex gap-1 p-3 font-semibold hover:text-[#159394] duration-300"
                                     to={items.to}
                                 >
                                     {items.title} {items.svg}
@@ -133,13 +143,13 @@ export default function Navbar() {
                                 {showSubmenu &&
                                     currentSubmenuIndex === index &&
                                     items.subItems && (
-                                        <div className="absolute bg-blue-500 text-white w-64 rounded-b-lg rounded-l-lg top-19">
+                                        <div className="absolute bg-[#159394] text-white w-64 rounded-b-lg rounded-l-lg top-19">
                                             <ul className="p-2 flex flex-col gap-2">
                                                 {items.subItems.map(
                                                     (subItem, subIndex) => (
                                                         <li key={subIndex}>
                                                             <Link
-                                                                className="w-full flex rounded hover:bg-white font-semibold hover:text-blue-500 px-2 duration-300 py-1"
+                                                                className="w-full flex rounded hover:bg-white font-semibold hover:text-[#159394] px-2 duration-300 py-1"
                                                                 to={subItem.to}
                                                             >
                                                                 {subItem.title}

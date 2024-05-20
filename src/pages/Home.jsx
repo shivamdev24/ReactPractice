@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import Footer from "../Components/Footer";
 
 
 
@@ -488,14 +487,14 @@ function App() {
             </div>
             <div>
                 <div className="relative ">
-                    <div className="flex flex-col-reverse md:flex-row items-center justify-between z-10">
+                    <div className="flex flex-col-reverse md:flex-row items-center justify-between ">
                         <div className="flex flex-col z-20 gap-1">
                             {sectTwo.map((props, index) => (
                                 <div
                                     key={index}
                                     className="flex flex-col gap-1 relative"
                                 >
-                                    <div className="bg-blue-500 w-[27rem] h-64 overflow-hidden transition duration-500 hover:bg-blue-700">
+                                    <div className="bg-[#159394] w-[27rem] h-64 overflow-hidden transition duration-500 hover:bg-blue-700">
                                         <Link
                                             // eslint-disable-next-line react/prop-types
                                             to={props.to}
@@ -512,7 +511,7 @@ function App() {
                         <div className="flex justify-between  px-5 lg:justify-around">
                             <div className="lg:w-[70%] mt-14 leading-8">
                                 <span className="font-bold">Our Vision</span>
-                                <h1 className="text-2xl font-bold text-blue-500">
+                                <h1 className="text-2xl font-bold text-[#159394]">
                                     INTELLIGENCE DRIVEN HEALTHCARE
                                 </h1>
                                 <p className="mt-3 text-justify">
@@ -533,7 +532,7 @@ function App() {
                                     needs in a timely and consistent manner....{" "}
                                     <Link
                                         to="/"
-                                        className="text-blue-500 font-bold"
+                                        className="text-[#159394] font-bold"
                                     >
                                         Read More
                                     </Link>
@@ -541,21 +540,21 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    <div className=" w-full  ">
+                    <div className="  ">
                         <div className="flex flex-col  imgbg ">
-                            <div className="flex flex-col w-full bg-gray-50  py-10  justify-center items-center px-5">
-                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-blue-500">
+                            <div className="flex flex-col w-full   py-10  justify-center items-center px-5">
+                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-[#159394]">
                                     OUR SERVICE
                                 </h2>
                                 <div className="flex mt-10 flex-col lg:flex-row px-5 gap-4">
                                     {sectionOne.map((props, index) => (
                                         <Link to="/" key={index}>
-                                            <div className=" flex flex-col items-center w-96 lg:w-80 py-6 h-auto  text-blue-500 rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
-                                                <span className="mb-2">
+                                            <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto   rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
+                                                <span className="text-yellow-500">
                                                     {" "}
                                                     {props.Icon}{" "}
                                                 </span>
-                                                <span className="text-2xl font-bold p-4 text-center">
+                                                <span className="text-lg font-bold p-4 text-center">
                                                     {" "}
                                                     {props.title}{" "}
                                                 </span>
@@ -564,16 +563,19 @@ function App() {
                                     ))}
                                 </div>
                             </div>
-                            <div className="flex flex-col  justify-center w-full bg-blue-500 py-20 px-5  items-center">
-                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-white">
+                            <div className="flex flex-col  justify-center w-full  py-20 px-5  items-center">
+                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-[#159394]">
                                     MANAGEMENT CONSULTING
                                 </h2>
                                 <div className="flex mt-20 flex-col lg:flex-row gap-4">
                                     {sectionTwo.map((props, index) => (
                                         <Link to="/" key={index}>
-                                            <div className=" flex flex-col items-center w-96 lg:w-80 py-6 h-48  text-blue-500  rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
-                                                <span> {props.img} </span>
-                                                <span className="text-2xl font-bold py-4 px-1 text-blue-500 text-center">
+                                            <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-48   rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
+                                                <span className="text-yellow-500">
+                                                    {" "}
+                                                    {props.img}{" "}
+                                                </span>
+                                                <span className="text-lg font-bold py-4 px-1 text-[#159394] text-center">
                                                     {" "}
                                                     {props.title}{" "}
                                                 </span>
@@ -601,15 +603,18 @@ function App() {
                                 </div>
                             </div> */}
                             <div className="flex flex-col py-20  justify-center px-5 items-center">
-                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-blue-500">
+                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-[#159394]">
                                     PROGRAM MANAGEMENT
                                 </h2>
                                 <div className="flex mt-20 flex-col lg:flex-row gap-8">
                                     {sectionFour.map((props, index) => (
                                         <Link to="/" key={index}>
-                                            <div className="flex flex-col items-center w-96 lg:w-80 py-6 h-48  text-blue-500  rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
-                                                <span> {props.img} </span>
-                                                <span className="text-2xl p-4 font-bold text-blue-500 text-center">
+                                            <div className="flex flex-col items-center w-[20rem] lg:w-80 py-6 h-48    rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
+                                                <span className="text-yellow-500">
+                                                    {" "}
+                                                    {props.img}{" "}
+                                                </span>
+                                                <span className="text-lg p-4 font-bold text-[#159394] text-center">
                                                     {" "}
                                                     {props.title}{" "}
                                                 </span>
@@ -618,16 +623,19 @@ function App() {
                                     ))}
                                 </div>
                             </div>
-                            <div className="flex flex-col  py-20 bg-blue-500 justify-center px-5 items-center">
-                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-white">
+                            <div className="flex flex-col  py-20  justify-center px-5 items-center">
+                                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-[#159394]">
                                     PROCUREMENT AND SUPPLY CHAIN
                                 </h2>
                                 <div className="flex mt-20 flex-col lg:flex-row gap-8">
                                     {sectionFive.map((props, index) => (
                                         <Link to="/" key={index}>
-                                            <div className="flex flex-col items-center w-96 lg:w-80 py-6 h-48  text-blue-500  rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
-                                                <span> {props.img} </span>
-                                                <span className="text-2xl p-4 font-bold text-blue-500 text-center">
+                                            <div className="flex flex-col items-center w-[20rem] lg:w-80 py-6 h-48    rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
+                                                <span className="text-yellow-500">
+                                                    {" "}
+                                                    {props.img}{" "}
+                                                </span>
+                                                <span className="text-lg p-4 font-bold text-[#159394] text-center">
                                                     {" "}
                                                     {props.title}{" "}
                                                 </span>
@@ -638,7 +646,7 @@ function App() {
                             </div>
 
                             <div className="bg-white mt-10 flex flex-col items-center py-10 px-5 z-10">
-                                <h2 className="lg:text-3xl text-xl text-center text-blue-500 py-5">
+                                <h2 className="lg:text-3xl text-xl text-center text-[#159394] py-5">
                                     <span className="font-bold">OUR</span>{" "}
                                     PRODUCT PORTFOLIO
                                 </h2>
@@ -656,7 +664,7 @@ function App() {
                                                 />
                                             </Link>
                                             <Link
-                                                className="text-xl font-semibold hover:text-blue-500"
+                                                className="text-xl font-semibold hover:text-[#159394]"
                                                 to={props.path}
                                             >
                                                 {props.title}

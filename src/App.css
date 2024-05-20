@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+*{
+  box-sizing: border-box;
+}
+
 .slider-container {
   width: 100%;
   margin: 0 auto;
@@ -39,10 +43,10 @@
 }
 
 
-/* .imgbg{
+.imgbg{
   background-image: url('./assets/img/dot.jpg');
   width: 100%;
-} */
+}
 .imgfut{
   background: gray;
 }
