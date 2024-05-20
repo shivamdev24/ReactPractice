@@ -39,9 +39,10 @@
 }
 
 
-.imgbg{
+/* .imgbg{
   background-image: url('./assets/img/dot.jpg');
-}
+  width: 100%;
+} */
 .imgfut{
   background: gray;
 }
