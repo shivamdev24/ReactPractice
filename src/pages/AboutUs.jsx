@@ -141,6 +141,9 @@ export default function AboutUs() {
       </div>
      </div>
     </div>
+
+
+    
     <div className="py-8 flex w-full  px-5 justify-around">
      <div className="md:w-[80%] w-full flex flex-col gap-4 md:gap-8">
       <h1 className="text-orange md:text-3xl text-xl  font-bold">

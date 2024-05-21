@@ -12,6 +12,7 @@ export default {
    graydark: "#111111",
    graylight: "#222222",
    graypowder: "#777777",
+   graypowderlight: "#d1cfcf",
    black: "#000000",
    darknavyblue: "#00085c",
    navylight: "#6a7695",

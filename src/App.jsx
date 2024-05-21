@@ -8,6 +8,7 @@ import {
 import Layout from "./Layout";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
+import Contact from "./pages/Contact";
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
@@ -37,8 +38,8 @@ const router = createBrowserRouter([
                 element: <Service />,
             },
             {
-                path: "/conatct",
-                element: <Service />,
+                path: "/contact",
+                element: <Contact />,
             },
         ],
     },

@@ -266,7 +266,7 @@ export default function Navbar() {
   <div className="relative">
    <div
     className={`fixed w-full top-0 z-50 duration-500 ${
-     isTop ? "text-white lg:pt-10" : "text-darknavyblue bg-white border"
+     isTop ? "text-white lg:pt-10 lg:pb-5" : "text-darknavyblue bg-white py-5 shadow"
     } ${mobileMenuOpen ? "text-darknavyblue " : ""}`}
    >
     <div className="flex md:justify-around justify-between px-6 py-2 items-center">
@@ -305,7 +305,7 @@ export default function Navbar() {
          onMouseLeave={handleMouseLeave}
         >
          <Link
-          className="flex gap-1 p-3 font-semibold hover:text-orange duration-300"
+          className="flex text-lg gap-1 p-3 font-semibold hover:text-orange duration-300"
           to={item.to}
          >
           {item.title} {item.svg}
