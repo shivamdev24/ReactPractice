@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout";
 import AboutUs from "./pages/AboutUs";
+import Service from "./pages/Service";
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
@@ -26,6 +27,18 @@ const router = createBrowserRouter([
             {
                 path: "/aboutUs",
                 element: <AboutUs />,
+            },
+            {
+                path: "/service",
+                element: <Service />,
+            },
+            {
+                path: "/productPortfolio",
+                element: <Service />,
+            },
+            {
+                path: "/conatct",
+                element: <Service />,
             },
         ],
     },

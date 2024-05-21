@@ -54,56 +54,56 @@ const SlideShow = () => {
     };
 
     return (
-        <div>
-            <div className="slideshow-container w-full">
-                {slides.map((slide, index) => (
-                    <div
-                        key={index}
-                        className={`mySlides fade ${slideIndex === index ? "block" : "none"}`}
-                    >
-                        {/* <div className="numbertext">{slide.number}</div> */}
-                        <div className="black-overlay"></div>
-                        <img
-                            src={slide.src}
-                            style={{ width: "100%" }}
-                            alt={`Slide ${index + 1}`}
-                            className="w-full md:h-[700px] h-[655px] object-cover"
-                        />
-                        <div className="text flex justify-center items-center lg:text-7xl text-3xl font-bold ">
-                            <div className="w-64 md:w-full">
-                                {slideIndex === index && (
-                                    <Typewriter
-                                        options={{
-                                            strings: [slide.caption],
-                                            autoStart: true,
-                                            loop: false,
-                                        }}
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                ))}
+     <div>
+      <div className="slideshow-container w-full">
+       {slides.map((slide, index) => (
+        <div
+         key={index}
+         className={`mySlides fade ${slideIndex === index ? "block" : "none"}`}
+        >
+         {/* <div className="numbertext">{slide.number}</div> */}
+         <div className="black-overlay md:h-[700px] h-[630px]"></div>
+         <img
+          src={slide.src}
+          style={{ width: "100%" }}
+          alt={`Slide ${index + 1}`}
+          className="w-full md:h-[700px] h-[630px] object-cover"
+         />
+         <div className="text flex justify-center items-center lg:text-7xl text-3xl font-bold ">
+          <div className="w-64 text-orange md:w-full">
+           {slideIndex === index && (
+            <Typewriter
+             options={{
+              strings: [slide.caption],
+              autoStart: true,
+              loop: false,
+             }}
+            />
+           )}
+          </div>
+         </div>
+        </div>
+       ))}
 
-                {/* <a className="prev" onClick={() => plusSlides(-1)}>
+       {/* <a className="prev" onClick={() => plusSlides(-1)}>
                     ❮
                 </a>
                 <a className="next" onClick={() => plusSlides(1)}>
                     ❯
                 </a> */}
-                <div className=" absolute bottom-5 md:right-[47%] right-[37%]">
-                    <div className=" flex gap-3">
-                        {slides.map((_, index) => (
-                            <span
-                                key={index}
-                                className={`dot  ${slideIndex === index ? "active" : ""}`}
-                                onClick={() => currentSlide(index)}
-                            ></span>
-                        ))}
-                    </div>
-                </div>
-            </div>
+       <div className=" absolute bottom-5 md:right-[47%] right-[37%]">
+        <div className=" flex gap-3">
+         {slides.map((_, index) => (
+          <span
+           key={index}
+           className={`dot  ${slideIndex === index ? "active" : ""}`}
+           onClick={() => currentSlide(index)}
+          ></span>
+         ))}
         </div>
+       </div>
+      </div>
+     </div>
     );
 };
 

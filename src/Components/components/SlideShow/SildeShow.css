@@ -71,19 +71,19 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #ffffff;
+  background-color: #f44705;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #0080ff;
+  background-color: #ffffff;
 }
 .black-overlay{
 background: #000;
 width: 100%;
-height: 700px;
+
 position: absolute;
 opacity: .7;
 }
