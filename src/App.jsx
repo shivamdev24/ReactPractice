@@ -52,8 +52,8 @@ const router = createBrowserRouter([
           },
         ],
       },
-                                    {
-                path: "/productPortfolio",
+        {
+                path: "/ls",
                 element: <LaboratorySolutions/>,
             },
       {
