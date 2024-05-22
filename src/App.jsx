@@ -9,40 +9,51 @@ import Layout from "./Layout";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
+import ProductOutlet from "./pages/productPage/mseProductPage/ProductOutlet";
+import ProductOnePage from "./pages/productPage/mseProductPage/ProductOnePage";
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
-    // {
-    //     path: "/",
-    //     element: <SlideShow />,
-
-    // },
-    {
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
         path: "/",
-        element: <Layout />,
+        element: <Home />,
+      },
+      {
+        path: "aboutUs",
+        element: <AboutUs />,
+      },
+      {
+        path: "service",
+        element: <Service />,
+      },
+      {
+        path: "mse",
+        element: <ProductOutlet />,
         children: [
-            {
-                path: "/",
-                element: <Home />,
-            },
-            {
-                path: "/aboutUs",
-                element: <AboutUs />,
-            },
-            {
-                path: "/service",
-                element: <Service />,
-            },
-            {
-                path: "/productPortfolio",
-                element: <Service />,
-            },
-            {
-                path: "/contact",
-                element: <Contact />,
-            },
+          {
+            path: "",
+            element: <ProductOnePage />,
+          },
+          {
+            path: "ProductTwo",
+            element: <ProductOnePage />,
+          },
+          {
+            path: "ProductThree",
+            element: <ProductOnePage />,
+          },
         ],
-    },
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
+  },
 ]);
 
 
