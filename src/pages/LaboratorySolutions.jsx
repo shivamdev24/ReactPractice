@@ -56,10 +56,6 @@ const descriptions = [
   "Micro Pestle",
   "Micropipettes",
   "Diagnostic Rapid testing Kits",
-
-
-
-
   // Add descriptions for all 50 images here
 ];
 
@@ -94,17 +90,16 @@ export default function LaboratorySolutions() {
           </div>
         </div>
       </div>
-      <div className="p-5">
+      <div className="p-5 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
           {imageArray.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="border border-gray-300 rounded p-2">
-                <div className="w-full sm:w-48 md:w-60 lg:w-64 h-64 flex items-center justify-center">
+              <div className="border border-gray-300 rounded p-2 w-full">
+                <div className="w-full h-48 flex items-center justify-center">
                   <img
                     src={item.image}
                     alt={`Image ${index + 1}`}
                     className="w-full h-full rounded object-contain"
-                    style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                   />
                 </div>
               </div>
@@ -113,6 +108,7 @@ export default function LaboratorySolutions() {
           ))}
         </div>
       </div>
+      <div className="h-60"></div> {/* This div adds space between the content and the footer */}
     </div>
   );
 }
