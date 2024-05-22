@@ -9,41 +9,59 @@ import Layout from "./Layout";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
+
 import LaboratorySolutions from "./pages/LaboratorySolutions";
+
+import ProductOutlet from "./pages/productPage/mseProductPage/ProductOutlet";
+import ProductOnePage from "./pages/productPage/mseProductPage/ProductOnePage";
+
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
-    // {
-    //     path: "/",
-    //     element: <SlideShow />,
-
-    // },
-    {
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
         path: "/",
-        element: <Layout />,
+        element: <Home />,
+      },
+      {
+        path: "aboutUs",
+        element: <AboutUs />,
+      },
+      {
+        path: "service",
+        element: <Service />,
+      },
+      {
+        path: "mse",
+        element: <ProductOutlet />,
         children: [
-            {
-                path: "/",
-                element: <Home />,
-            },
-            {
-                path: "/aboutUs",
-                element: <AboutUs />,
-            },
-            {
-                path: "/service",
-                element: <Service />,
-            },
-            {
+          {
+            path: "",
+            element: <ProductOnePage />,
+          },
+          {
+            path: "ProductTwo",
+            element: <ProductOnePage />,
+          },
+          {
+            path: "ProductThree",
+            element: <ProductOnePage />,
+          },
+        ],
+      },
+                                    {
                 path: "/productPortfolio",
                 element: <LaboratorySolutions/>,
             },
-            {
-                path: "/contact",
-                element: <Contact />,
-            },
-        ],
-    },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
+  },
 ]);
 
 
