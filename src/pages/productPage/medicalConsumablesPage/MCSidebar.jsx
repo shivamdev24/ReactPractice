@@ -42,9 +42,9 @@ export default function MediConsumablesSidebar() {
                 key={index}
                 to={props.path}
                 className={({ isActive }) =>
-                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
+                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${isActive || activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
                 }
-                onClick={() => setActivePath(`/${props.path}`)}
+                onChange={() => setActivePath(`/${props.path}`)}
               >
                 {props.title}
               </NavLink>
