@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
+import { Link } from 'react-router-dom';
 
 // Dynamically import all images from the specified directory
 const images = import.meta.glob('../assets/img/LaboratorySol/*.jpg', { eager: true });
@@ -83,7 +84,7 @@ export default function LaboratorySolutions() {
           <div className="flex gap-4 items-center font-bold text-white">
             <span>Home</span>
             <hr className="h-4 w-[2px] bg-white" />
-            <span>Laboratory Solutions</span>
+            <Link nk to="/medical-consumables">Laboratory Solutions</Link>
           </div>
           <div className="mt-4">
             <span className="text-6xl font-bold text-white">LABORATORY SOLUTIONS</span>

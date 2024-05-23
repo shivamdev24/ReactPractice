@@ -1,12 +1,14 @@
 import { Select } from "antd";
-import { NavLink, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const { Option } = Select;
 
 const selectOptions = [
   {
     title: "Medical Disposables",
-    path: "",
+    path: "medical-pisposables",
   },
   {
     title: "Medical Rubber Products",
@@ -20,7 +22,15 @@ const selectOptions = [
 
 export default function MediConsumablesSidebar() {
   const location = useLocation();
-  const currentPath = location.pathname;
+  const [activePath, setActivePath] = useState();
+
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, []);
+
+  const handleChange = (value) => {
+    window.location.href = value;
+  };
 
   return (
     <div>
@@ -31,12 +41,10 @@ export default function MediConsumablesSidebar() {
               <NavLink
                 key={index}
                 to={props.path}
-                className={`text-xs font-bold px-4 py-4 ${
-                  currentPath === `/${props.path}`
-                    ? "bg-orange-500 text-white" 
-                    : "bg-graypowderlight text-graydark hover:bg-gray-200"
-                }`
+                className={({ isActive }) =>
+                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
                 }
+                onClick={() => setActivePath(`/${props.path}`)}
               >
                 {props.title}
               </NavLink>

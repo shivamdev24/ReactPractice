@@ -47,7 +47,7 @@ export default function Contact() {
      <div className="flex gap-4 items-center font-bold text-white">
       <span>Home</span>
       <hr className="h-4 w-[2px] bg-white" />
-      <span>Contact Us</span>
+      <span to="/medical-consumables">Contact Us</span>
      </div>
      <div className="mt-4">
       <span className="text-6xl font-bold text-white">CONTACT</span>

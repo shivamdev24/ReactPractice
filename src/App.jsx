@@ -17,6 +17,8 @@ import RubberProducts from "./pages/productPage/medicalConsumablesPage/RubberPro
 import BloodCollection from "./pages/productPage/medicalConsumablesPage/BloodCollection";
 import Ortho from "./pages/productPage/mseProductPage/Ortho";
 import Diagno from "./pages/productPage/mseProductPage/Diagno";
+import MaseProductPage from "./pages/productPage/mseProductPage/MaseProductPage";
+import MscProductPage from "./pages/productPage/medicalConsumablesPage/MscProductPage";
 
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
         children: [
           {
             path: "",
+            element: <MaseProductPage />,
+          },
+          {
+            path: "MedicalFurniture",
             element: <ProductOnePage />,
           },
           {
@@ -58,21 +64,25 @@ const router = createBrowserRouter([
 
       {
         path: "medical-consumables",
-        element: <MCOutlet/>,
-        children:[
+        element: <MCOutlet />,
+        children: [
           {
             path: "",
-            element: <Disposables/>,
+            element: <MscProductPage />,
+          },
+          {
+            path: "medical-pisposables",
+            element: <Disposables />,
           },
           {
             path: "rubber-products",
-            element: <RubberProducts/>,
+            element: <RubberProducts />,
           },
           {
             path: "blood-collection",
-            element: <BloodCollection/>,
-          }
-        ]
+            element: <BloodCollection />,
+          },
+        ],
       },
       {
         path: "Lab-Solutions",
