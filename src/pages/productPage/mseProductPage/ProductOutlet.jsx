@@ -18,10 +18,10 @@ export default function ProductOutlet() {
           <div className="flex gap-4 items-center font-bold text-white">
             <span>Home</span>
             <hr className="h-4 w-[2px] bg-white" />
-            <span>About Us</span>
+            <span>Medical & Surgical Equipment</span>
           </div>
           <div className="mt-4">
-            <span className="text-6xl font-bold text-white">ABOUT US</span>
+            <span className="text-6xl font-bold text-white">Medical & Surgical Equipment</span>
           </div>
         </div>
       </div>
