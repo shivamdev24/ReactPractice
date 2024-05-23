@@ -53,6 +53,7 @@ const router = createBrowserRouter([
           },
         ],
       },
+
       {
         path: "medical-consumables",
         element: <MCOutlet/>,
@@ -75,6 +76,7 @@ const router = createBrowserRouter([
         path: "Lab-Solutions",
         element: <LaboratorySolutions />,
       },
+
       {
         path: "contact",
         element: <Contact />,
