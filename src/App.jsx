@@ -15,6 +15,8 @@ import MCOutlet from "./pages/productPage/medicalConsumablesPage/MCOutlet";
 import Disposables from "./pages/productPage/medicalConsumablesPage/Disposables";
 import RubberProducts from "./pages/productPage/medicalConsumablesPage/RubberProducts";
 import BloodCollection from "./pages/productPage/medicalConsumablesPage/BloodCollection";
+import Ortho from "./pages/productPage/mseProductPage/Ortho";
+import Diagno from "./pages/productPage/mseProductPage/Diagno";
 
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
@@ -44,12 +46,12 @@ const router = createBrowserRouter([
             element: <ProductOnePage />,
           },
           {
-            path: "ProductTwo",
-            element: <ProductOnePage />,
+            path: "ortho",
+            element: <Ortho />,
           },
           {
-            path: "ProductThree",
-            element: <ProductOnePage />,
+            path: "diagno",
+            element: <Diagno />,
           },
         ],
       },

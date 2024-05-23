@@ -12,11 +12,11 @@ const selectOptions = [
   },
   {
     title: "Orthopaedic Implants & Instrument",
-    path: "ProductTwo",
+    path: "ortho",
   },
   {
     title: "Diagnostic Equipment & Products",
-    path: "ProductThree",
+    path: "diagno",
   },
 ];
 
