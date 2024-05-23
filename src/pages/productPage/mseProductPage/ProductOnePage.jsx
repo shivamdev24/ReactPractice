@@ -3,30 +3,19 @@ const images = import.meta.glob("../../../assets/img/productdemoimg/*.jpg", {
 });
 
 const descriptions = [
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
-  "Product Title ",
+  "Hospital Bed ",
+  "ICU Bed ",
+  "Bed Mattress ",
+  "Beside Screen ",
+  "IV Pole Saline Stands ",
+  "Trolley ",
+  "Dirty Linen / Waste Trolley",
+  "Cart / Trolley",
+  "Beside Revolving Stools ",
+  "Bowl Stand ",
+  "Medical Cabinet Cupboard ",
+  "Ambulance Stretcher ",
+  
 ];
 const sortedImages = Object.keys(images)
   .sort((a, b) => parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]))

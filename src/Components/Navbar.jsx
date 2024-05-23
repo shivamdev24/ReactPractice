@@ -98,8 +98,8 @@ export default function Navbar() {
      <div
        className={`fixed w-full top-0 z-50 duration-500 ${
          isTop
-           ? "text-white mt-8 lg:pb-5"
-           : "text-graydark bg-white py-5 shadow"
+           ? "bg-white text-graydark sm:mt-8 py-1 sm:pb-3"
+           : "text-graydark bg-white py-2 sm:py-5 shadow"
        } ${mobileMenuOpen ? "text-darknavyblue " : ""}`}
      >
        <div className="flex md:justify-around justify-between px-6 py-2 items-center">
@@ -172,7 +172,7 @@ export default function Navbar() {
          </div>
        </div>
        {mobileMenuOpen && (
-         <div className="lg:hidden absolute top-10 h-screen left-0 w-full bg-orange text-white shadow-md z-40">
+         <div className="lg:hidden absolute top-12 h-screen left-0 w-full bg-orange text-white shadow-md z-40">
            <div className="flex flex-col gap-2 mt-4 p-4">
              {navlink.map((item, index) => (
                <div key={index}>

@@ -2,7 +2,7 @@
 
 function Header() {
   return (
-      <div className="bg-[#f44705]  lg:justify-around hidden lg:block text-white p-1">
+      <div className="bg-[#f44705]  lg:justify-around hidden sm:block text-white p-1">
           <div className="flex  md:justify-around ">
               <div className="flex  gap-6">
                   {" "}

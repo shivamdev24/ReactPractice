@@ -6,15 +6,15 @@ const { Option } = Select;
 
 const selectOptions = [
   {
-    title: "Medical & Surgical Equipment One",
+    title: "Hospital Medical Furniture",
     path: "",
   },
   {
-    title: "Medical & Surgical Equipment Two",
+    title: "Orthopaedic Implants & Instrument",
     path: "ProductTwo",
   },
   {
-    title: "Medical & Surgical Equipment Three",
+    title: "Diagnostic Equipment & Products",
     path: "ProductThree",
   },
 ];
