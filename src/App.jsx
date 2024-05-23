@@ -1,10 +1,7 @@
 import "./App.css";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
@@ -14,6 +11,10 @@ import LaboratorySolutions from "./pages/LaboratorySolutions";
 
 import ProductOutlet from "./pages/productPage/mseProductPage/ProductOutlet";
 import ProductOnePage from "./pages/productPage/mseProductPage/ProductOnePage";
+import MCOutlet from "./pages/productPage/medicalConsumablesPage/MCOutlet";
+import Disposables from "./pages/productPage/medicalConsumablesPage/Disposables";
+import RubberProducts from "./pages/productPage/medicalConsumablesPage/RubberProducts";
+import BloodCollection from "./pages/productPage/medicalConsumablesPage/BloodCollection";
 
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
@@ -52,10 +53,30 @@ const router = createBrowserRouter([
           },
         ],
       },
-        {
-                path: "/ls",
-                element: <LaboratorySolutions/>,
-            },
+
+      {
+        path: "medical-consumables",
+        element: <MCOutlet/>,
+        children:[
+          {
+            path: "",
+            element: <Disposables/>,
+          },
+          {
+            path: "rubber-products",
+            element: <RubberProducts/>,
+          },
+          {
+            path: "blood-collection",
+            element: <BloodCollection/>,
+          }
+        ]
+      },
+      {
+        path: "Lab-Solutions",
+        element: <LaboratorySolutions />,
+      },
+
       {
         path: "contact",
         element: <Contact />,
@@ -64,13 +85,12 @@ const router = createBrowserRouter([
   },
 ]);
 
-
 function App() {
-    return (
-        <>
-            <RouterProvider router={router} />
-        </>
-    );
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

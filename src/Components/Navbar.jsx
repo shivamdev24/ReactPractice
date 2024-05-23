@@ -1,6 +1,3 @@
-
-
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/logo.png";
@@ -45,11 +42,11 @@ const navlink = [
    },
    {
     title: "Medical Consumables",
-    to: "/mc",
+    to: "/medical-consumables",
    },
    {
     title: "Laboratory Solutions",
-    to: "/ls",
+    to: "/Lab-Solutions",
    },
   ],
  },

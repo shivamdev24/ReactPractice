@@ -1,6 +1,7 @@
 import { Select } from "antd";
+import React, { useState, useEffect } from "react";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink , useLocation} from "react-router-dom";
 
 const { Option } = Select;
 
@@ -20,7 +21,13 @@ const selectOptions = [
 ];
 
 export default function LsSidebar() {
-  
+  const location = useLocation();
+  const [activePath, setActivePath] = useState(location.pathname);
+
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location.pathname]);
+
   const handleChange = (value) => {
     window.location.href = value;
   };
@@ -34,9 +41,10 @@ export default function LsSidebar() {
               <NavLink
                 key={index}
                 to={props.path}
-                className={({ isActive }) =>
-                  `hover:bg-white text-xs font-bold px-4 hover:border border border-white text-graydark py-4 ${isActive ? "bg-orange text-white hover:bg-orangeshade" : "bg-graypowderlight"}`
+                className={() =>
+                  `hover:bg-white text-xs font-bold px-4 hover:border border border-white text-graydark py-4 ${activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
                 }
+                onClick={() => setActivePath(`/${props.path}`)}
               >
                 {props.title}
               </NavLink>

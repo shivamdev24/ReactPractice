@@ -103,7 +103,7 @@ export default function LaboratorySolutions() {
                   />
                 </div>
               </div>
-              <p className="text-center mt-2 text-sm md:text-lg">{item.description}</p>
+              <p className="text-center mt-2 text-sm md:text-black">{item.description}</p>
             </div>
           ))}
         </div>
