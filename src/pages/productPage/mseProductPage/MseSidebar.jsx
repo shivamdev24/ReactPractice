@@ -22,11 +22,11 @@ const selectOptions = [
 
 export default function LsSidebar() {
   const location = useLocation();
-  const [activePath, setActivePath] = useState(location.pathname);
+  const [activePath, setActivePath] = useState();
 
   useEffect(() => {
     setActivePath(location.pathname);
-  }, [location.pathname]);
+  }, []);
 
   const handleChange = (value) => {
     window.location.href = value;
@@ -42,7 +42,7 @@ export default function LsSidebar() {
                 key={index}
                 to={props.path}
                 className={() =>
-                  `hover:bg-white text-xs font-bold px-4 hover:border border border-white text-graydark py-4 ${activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
+                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
                 }
                 onClick={() => setActivePath(`/${props.path}`)}
               >
@@ -54,9 +54,11 @@ export default function LsSidebar() {
 
         <div className="block lg:hidden">
           <div className="flex justify-center py-5">
-            <Select style={{ width: "350px" }}
-            defaultValue={selectOptions[0].title}
-            onChange={handleChange}>
+            <Select
+              style={{ width: "350px" }}
+              defaultValue={selectOptions[0].title}
+              onChange={handleChange}
+            >
               {selectOptions.map((option) => (
                 <Option key={option.path}>
                   <div>
@@ -71,3 +73,5 @@ export default function LsSidebar() {
     </div>
   );
 }
+
+
