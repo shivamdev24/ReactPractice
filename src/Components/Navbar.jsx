@@ -18,7 +18,7 @@ const navlink = [
  },
  {
   title: "OUR PRODUCT PORTFOLIO",
-  to: "/",
+  to: "",
   svg: (
    <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ export default function Navbar() {
                  onMouseLeave={handleMouseLeave}
                >
                  <Link
-                   className="flex text-lg gap-1 p-3 font-semibold hover:text-orange duration-300"
+                   className="flex text-md gap-1 p-3 font-semibold hover:text-orange duration-300"
                    to={item.to}
                  >
                    {item.title} {item.svg}

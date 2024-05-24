@@ -3,8 +3,8 @@
 function Header() {
   return (
       <div className="bg-[#f44705]  lg:justify-around hidden sm:block text-white p-1">
-          <div className="flex  md:justify-around ">
-              <div className="flex  gap-6">
+          <div className="flex   ">
+              <div className="flex justify-around w-full  gap-6">
                   {" "}
                   <p>+91 9910998246, +91 11-42283156</p>
                   <p>info@intelliohealthcare.com</p>

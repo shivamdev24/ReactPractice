@@ -1,5 +1,5 @@
 import { Select } from "antd";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { Link, NavLink, useLocation } from "react-router-dom";
 
@@ -61,7 +61,7 @@ export default function MediConsumablesSidebar() {
             >
               {selectOptions.map((option) => (
                 <Option key={option.path} value={option.path}>
-                  {option.title}
+                  <Link to={option.path}>{option.title}</Link>
                 </Option>
               ))}
             </Select>

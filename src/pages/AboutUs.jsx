@@ -145,15 +145,15 @@ export default function AboutUs() {
 
     
     <div className="py-8 flex w-full  px-5 justify-around">
-     <div className="md:w-[80%] w-full flex flex-col gap-4 md:gap-8">
-      <h1 className="text-orange md:text-3xl text-xl  font-bold">
+     <div className="md:w-[80%]  w-full flex flex-col gap-4 md:gap-8">
+      <h1 className="text-orange md:text-4xl text-xl  font-bold">
        INTELLIGENCE DRIVEN HEALTHCARE
       </h1>
       <div className="flex flex-col gap-1">
-       <h2 className="md:text-md text-sm font-bold text-darknavyblue">
+       <h2 className="md:text-lg text-sm font-bold text-darknavyblue">
         We strive to enable nations in achieving Universal Healthcare Goals
        </h2>
-       <p className="text-md text-justify">
+       <p className="text-sm md:text-md  text-justify">
         Intellio is a healthcare solutions firm focused on providing global
         support that facilitates the governments and organizations in providing
         the best quality health at the most affordable cost. At Intellio, we

@@ -87,7 +87,26 @@ const Service = () => {
       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
-         <h1 className="mb-4 font-bold text-orange md:text-3xl">
+         <h1 className="mb-4 font-bold text-orange md:text-4xl">
+          MANAGEMENT CONSULTING
+         </h1>
+         {collapseList.map((props, index) => (
+          <div key={index}>
+           <div>
+            <Collapse
+             items={props.items}
+             className="text-red-500 text-md w-full border-none "
+            />
+           </div>
+          </div>
+         ))}
+        </div>
+       </div>
+      </div>
+      <div className="">
+       <div className="flex  py-10  justify-around">
+        <div className=" w-[80%]  flex flex-col gap-4">
+         <h1 className="mb-4 font-bold text-orange md:text-4xl">
           MANAGEMENT CONSULTING
          </h1>
          {collapseList.map((props, index) => (
@@ -106,7 +125,7 @@ const Service = () => {
       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
-         <h1 className="mb-4 font-bold text-orange md:text-3xl">
+         <h1 className="mb-4 font-bold text-orange md:text-4xl">
           MANAGEMENT CONSULTING
          </h1>
          {collapseList.map((props, index) => (
@@ -125,26 +144,7 @@ const Service = () => {
       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
-         <h1 className="mb-4 font-bold text-orange md:text-3xl">
-          MANAGEMENT CONSULTING
-         </h1>
-         {collapseList.map((props, index) => (
-          <div key={index}>
-           <div>
-            <Collapse
-             items={props.items}
-             className="text-red-500 w-full border-none "
-            />
-           </div>
-          </div>
-         ))}
-        </div>
-       </div>
-      </div>
-      <div className="">
-       <div className="flex  py-10  justify-around">
-        <div className=" w-[80%]  flex flex-col gap-4">
-         <h1 className="mb-4 font-bold text-orange md:text-3xl">
+         <h1 className="mb-4 font-bold text-orange md:text-4xl">
           MANAGEMENT CONSULTING
          </h1>
          {collapseList.map((props, index) => (

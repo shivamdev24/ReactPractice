@@ -19,6 +19,8 @@ import Ortho from "./pages/productPage/mseProductPage/Ortho";
 import Diagno from "./pages/productPage/mseProductPage/Diagno";
 import MaseProductPage from "./pages/productPage/mseProductPage/MaseProductPage";
 import MscProductPage from "./pages/productPage/medicalConsumablesPage/MscProductPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 // import SlideShow from "./Components/components/SlideShow.jsx";
 
@@ -40,11 +42,19 @@ const router = createBrowserRouter([
         element: <Service />,
       },
       {
-        path: "mse",
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "terms-condition",
+        element: <TermsConditions />,
+      },
+      {
+        path: "",
         element: <ProductOutlet />,
         children: [
           {
-            path: "",
+            path: "mse",
             element: <MaseProductPage />,
           },
           {
@@ -100,7 +110,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <div className="text-black">
+        <RouterProvider router={router} />
+      </div>
     </>
   );
 }
