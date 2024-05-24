@@ -1,4 +1,5 @@
 import {Fade } from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const images = import.meta.glob(
   "../../../assets/img/MediConsumables/RubberProducts/*.jpg",
@@ -39,6 +40,11 @@ const imageArray = sortedImages.map((image, index) => ({
 }));
 
 function RubberProducts() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <div>

@@ -6,6 +6,7 @@ import MC from "../assets/img/mc.jpg";
 import Lab from "../assets/img/lab.jpg";
 import SlideShow from "../Components/components/SlideShow/SlideShow";
 import { Fade } from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const sectTwo = [
   {
@@ -473,6 +474,11 @@ const productPortfolio = [
 ];
 
 function App() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="">

@@ -1,22 +1,17 @@
-import "./App.css";
-import Home from "./pages/Home";
-
+import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
+import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
-
 import LaboratorySolutions from "./pages/LaboratorySolutions";
-
 import ProductOutlet from "./pages/productPage/mseProductPage/ProductOutlet";
 import ProductOnePage from "./pages/productPage/mseProductPage/ProductOnePage";
 import MCOutlet from "./pages/productPage/medicalConsumablesPage/MCOutlet";
 import Disposables from "./pages/productPage/medicalConsumablesPage/Disposables";
 import RubberProducts from "./pages/productPage/medicalConsumablesPage/RubberProducts";
 import BloodCollection from "./pages/productPage/medicalConsumablesPage/BloodCollection";
-
-// import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,7 +48,6 @@ const router = createBrowserRouter([
           },
         ],
       },
-
       {
         path: "medical-consumables",
         element: <MCOutlet/>,
@@ -76,7 +70,6 @@ const router = createBrowserRouter([
         path: "Lab-Solutions",
         element: <LaboratorySolutions />,
       },
-
       {
         path: "contact",
         element: <Contact />,
@@ -86,6 +79,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  // Scroll to the top whenever the component re-renders
+
+
   return (
     <>
       <RouterProvider router={router} />

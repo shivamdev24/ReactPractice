@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
 import { Fade } from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const AboutUsCards = [
  {
@@ -121,6 +122,11 @@ const AboutUsCards = [
 ];
 
 export default function AboutUs() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
  return (
   <div>
    <div>

@@ -1,10 +1,16 @@
 import { Outlet } from "react-router-dom"
 import MCSidebar from "./MCSidebar";
+import { useEffect } from "react";
 
 import AboutImg from "../../../assets/img/AboutUs/AboutUs.jpg";
 
 
 export default function MCOutlet() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="">
       <div className="relative">

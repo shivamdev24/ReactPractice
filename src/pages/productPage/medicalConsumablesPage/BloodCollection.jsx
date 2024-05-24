@@ -1,4 +1,5 @@
 import {Fade} from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollection/*.jpg", {
     eager: true,
@@ -27,6 +28,11 @@ const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollec
   }));
   
   function BloodCollection() {
+    useEffect(() => {
+      console.log("Component re-rendered");
+      window.scrollTo(0, 0);
+    }, []);
+
     return (
       <div>
         <div>

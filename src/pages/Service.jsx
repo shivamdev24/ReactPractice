@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg"
 
@@ -58,11 +58,15 @@ const collapseList = [
 
 
 
+
 const Service = () => {
-     
-
-
+  useEffect(() => {
+    // Debugging: Log a message to check if the effect runs
+    console.log("Effect running...");
     
+    // Scroll to the top when component re-renders
+    window.scrollTo(0, 0);
+  }, []); 
 
     return (
      <div>

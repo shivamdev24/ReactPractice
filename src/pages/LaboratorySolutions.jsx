@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
 import {Fade} from "react-awesome-reveal";
+import { useEffect } from 'react';
 
 // Dynamically import all images from the specified directory
 const images = import.meta.glob('../assets/img/LaboratorySol/*.jpg', { eager: true });
@@ -71,6 +72,11 @@ const imageArray = sortedImages.map((image, index) => ({
 }));
 
 export default function LaboratorySolutions() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="relative w-full">
