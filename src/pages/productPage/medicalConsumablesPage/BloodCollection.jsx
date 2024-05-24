@@ -1,3 +1,5 @@
+import {Fade} from "react-awesome-reveal";
+
 const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollection/*.jpg", {
     eager: true,
   });
@@ -30,6 +32,7 @@ const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollec
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
             {imageArray.map((item, index) => (
+              <Fade key={index} triggerOnce={true} direction="up">
               <div
                 key={index}
                 className="flex flex-col border border-gray-400 rounded hover:shadow-lg duration-500 items-center"
@@ -52,6 +55,7 @@ const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollec
                   {item.description}
                 </p>
               </div>
+              </Fade>
             ))}
           </div>
         </div>
