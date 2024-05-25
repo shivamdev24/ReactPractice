@@ -12,6 +12,12 @@ import MCOutlet from "./pages/productPage/medicalConsumablesPage/MCOutlet";
 import Disposables from "./pages/productPage/medicalConsumablesPage/Disposables";
 import RubberProducts from "./pages/productPage/medicalConsumablesPage/RubberProducts";
 import BloodCollection from "./pages/productPage/medicalConsumablesPage/BloodCollection";
+import Ortho from "./pages/productPage/mseProductPage/Ortho";
+import Diagno from "./pages/productPage/mseProductPage/Diagno";
+import MaseProductPage from "./pages/productPage/mseProductPage/MaseProductPage";
+import MscProductPage from "./pages/productPage/medicalConsumablesPage/MscProductPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 const router = createBrowserRouter([
   {
@@ -31,40 +37,56 @@ const router = createBrowserRouter([
         element: <Service />,
       },
       {
-        path: "mse",
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "terms-condition",
+        element: <TermsConditions />,
+      },
+      {
+        path: "",
         element: <ProductOutlet />,
         children: [
           {
-            path: "",
+            path: "mse",
+            element: <MaseProductPage />,
+          },
+          {
+            path: "MedicalFurniture",
             element: <ProductOnePage />,
           },
           {
-            path: "ProductTwo",
-            element: <ProductOnePage />,
+            path: "ortho",
+            element: <Ortho />,
           },
           {
-            path: "ProductThree",
-            element: <ProductOnePage />,
+            path: "diagno",
+            element: <Diagno />,
           },
         ],
       },
       {
         path: "medical-consumables",
-        element: <MCOutlet/>,
-        children:[
+        element: <MCOutlet />,
+        children: [
           {
             path: "",
-            element: <Disposables/>,
+            element: <MscProductPage />,
+          },
+          {
+            path: "medical-pisposables",
+            element: <Disposables />,
           },
           {
             path: "rubber-products",
-            element: <RubberProducts/>,
+            element: <RubberProducts />,
           },
           {
             path: "blood-collection",
-            element: <BloodCollection/>,
-          }
-        ]
+            element: <BloodCollection />,
+          },
+        ],
       },
       {
         path: "Lab-Solutions",
@@ -84,7 +106,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <div className="text-black">
+        <RouterProvider router={router} />
+      </div>
     </>
   );
 }

@@ -474,230 +474,157 @@ const productPortfolio = [
 ];
 
 function App() {
+
   useEffect(() => {
     console.log("Component re-rendered");
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <>
-      <div className="">
-        <SlideShow />
+
+ return (
+  <>
+   <div className="">
+    <SlideShow />
+   </div>
+   <div>
+    <div className="relative ">
+     <div className="flex flex-col-reverse md:flex-row items-center justify-between ">
+      <div className="flex flex-col z-20 gap-1">
+       {sectTwo.map((props, index) => (
+        <div key={index} className="flex flex-col gap-1 relative">
+         <div className="bg-orange md:w-[27rem] w-[25rem] rounded md:rounded-none h-64 overflow-hidden transition duration-500 hover:bg-darknavyblue  text-white">
+          <Link
+           // eslint-disable-next-line react/prop-types
+           to={props.to}
+           className="  flex flex-col items-center mt-16 gap-3  text-2xl font-bold 0"
+          >
+           <span> {props.icon} </span>
+           <span>{props.title}</span>
+          </Link>
+         </div>
+        </div>
+       ))}
       </div>
-      <div>
-        <div className="relative ">
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between ">
-            <div className="flex flex-col z-20 gap-1">
-             
-                {sectTwo.map((props, index) => (
-                 <Fade direction="up" triggerOnce={true}>
-                  <div key={index} className="flex flex-col gap-1 relative">
-                    <div className="bg-orange w-[27rem] h-64 overflow-hidden transition duration-500 hover:bg-darknavyblue  text-white">
-                      <Link
-                        // eslint-disable-next-line react/prop-types
-                        to={props.to}
-                        className="  flex flex-col items-center mt-16 gap-3  text-2xl font-bold 0"
-                      >
-                        <span> {props.icon} </span>
-                        <span>{props.title}</span>
-                      </Link> 
-                    </div>
-                  </div>
-                  </Fade>
-                ))}
-            </div>
 
-            <Fade direction="up" triggerOnce={true}>
-              <div className="flex justify-between  px-5 lg:justify-around">
-                <div className="lg:w-[70%] lg:mt-[-80px] leading-8">
-                  <span className="font-bold text-lg">Our Vision</span>
-                  <h1 className="text-2xl font-bold text-[#f44705]">
-                    INTELLIGENCE DRIVEN HEALTHCARE
-                  </h1>
-                  <p className="mt-3 text-justify text-graylight">
-                    Intellio is a healthcare solutions firm focused on providing
-                    global support that facilitates the governments and
-                    organizations in providing the best quality health at the
-                    most affordable cost. At Intellio, we bring together a
-                    global team that harbors a passion for health access and
-                    innovation. The experience and outreach of our teams is the
-                    core success driver of our underlying philosophy of
-                    providing the best services at the most affordable costs. We
-                    have identified and developed the relationships with our
-                    partners that we leverage for our clients to serve their
-                    needs in a timely and consistent manner....{" "}
-                    <Link
-                      to="/"
-                      className="text-[#f44705] duration-500 hover:text-[#00085c] font-bold"
-                    >
-                      Read More
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </Fade>
-          </div>
+      <div className="flex justify-between  px-5 lg:justify-around">
+       <div className="lg:w-[70%] lg:mt-[-80px] leading-8">
+        <span className="font-bold text-md md:text-lg text-black">Our Vision</span>
+        <h1 className="text-lg md:text-2xl font-bold text-[#f44705]">
+         INTELLIGENCE DRIVEN HEALTHCARE
+        </h1>
+        <p className="mt-3 text-sm md:text-md text-justify mb-4 text-graylight">
+         Intellio is a healthcare solutions firm focused on providing global
+         support that facilitates the governments and organizations in providing
+         the best quality health at the most affordable cost. At Intellio, we
+         bring together a global team that harbors a passion for health access
+         and innovation. The experience and outreach of our teams is the core
+         success driver of our underlying philosophy of providing the best
+         services at the most affordable costs. We have identified and developed
+         the relationships with our partners that we leverage for our clients to
+         serve their needs in a timely and consistent manner....{" "}
+         <Link
+          to="/"
+          className="text-[#f44705] duration-500 hover:text-[#00085c] font-bold"
+         >
+          Read More
+         </Link>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div className=" lg:relative top-[-90px] ">
+      <div className="flex flex-col  imgbg ">
+       <div className="flex flex-col w-full   py-10  justify-center items-center px-5">
+        <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
+         OUR SERVICE
+        </h2>
+        <div className="flex mt-20 flex-col lg:flex-row px-5 gap-4">
+         {sectionOne.map((props, index) => (
+          <Link to="/" key={index}>
+           <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-darknavyblue hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
+            <span className=" border-2 p-2 rounded-md"> {props.Icon} </span>
+            <span className="text-sm pt-10 font-meduim   text-center">
+             {" "}
+             {props.title}{" "}
+            </span>
+           </div>
+          </Link>
+         ))}
+        </div>
+       </div>
+       <div className="flex flex-col  justify-center w-full  py-20 px-5  items-center">
+        <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
+         MANAGEMENT CONSULTING
+        </h2>
+        <div className="flex mt-20 flex-col lg:flex-row gap-4">
+         {sectionTwo.map((props, index) => (
+          <Link to="/" key={index}>
+           <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-darknavyblue hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
+            <span className=" border-2 p-2 rounded-md"> {props.img} </span>
+            <span className="text-sm pt-10 font-bold   text-center">
+             {" "}
+             {props.title}{" "}
+            </span>
+           </div>
+          </Link>
+         ))}
+        </div>
+       </div>
+      
+       <div className="flex flex-col py-20  justify-center px-5 items-center">
+        <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
+         PROGRAM MANAGEMENT
+        </h2>
+        <div className="flex mt-20 flex-col lg:flex-row gap-8">
+         {sectionFour.map((props, index) => (
+          <Link to="/" key={index}>
+           <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-darknavyblue hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
+            <span className=" border-2 p-2 rounded-md"> {props.img} </span>
+            <span className="text-sm pt-10 font-bold   text-center">
+             {" "}
+             {props.title}{" "}
+            </span>
+           </div>
+          </Link>
+         ))}
+        </div>
+       </div>
+       <div className="flex flex-col  py-20  justify-center px-5 items-center">
+        <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
+         PROCUREMENT AND SUPPLY CHAIN
+        </h2>
+        <div className="flex mt-20 flex-col lg:flex-row gap-8">
+         {sectionFive.map((props, index) => (
+          <Link to="/" key={index}>
+           <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-black hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
+            <span className=" border-2 p-2 rounded-md"> {props.img} </span>
+            <span className="text-sm pt-10 font-bold   text-center">
+             {" "}
+             {props.title}{" "}
+            </span>
+           </div>
+          </Link>
+         ))}
+        </div>
+       </div>
 
-          <div className=" lg:relative top-[-90px] ">
-            <div className="flex flex-col  imgbg ">
-             
-                <div className="flex flex-col w-full   py-10  justify-center items-center px-5">
-                    <Fade direction="up" triggerOnce={true}>
-                  <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
-                    OUR SERVICE
-                  </h2>
-                  </Fade>
-                  <div className="flex mt-20 flex-col lg:flex-row px-5 gap-4">
-                    {sectionOne.map((props, index) => (
-                         <Fade direction="up" triggerOnce={true}>
-                      <Link to="/" key={index}>
-                        <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-darknavyblue hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
-                          <span className=" border-4 rounded-md">
-                            {" "}
-                            {props.Icon}{" "}
-                          </span>
-                          <span className="text-md pt-10 font-bold   text-center">
-                            {" "}
-                            {props.title}{" "}
-                          </span>
-                        </div>
-                      </Link>
-                      </Fade>
-                    ))}
-                  </div>
-                </div>
-              
+       <div className="bg-white mt-10 flex flex-col items-center py-10 px-5 z-10">
+        <h2 className="lg:text-4xl text-xl text-center text-orange py-5">
+         <span className="font-bold">OUR</span> PRODUCT PORTFOLIO
+        </h2>
+        <div className="flex flex-col sm:flex-row  gap-10 justify-center">
+         {productPortfolio.map((props, index) => (
+          <div key={index} className="flex flex-col items-start gap-4">
+           <Link to={props.path}>
+            <img src={props.img} alt="" className="w-96 rounded" />
+           </Link>
+           <Link
+            className="text-md font-semibold hover:text-orange duration-500"
+            to={props.path}
+           >
+            {props.title}
+           </Link>
 
-              
-                <div className="flex flex-col  justify-center w-full  py-20 px-5  items-center">
-                <Fade direction="up" triggerOnce="true">
-                  <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
-                    MANAGEMENT CONSULTING
-                  </h2>
-                    </Fade>
-                  <div className="flex mt-20 flex-col lg:flex-row gap-4">
-                    {sectionTwo.map((props, index) => (
-                        <Fade direction="up" triggerOnce="true">
-                      <Link to="/" key={index}>
-                        <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-darknavyblue hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
-                          <span className=" border-4 rounded-md">
-                            {" "}
-                            {props.img}{" "}
-                          </span>
-                          <span className="text-md pt-10 font-bold   text-center">
-                            {" "}
-                            {props.title}{" "}
-                          </span>
-                        </div>
-                      </Link>
-                      </Fade>
-                    ))}
-                  </div>
-                </div>
-              
-              {/* <div className="flex flex-col mt-20 justify-center px-5  items-center">
-                                <h2 className="text-4xl mt-2 font-bold text-blue-500">
-                                    INVESTMENT ADVISORY
-                                </h2>
-                                <div className="flex mt-20 flex-col lg:flex-row gap-8">
-                                    {sectionThree.map((props, index) => (
-                                        <Link to="/" key={index}>
-                                            <div className=" flex flex-col items-center w-80 py-6 h-48  text-blue-500  rounded bg-white hover:scale-105 duration-500 hover:shadow-lg border">
-                                                <span> {props.img} </span>
-                                                <span className="text-2xl font-bold p-4 text-blue-500 text-center">
-                                                    {" "}
-                                                    {props.title}{" "}
-                                                </span>
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div> */}
-              
-                <div className="flex flex-col py-20  justify-center px-5 items-center">
-                <Fade direction="up" triggerOnce="true">
-                  <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
-                    PROGRAM MANAGEMENT
-                  </h2>
-                  </Fade>
-                  <div className="flex mt-20 flex-col lg:flex-row gap-8">
-                    {sectionFour.map((props, index) => (
-                        <Fade direction="up" triggerOnce="true">
-                      <Link to="/" key={index}>
-                        <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-darknavyblue hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
-                          <span className=" border-4 rounded-md">
-                            {" "}
-                            {props.img}{" "}
-                          </span>
-                          <span className="text-md pt-10 font-bold   text-center">
-                            {" "}
-                            {props.title}{" "}
-                          </span>
-                        </div>
-                      </Link>
-                      </Fade>
-                    ))}
-                  </div>
-                </div>
-
-              <div className="flex flex-col  py-20  justify-center px-5 items-center">
-                <Fade direction="up" triggerOnce="true">
-                <h2 className="lg:text-4xl text-2xl text-center  font-bold text-orange">
-                  PROCUREMENT AND SUPPLY CHAIN
-                </h2>
-                </Fade>
-                <div className="flex mt-20 flex-col lg:flex-row gap-8">
-                  {sectionFive.map((props, index) => (
-                    <Fade direction="up" triggerOnce="true">
-                      <Link to="/" key={index}>
-                        <div className=" flex flex-col items-center w-[20rem] lg:w-80 py-6 h-auto bg-white  rounded text-black hover:scale-105 duration-500 hover:text-orange hover:shadow-md hover:bg-white  border">
-                          <span className=" border-4 rounded-md">
-                            {" "}
-                            {props.img}{" "}
-                          </span>
-                          <span className="text-md pt-10 font-bold   text-center">
-                            {" "}
-                            {props.title}{" "}
-                          </span>
-                        </div>
-                      </Link>
-                    </Fade>
-                  ))}
-                </div>
-              </div>
-
-             
-                <div className="bg-white mt-10 flex flex-col items-center py-10 px-5 z-10">
-                  <h2 className="lg:text-3xl text-xl text-center text-orange py-5">
-                    <span className="font-bold">OUR</span> PRODUCT PORTFOLIO
-                  </h2>
-                  <div className="flex flex-col sm:flex-row  gap-10 justify-center">
-                    {productPortfolio.map((props, index) => (
-                         <Fade direction="up" triggerOnce="true">
-                      <div
-                        key={index}
-                        className="flex flex-col items-start gap-4"
-                      >
-                        <Link to={props.path}>
-                          <img
-                            src={props.img}
-                            alt=""
-                            className="w-96 rounded"
-                          />
-                        </Link>
-                        <Link
-                          className="text-xl font-semibold hover:text-[#159394] text-black"
-                          to={props.path}
-                        >
-                          {props.title}
-                        </Link>
-                      </div>
-                      </Fade>
-                    ))}
-                  </div>
-                </div>
-              
-            </div>
           </div>
         </div>
       </div>

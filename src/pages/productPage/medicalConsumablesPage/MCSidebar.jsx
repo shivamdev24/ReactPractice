@@ -2,12 +2,13 @@ import { Select } from "antd";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
+
 const { Option } = Select;
 
 const selectOptions = [
   {
     title: "Medical Disposables",
-    path: "",
+    path: "medical-pisposables",
   },
   {
     title: "Medical Rubber Products",
@@ -21,6 +22,7 @@ const selectOptions = [
 
 export default function MCSidebar() {
   const location = useLocation();
+
   const navigate = useNavigate();
   const currentPath = location.pathname === "/" ? "" : location.pathname.slice(1);
 
@@ -29,6 +31,7 @@ export default function MCSidebar() {
       navigate(selectOptions[0].path);
     }
   }, [currentPath, navigate]);
+
 
   return (
     <div>
@@ -39,11 +42,13 @@ export default function MCSidebar() {
               <NavLink
                 key={index}
                 to={props.path}
+
                 className={`text-xs font-bold px-4 py-4 ${
                   currentPath === props.path
                     ? "bg-orange-500 text-white" 
                     : "bg-graypowderlight text-graydark hover:bg-gray-200"
                 }`}
+
               >
                 {props.title}
               </NavLink>
@@ -60,7 +65,7 @@ export default function MCSidebar() {
             >
               {selectOptions.map((option) => (
                 <Option key={option.path} value={option.path}>
-                  {option.title}
+                  <Link to={option.path}>{option.title}</Link>
                 </Option>
               ))}
             </Select>

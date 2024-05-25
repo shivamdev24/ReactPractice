@@ -7,26 +7,26 @@ const { Option } = Select;
 
 const selectOptions = [
   {
-    title: "Medical & Surgical Equipment One",
-    path: "",
+    title: "Hospital Medical Furniture",
+    path: "MedicalFurniture",
   },
   {
-    title: "Medical & Surgical Equipment Two",
-    path: "ProductTwo",
+    title: "Orthopaedic Implants & Instrument",
+    path: "ortho",
   },
   {
-    title: "Medical & Surgical Equipment Three",
-    path: "ProductThree",
+    title: "Diagnostic Equipment & Products",
+    path: "diagno",
   },
 ];
 
 export default function LsSidebar() {
   const location = useLocation();
-  const [activePath, setActivePath] = useState(location.pathname);
+  const [activePath, setActivePath] = useState();
 
   useEffect(() => {
     setActivePath(location.pathname);
-  }, [location.pathname]);
+  }, []);
 
   const handleChange = (value) => {
     window.location.href = value;
@@ -41,10 +41,10 @@ export default function LsSidebar() {
               <NavLink
                 key={index}
                 to={props.path}
-                className={() =>
-                  `hover:bg-white text-xs font-bold px-4 hover:border border border-white text-graydark py-4 ${activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
+                className={({ isActive }) =>
+                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${isActive || activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
                 }
-                onClick={() => setActivePath(`/${props.path}`)}
+                onChange={() => setActivePath(`/${props.path}`)}
               >
                 {props.title}
               </NavLink>
@@ -54,9 +54,11 @@ export default function LsSidebar() {
 
         <div className="block lg:hidden">
           <div className="flex justify-center py-5">
-            <Select style={{ width: "350px" }}
-            defaultValue={selectOptions[0].title}
-            onChange={handleChange}>
+            <Select
+              style={{ width: "350px" }}
+              defaultValue={selectOptions[0].title}
+              onChange={handleChange}
+            >
               {selectOptions.map((option) => (
                 <Option key={option.path}>
                   <div>
@@ -71,3 +73,5 @@ export default function LsSidebar() {
     </div>
   );
 }
+
+
