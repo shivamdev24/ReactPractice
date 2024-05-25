@@ -1,14 +1,14 @@
 import { Select } from "antd";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-
+import { useEffect,  useState} from "react";
+import { Link } from "react-router-dom";
 
 const { Option } = Select;
 
 const selectOptions = [
   {
     title: "Medical Disposables",
-    path: "medical-pisposables",
+    path: "medical-disposables",
   },
   {
     title: "Medical Rubber Products",
@@ -22,33 +22,30 @@ const selectOptions = [
 
 export default function MCSidebar() {
   const location = useLocation();
-
-  const navigate = useNavigate();
-  const currentPath = location.pathname === "/" ? "" : location.pathname.slice(1);
+  const [activePath, setActivePath] = useState();
 
   useEffect(() => {
-    if (currentPath === "") {
-      navigate(selectOptions[0].path);
-    }
-  }, [currentPath, navigate]);
+    setActivePath(location.pathname);
+  }, []);
+
+  const handleChange = (value) => {
+    window.location.href = value;
+  };
 
 
-  return (
+    return (
     <div>
       <div>
         <div className="hidden lg:block">
-          <div className="flex flex-col w-72 text-white">
+          <div className="flex flex-col  k  w-72  text-white">
             {selectOptions.map((props, index) => (
               <NavLink
                 key={index}
                 to={props.path}
-
-                className={`text-xs font-bold px-4 py-4 ${
-                  currentPath === props.path
-                    ? "bg-orange-500 text-white" 
-                    : "bg-graypowderlight text-graydark hover:bg-gray-200"
-                }`}
-
+                className={({ isActive }) =>
+                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${isActive || activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
+                }
+                onChange={() => setActivePath(`/${props.path}`)}
               >
                 {props.title}
               </NavLink>
@@ -60,12 +57,14 @@ export default function MCSidebar() {
           <div className="flex justify-center py-5">
             <Select
               style={{ width: "350px" }}
-              value={currentPath}
-              onChange={(value) => navigate(value)}
+              defaultValue={selectOptions[0].title}
+              onChange={handleChange}
             >
               {selectOptions.map((option) => (
-                <Option key={option.path} value={option.path}>
-                  <Link to={option.path}>{option.title}</Link>
+                <Option key={option.path}>
+                  <div>
+                    <Link to={option.path}>{option.title}</Link>
+                  </div>
                 </Option>
               ))}
             </Select>

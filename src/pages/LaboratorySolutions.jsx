@@ -1,11 +1,7 @@
-
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
-
-import {Fade} from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { useEffect } from 'react';
-
 import { Link } from 'react-router-dom';
-
 
 // Dynamically import all images from the specified directory
 const images = import.meta.glob('../assets/img/LaboratorySol/*.jpg', { eager: true });
@@ -23,7 +19,7 @@ const descriptions = [
   "Pipettes Glassware",
   "Watch Glasses",
   "Burets",
-  "Pippette Pump",
+  "Pipette Pump",
   "Condensers",
   "Desiccators Glassware",
   "Flasks Glassware",
@@ -94,7 +90,7 @@ export default function LaboratorySolutions() {
           <div className="flex gap-4 items-center font-bold text-white">
             <span>Home</span>
             <hr className="h-4 w-[2px] bg-white" />
-            <Link nk to="/medical-consumables">Laboratory Solutions</Link>
+            <Link to="/medical-consumables">Laboratory Solutions</Link>
           </div>
           <div className="mt-4">
             <span className="text-6xl font-bold text-white">LABORATORY SOLUTIONS</span>
@@ -105,18 +101,21 @@ export default function LaboratorySolutions() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
           {imageArray.map((item, index) => (
             <Fade key={index} triggerOnce='true' direction='up'>
-            <div key={index} className="flex flex-col items-center">
-              <div className="border border-gray-300 rounded p-2 w-full">
-                <div className="w-full h-48 flex items-center justify-center">
-                  <img
-                    src={item.image}
-                    alt={`Image ${index + 1}`}
-                    className="w-full h-full rounded object-contain"
-                  />
+              <div
+                key={index}
+                className="flex flex-col items-center transform transition-transform duration-300 hover:-translate-y-2"
+              >
+                <div className="border border-gray-300 rounded p-2 w-full">
+                  <div className="w-full h-48 flex items-center justify-center">
+                    <img
+                      src={item.image}
+                      alt={`Image ${index + 1}`}
+                      className="w-full h-full rounded object-contain"
+                    />
+                  </div>
                 </div>
+                <p className="text-center mt-2 text-sm md:text-black">{item.description}</p>
               </div>
-              <p className="text-center mt-2 text-sm md:text-black">{item.description}</p>
-            </div>
             </Fade>
           ))}
         </div>
