@@ -1,7 +1,7 @@
 import { Select } from "antd";
-import { useState, useEffect } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-import { Link, NavLink, useLocation } from "react-router-dom";
 
 const { Option } = Select;
 
@@ -20,17 +20,18 @@ const selectOptions = [
   },
 ];
 
-export default function MediConsumablesSidebar() {
+export default function MCSidebar() {
   const location = useLocation();
-  const [activePath, setActivePath] = useState();
+
+  const navigate = useNavigate();
+  const currentPath = location.pathname === "/" ? "" : location.pathname.slice(1);
 
   useEffect(() => {
-    setActivePath(location.pathname);
-  }, []);
+    if (currentPath === "") {
+      navigate(selectOptions[0].path);
+    }
+  }, [currentPath, navigate]);
 
-  const handleChange = (value) => {
-    window.location.href = value;
-  };
 
   return (
     <div>
@@ -41,10 +42,13 @@ export default function MediConsumablesSidebar() {
               <NavLink
                 key={index}
                 to={props.path}
-                className={({ isActive }) =>
-                  `hover:bg-white hover:text-orange text-xs font-bold  hover:border border border-white text-graydark py-4 px-4 ${isActive || activePath === `/${props.path}` ? "bg-orange text-white hover:text-black hover:bg-orangeshade" : "bg-graypowderlight"}`
-                }
-                onChange={() => setActivePath(`/${props.path}`)}
+
+                className={`text-xs font-bold px-4 py-4 ${
+                  currentPath === props.path
+                    ? "bg-orange-500 text-white" 
+                    : "bg-graypowderlight text-graydark hover:bg-gray-200"
+                }`}
+
               >
                 {props.title}
               </NavLink>
@@ -56,7 +60,7 @@ export default function MediConsumablesSidebar() {
           <div className="flex justify-center py-5">
             <Select
               style={{ width: "350px" }}
-              defaultValue={selectOptions[0].path}
+              value={currentPath}
               onChange={(value) => navigate(value)}
             >
               {selectOptions.map((option) => (

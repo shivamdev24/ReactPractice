@@ -1,14 +1,11 @@
-import "./App.css";
-import Home from "./pages/Home";
-
+import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
+import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
-
 import LaboratorySolutions from "./pages/LaboratorySolutions";
-
 import ProductOutlet from "./pages/productPage/mseProductPage/ProductOutlet";
 import ProductOnePage from "./pages/productPage/mseProductPage/ProductOnePage";
 import MCOutlet from "./pages/productPage/medicalConsumablesPage/MCOutlet";
@@ -21,8 +18,6 @@ import MaseProductPage from "./pages/productPage/mseProductPage/MaseProductPage"
 import MscProductPage from "./pages/productPage/medicalConsumablesPage/MscProductPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
-
-// import SlideShow from "./Components/components/SlideShow.jsx";
 
 const router = createBrowserRouter([
   {
@@ -71,7 +66,6 @@ const router = createBrowserRouter([
           },
         ],
       },
-
       {
         path: "medical-consumables",
         element: <MCOutlet />,
@@ -98,7 +92,6 @@ const router = createBrowserRouter([
         path: "Lab-Solutions",
         element: <LaboratorySolutions />,
       },
-
       {
         path: "contact",
         element: <Contact />,
@@ -108,6 +101,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  // Scroll to the top whenever the component re-renders
+
+
   return (
     <>
       <div className="text-black">

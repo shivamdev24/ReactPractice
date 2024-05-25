@@ -1,5 +1,6 @@
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -39,6 +40,10 @@ const socialLink = [
 
 
 export default function Contact() {
+    useEffect(() => {
+        console.log("Component re-rendered");
+        window.scrollTo(0, 0);
+      }, []);
  return (
    <div>
      <div className="relative">

@@ -1,10 +1,16 @@
 import { Link, Outlet } from "react-router-dom"
 import MseSidebar from "./MseSidebar";
+import { useEffect } from "react";
 
 import AboutImg from "../../../assets/img/AboutUs/AboutUs.jpg";
 
 
 export default function ProductOutlet() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="">
       <div className="relative">

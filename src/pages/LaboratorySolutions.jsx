@@ -1,6 +1,11 @@
-import React from 'react';
+
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
+
+import {Fade} from "react-awesome-reveal";
+import { useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
+
 
 // Dynamically import all images from the specified directory
 const images = import.meta.glob('../assets/img/LaboratorySol/*.jpg', { eager: true });
@@ -71,6 +76,11 @@ const imageArray = sortedImages.map((image, index) => ({
 }));
 
 export default function LaboratorySolutions() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="relative w-full">
@@ -94,6 +104,7 @@ export default function LaboratorySolutions() {
       <div className="p-5 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
           {imageArray.map((item, index) => (
+            <Fade key={index} triggerOnce='true' direction='up'>
             <div key={index} className="flex flex-col items-center">
               <div className="border border-gray-300 rounded p-2 w-full">
                 <div className="w-full h-48 flex items-center justify-center">
@@ -106,6 +117,7 @@ export default function LaboratorySolutions() {
               </div>
               <p className="text-center mt-2 text-sm md:text-black">{item.description}</p>
             </div>
+            </Fade>
           ))}
         </div>
       </div>

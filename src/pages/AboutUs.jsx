@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
+import { Fade } from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const AboutUsCards = [
  {
@@ -120,6 +122,11 @@ const AboutUsCards = [
 ];
 
 export default function AboutUs() {
+  useEffect(() => {
+    console.log("Component re-rendered");
+    window.scrollTo(0, 0);
+  }, []);
+
  return (
   <div>
    <div>
@@ -153,7 +160,9 @@ export default function AboutUs() {
        <h2 className="md:text-lg text-sm font-bold text-darknavyblue">
         We strive to enable nations in achieving Universal Healthcare Goals
        </h2>
+
        <p className="text-sm md:text-md  text-justify">
+
         Intellio is a healthcare solutions firm focused on providing global
         support that facilitates the governments and organizations in providing
         the best quality health at the most affordable cost. At Intellio, we
@@ -169,11 +178,14 @@ export default function AboutUs() {
     </div>
     <div className="imgbg flex  w-full  py-10 justify-around">
      <div className="md:w-[80%] w-full flex flex-col items-center">
+        <Fade triggerOnce={true} direction="up">
       <h1 className="text-orange text-center text-4xl font-bold">
        PILLARS OF OUR PHILOSOPHY
       </h1>
+      </Fade>
       <div className="py-10 flex gap-6 flex-wrap items-center px-5 sm:px-0 justify-center">
        {AboutUsCards.map((props, index) => (
+        <Fade key={index} triggerOnce={true} direction="up">
         <Link key={index} to={props.to}>
          <div className="w-96 flex flex-col items-center rounded hover:shadow-lg hover:scale-105 duration-500 gap-3 border bg-white text-darknavyblue hover:text-orange p-6  h-64">
           <span className="text-4xl border-4 rounded-md text-yellow-500">
@@ -183,6 +195,7 @@ export default function AboutUs() {
           <p className="text-sm text-graydark">{props.description}</p>
          </div>
         </Link>
+        </Fade>
        ))}
       </div>
      </div>

@@ -1,4 +1,5 @@
-
+import { useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg"
 
 
@@ -57,11 +58,15 @@ const collapseList = [
 
 
 
+
 const Service = () => {
-     
-
-
+  useEffect(() => {
+    // Debugging: Log a message to check if the effect runs
+    console.log("Effect running...");
     
+    // Scroll to the top when component re-renders
+    window.scrollTo(0, 0);
+  }, []); 
 
     return (
      <div>
@@ -87,10 +92,14 @@ const Service = () => {
       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
+       <Fade triggerOnce={true} direction="up">
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
+
           MANAGEMENT CONSULTING
          </h1>
+         </Fade>
          {collapseList.map((props, index) => (
+            <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
             <Collapse
@@ -99,6 +108,7 @@ const Service = () => {
             />
            </div>
           </div>
+          </Fade>
          ))}
         </div>
        </div>
@@ -106,10 +116,16 @@ const Service = () => {
       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
+
+        <Fade triggerOnce={true} direction="up">
+       
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
+
           MANAGEMENT CONSULTING
          </h1>
+         </Fade>
          {collapseList.map((props, index) => (
+            <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
             <Collapse
@@ -118,6 +134,7 @@ const Service = () => {
             />
            </div>
           </div>
+          </Fade>
          ))}
         </div>
        </div>
@@ -125,10 +142,16 @@ const Service = () => {
       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
+
+        <Fade triggerOnce={true} direction="up">
+
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
+
           MANAGEMENT CONSULTING
          </h1>
+         </Fade>
          {collapseList.map((props, index) => (
+            <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
             <Collapse
@@ -137,17 +160,23 @@ const Service = () => {
             />
            </div>
           </div>
+          </Fade>
          ))}
         </div>
        </div>
-      </div>
-      <div className="">
+       <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
+
+        <Fade triggerOnce={true} direction="up">
+         
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
+
           MANAGEMENT CONSULTING
          </h1>
+         </Fade>
          {collapseList.map((props, index) => (
+            <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
             <Collapse
@@ -156,9 +185,11 @@ const Service = () => {
             />
            </div>
           </div>
+          </Fade>
          ))}
         </div>
        </div>
+      </div>
       </div>
      </div>
     );

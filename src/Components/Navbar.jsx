@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/img/logo.png";
 import Logodark from "../assets/img/logo-dark.png";
 
 const navlink = [
+
  {
   title: "HOME",
   to: "/",
@@ -54,41 +55,48 @@ const navlink = [
   title: "CONTACT",
   to: "/contact",
  },
+
 ];
 
 export default function Navbar() {
- const [isTop, setIsTop] = useState(true);
- const [showSubmenu, setShowSubmenu] = useState(false);
- const [currentSubmenuIndex, setCurrentSubmenuIndex] = useState(null);
- const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isTop, setIsTop] = useState(true);
+  const [showSubmenu, setShowSubmenu] = useState(false);
+  const [currentSubmenuIndex, setCurrentSubmenuIndex] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
- useEffect(() => {
-  const handleScroll = () => {
-   const scrollTop = window.scrollY;
-   setIsTop(scrollTop < 10);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsTop(scrollTop < 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Scroll to the top when the location changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const handleMouseEnter = (index) => {
+    if (navlink[index].subItems) {
+      setCurrentSubmenuIndex(index);
+      setShowSubmenu(true);
+    }
   };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-   window.removeEventListener("scroll", handleScroll);
+  const handleMouseLeave = () => {
+    setShowSubmenu(false);
+    setCurrentSubmenuIndex(null);
   };
- }, []);
 
- const handleMouseEnter = (index) => {
-  if (navlink[index].subItems) {
-   setCurrentSubmenuIndex(index);
-   setShowSubmenu(true);
-  }
- };
-
- const handleMouseLeave = () => {
-  setShowSubmenu(false);
-  setCurrentSubmenuIndex(null);
- };
-
- const toggleMobileMenu = () => {
-  setMobileMenuOpen(!mobileMenuOpen);
- };
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
  return (
    <div className="relative">
