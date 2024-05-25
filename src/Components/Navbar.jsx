@@ -77,10 +77,10 @@ export default function Navbar() {
     };
   }, []);
 
-  useEffect(() => {
-    // Scroll to the top when the location changes
-    window.scrollTo(0, 0);
-  }, [location]);
+  // useEffect(() => {
+  //   // Scroll to the top when the location changes
+  //   window.scrollTo(0, 0);
+  // }, [location]);
 
   const handleMouseEnter = (index) => {
     if (navlink[index].subItems) {

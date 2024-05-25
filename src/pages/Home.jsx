@@ -473,12 +473,12 @@ const productPortfolio = [
   },
 ];
 
-function App() {
+function Home() {
 
-  useEffect(() => {
-    console.log("Component re-rendered");
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   console.log("Component re-rendered");
+  //   window.scrollTo(0, 0);
+  // }, []);
 
 
  return (
@@ -626,10 +626,17 @@ function App() {
            </Link>
 
           </div>
+         ))}
         </div>
       </div>
+      </div>
+      </div>
+      </div>
+      </div>
+         
+         
     </>
   );
 }
 
-export default App;
+export default Home;
