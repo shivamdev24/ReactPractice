@@ -512,7 +512,7 @@ function Home() {
         <h1 className="text-lg md:text-2xl font-bold text-[#f44705]">
          INTELLIGENCE DRIVEN HEALTHCARE
         </h1>
-        <p className="mt-3 text-sm md:text-md text-justify mb-4 text-graylight">
+        <p className="mt-3 text-sm md:text-lg text-justify mb-4 text-graylight">
          Intellio is a healthcare solutions firm focused on providing global
          support that facilitates the governments and organizations in providing
          the best quality health at the most affordable cost. At Intellio, we
