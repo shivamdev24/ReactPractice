@@ -7,20 +7,16 @@ const { Option } = Select;
 
 const selectOptions = [
   {
-    title: "Hospital Medical Furniture",
-    path: "MedicalFurniture",
+    title: "Refurbished MRI Machines",
+    path: "Refurbished-MRI",
   },
   {
-    title: "Orthopaedic Implants & Instrument",
-    path: "ortho",
-  },
-  {
-    title: "Diagnostic Equipment & Products",
-    path: "diagno",
+    title: "Refurbished CT Machines",
+    path: "Refurbished-CT",
   },
 ];
 
-export default function LsSidebar() {
+export default function RefurbishedSidebar() {
   const location = useLocation();
   const [activePath, setActivePath] = useState();
 
