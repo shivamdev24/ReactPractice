@@ -1,32 +1,26 @@
 import { Select } from "antd";
+import React, { useState, useEffect } from "react";
 
-
-import { useEffect,  useState} from "react";
-
-
-import { NavLink, useLocation, useNavigate,Link } from "react-router-dom";
-
-
-
+import { Link, NavLink , useLocation} from "react-router-dom";
 
 const { Option } = Select;
 
 const selectOptions = [
   {
-    title: "Medical Disposables",
-    path: "medical-disposables",
+    title: "Linear Accelerator",
+    path: "Linear-Accelerator",
   },
   {
-    title: "Medical Rubber Products",
-    path: "rubber-products",
+    title: "Radiation Planning Software",
+    path: "Radiation-Planning-Software",
   },
   {
-    title: "Blood Collection Tubes",
-    path: "blood-collection",
-  },
+    title: "Radiation Safety Accessories",
+    path: "Radiation-Safety-Accessories",
+  }
 ];
 
-export default function MCSidebar() {
+export default function RefurbishedSidebar() {
   const location = useLocation();
   const [activePath, setActivePath] = useState();
 
@@ -38,8 +32,7 @@ export default function MCSidebar() {
     window.location.href = value;
   };
 
-
-    return (
+  return (
     <div>
       <div>
         <div className="hidden lg:block">
@@ -80,3 +73,5 @@ export default function MCSidebar() {
     </div>
   );
 }
+
+

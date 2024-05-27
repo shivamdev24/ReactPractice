@@ -37,17 +37,22 @@ const navlink = [
     ),
     subItems: [
       {
-        title: "Medical & Surgical Equipment",
-        to: "mseProduct",
+        title: "PSA Oxygen Plant",
+        to: "/PSA-Oxygen-Plant",
       },
       {
-        title: "Medical Consumables",
-        to: "/medical-consumables",
+        title: "Refurbished CT and MRI Machines",
+        to: "/Refurbished-CT-MRI-Machines",
       },
       {
-        title: "Laboratory Solutions",
-        to: "/Lab-Solutions",
+        title: "Software Solutions",
+        to: "/Software-Solutions",
       },
+      {
+        title: "Onco Radiations Products",
+        to: "/Onco-Radiations-Products",
+      }
+      
     ],
   },
   {

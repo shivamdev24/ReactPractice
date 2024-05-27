@@ -67,13 +67,13 @@ function Footer() {
             <Link className=" hover:text-orange duration-300" to="/">
               Home
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/">
+            <Link className=" hover:text-orange duration-300" to="/AboutUS">
               About Us
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/">
+            <Link className=" hover:text-orange duration-300" to="/Service">
               Service
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/">
+            <Link className=" hover:text-orange duration-300" to="/contact">
               Contact US
             </Link>
           </div>
@@ -83,14 +83,17 @@ function Footer() {
             Our Product Portfolio
           </h1>
           <div className="flex text-sm md:text-md flex-col gap-3">
-            <Link className=" hover:text-orange duration-300" to="/mse">
-              Medical & Surgical Equipment
+            <Link className=" hover:text-orange duration-300" to="/PSA-Oxygen-Plant">
+              PSA Oxygen Plant
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/medical-consumable">
-              Medical Consumables
+            <Link className=" hover:text-orange duration-300" to="/Refurbished-CT-MRI-Machines">
+            Refurbished-CT MRI Machines
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/Lab-solutions">
-              Laboratory Solutions
+            <Link className=" hover:text-orange duration-300" to="/Software-Solutions">
+              Software Solutions
+            </Link>
+            <Link className=" hover:text-orange duration-300" to="/Onco-Radiations-Products">
+            Onco Radiations Products
             </Link>
           </div>
         </div>

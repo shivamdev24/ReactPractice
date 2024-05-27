@@ -1,33 +1,7 @@
-import {Fade} from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { useEffect } from "react";
 
-const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollection/*.jpg", {
-    eager: true,
-  });
-  
-  const descriptions = [
-    "Serum Test Tubes",
-    "Serum Seperating Tubes",
-    "EDTA Blood Draw Tubes",
-    "Sodium Citrate Tubes",
-    "Lithium Heparin Tubes",
-    "ESR Vacuum Blood Tubes",
-    "Multi Sample Blood Collection Needles",
-    "Fluoride Oxalate Tubes",
-    "ESR Rack", 
-    "Safety Lancets Twist Off",
-    "Tourniquet"
-  ];
-  const sortedImages = Object.keys(images)
-    .sort((a, b) => parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]))
-    .map((key) => images[key].default);
-  
-  const imageArray = sortedImages.map((image, index) => ({
-    image: image,
-    description: descriptions[index],
-  }));
-  
-  function BloodCollection() {
+function HMS() {
     useEffect(() => {
       console.log("Component re-rendered");
       window.scrollTo(0, 0);
@@ -69,5 +43,5 @@ const images = import.meta.glob("../../../assets/img/MediConsumables/BloodCollec
     );
   }
   
-  export default BloodCollection;
+  export default HMS;
   

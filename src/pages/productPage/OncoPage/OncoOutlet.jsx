@@ -1,15 +1,10 @@
-import { Link, Outlet } from "react-router-dom"
-import MCSidebar from "./MCSidebar";
-import { useEffect } from "react";
-
+import { Link, Outlet } from "react-router-dom";
 import AboutImg from "../../../assets/img/AboutUs/AboutUs.jpg";
+import OncoSideBar from "./OncoSideBar";
 
 
-export default function MCOutlet() {
-  useEffect(() => {
-    console.log("Component re-rendered");
-    window.scrollTo(0, 0);
-  }, []);
+export default function ProductOutlet() {
+
 
   return (
     <div className="">
@@ -22,14 +17,12 @@ export default function MCOutlet() {
         />
         <div className="absolute top-48 left-[30px] md:left-[11rem]">
           <div className="flex gap-4 items-center font-bold text-white">
-            <span>Home</span>
+            <Link to="/">Home</Link>
             <hr className="h-4 w-[2px] bg-white" />
-            <Link to="/medical-consumables">Medical Consumables</Link>
+            <span>Onco Radiation Products</span>
           </div>
           <div className="mt-4">
-            <span className="text-6xl font-bold text-white">
-              MEDICAL CONSUMABLES
-            </span>
+            <span className="text-6xl font-bold text-white">ONCO RADIATIONS PRODUCTS</span>
           </div>
         </div>
       </div>
@@ -37,7 +30,7 @@ export default function MCOutlet() {
       <div className="flex justify-around my-5">
         <div className="w-[80%] flex flex-col lg:flex-row justify-around">
           <div className="">
-            <MCSidebar />
+            <OncoSideBar/>
           </div>
           <div className=" px-5">
             <Outlet />
