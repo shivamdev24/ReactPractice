@@ -185,7 +185,7 @@ export default function AboutUs() {
       </Fade>
       <div className="py-10 flex gap-6 flex-wrap items-center px-5 sm:px-0 justify-center">
        {AboutUsCards.map((props, index) => (
-        <Fade key={index} triggerOnce={true} direction="up">
+        <Fade key={index} triggerOnce={true} direction="left">
         <Link key={index} to={props.to}>
          <div className="w-96 flex flex-col items-center rounded hover:shadow-lg hover:scale-105 duration-500 gap-3 border bg-white text-darknavyblue hover:text-orange p-6  h-64">
           <span className="text-4xl border-4 rounded-md text-yellow-500">

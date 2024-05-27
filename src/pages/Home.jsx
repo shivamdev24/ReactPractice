@@ -473,17 +473,23 @@ const productPortfolio = [
   },
 ];
 
-function App() {
-  useEffect(() => {
+
+
+ 
+
+function Home() {
+ useEffect(() => {
     console.log("Component re-rendered");
     window.scrollTo(0, 0);
   }, []);
+ 
 
   return (
     <>
       <div className="">
         <SlideShow />
       </div>
+
 
       <div>
         <div className="relative ">
@@ -579,6 +585,7 @@ function App() {
                 </div>
               </div>
 
+
               <div className="flex flex-col py-20 justify-center px-5 items-center">
                 <Fade direction="up" triggerOnce="true">
                 <h2 className="lg:text-4xl text-2xl text-center font-bold text-orange">
@@ -646,9 +653,11 @@ function App() {
             </div>
           </div>
           </div>
+         ))}
         </div>
       </>
     );
   }
 
-export default App;
+
+export default Home;

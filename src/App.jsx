@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
@@ -18,6 +18,7 @@ import MaseProductPage from "./pages/productPage/mseProductPage/MaseProductPage"
 import MscProductPage from "./pages/productPage/medicalConsumablesPage/MscProductPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import ProductPortfolio from "./pages/ProductPortfolio";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         element: <AboutUs />,
       },
       {
+        path: "productPortfolio",
+        element: <ProductPortfolio />,
+      },
+      {
         path: "service",
         element: <Service />,
       },
@@ -45,11 +50,11 @@ const router = createBrowserRouter([
         element: <TermsConditions />,
       },
       {
-        path: "",
+        path: "mseProduct",
         element: <ProductOutlet />,
         children: [
           {
-            path: "mse",
+            path: "",
             element: <MaseProductPage />,
           },
           {
