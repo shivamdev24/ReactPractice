@@ -107,7 +107,7 @@ export default function Navbar() {
        className={`fixed w-full top-0 z-50 duration-500 ${
          isTop
            ? "bg-white text-graydark sm:mt-8 py-1 sm:pb-3"
-           : "text-graydark bg-white py-2 sm:py-5 shadow"
+           : "text-graydark bg-white py-2 sm:py-3 shadow"
        } ${mobileMenuOpen ? "text-darknavyblue " : ""}`}
      >
        <div className="flex md:justify-around justify-between px-6 py-2 items-center">
@@ -118,11 +118,7 @@ export default function Navbar() {
                className="w-32 sm:w-72"
                alt="Logo"
              />
-             {/* <img
-               src={isTop ? Logo : Logodark}
-               className="w-32 sm:w-72"
-               alt="Logo"
-             /> */}
+             
            </div>
          </Link>
          <div className="lg:hidden block">
@@ -143,7 +139,7 @@ export default function Navbar() {
            </svg>
          </div>
          <div className="hidden lg:block">
-           <div className="flex gap-2">
+           <div className="flex gap-2 pt-4">
              {navlink.map((item, index) => (
                <div
                  key={index}
