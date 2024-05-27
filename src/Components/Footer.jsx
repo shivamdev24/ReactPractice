@@ -83,13 +83,13 @@ function Footer() {
             Our Product Portfolio
           </h1>
           <div className="flex text-sm md:text-md flex-col gap-3">
-            <Link className=" hover:text-orange duration-300" to="/">
+            <Link className=" hover:text-orange duration-300" to="/mse">
               Medical & Surgical Equipment
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/">
+            <Link className=" hover:text-orange duration-300" to="/medical-consumable">
               Medical Consumables
             </Link>
-            <Link className=" hover:text-orange duration-300" to="/">
+            <Link className=" hover:text-orange duration-300" to="/Lab-solutions">
               Laboratory Solutions
             </Link>
           </div>

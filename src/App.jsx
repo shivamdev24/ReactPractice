@@ -80,7 +80,7 @@ const router = createBrowserRouter([
             element: <MscProductPage />,
           },
           {
-            path: "medical-pisposables",
+            path: "medical-disposables",
             element: <Disposables />,
           },
           {
