@@ -12,22 +12,22 @@ const SlideShow = () => {
     {
       number: "1 / 4",
       src: Img1,
-      caption: "INTELIGENCE DRIVEN HEALTH CARE",
+      caption: "Empowering ",
     },
     {
       number: "2 / 4",
       src: Img2,
-      caption: "SMART HEALTH CARE SOLUTIONS",
+      caption: "SHealthcare ",
     },
     {
       number: "3 / 4",
       src: Img3,
-      caption: "ITS ALL ABOUT HEALTH CARE SOLUTIONS",
+      caption: "Excellence",
     },
     {
       number: "4 / 4",
       src: Img4,
-      caption: "EFFCIENT. TRUSTED. COMMITTED.",
+      caption: "Capital Medical Solutions.",
     },
   ];
 
@@ -60,15 +60,17 @@ const SlideShow = () => {
               className="w-full md:h-[700px] h-[630px] object-cover"
             />
             <div className="text flex justify-center items-center lg:text-7xl text-3xl font-bold ">
-              <div className="w-64 text-orange md:w-full">
+              <div className="w-64 text-white md:w-full">
                 {slideIndex === index && (
-                  <Typewriter
-                    options={{
-                      strings: [slide.caption],
-                      autoStart: true,
-                      loop: false,
-                    }}
-                  />
+                  <h1>
+                    <Typewriter
+                      options={{
+                        strings: [slide.caption],
+                        autoStart: true,
+                        loop: false,
+                      }}
+                    />
+                  </h1>
                 )}
               </div>
             </div>

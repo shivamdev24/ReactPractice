@@ -426,7 +426,7 @@ function Home() {
                   </h2>
                 </Fade>
                 <Fade direction="up" triggerOnce="true">
-                  <p className="lg:text-lg mt-5  text-xs md:text-center md:w-[60%]  mx-auto text-justify font-bold text-black">
+                  <p className="lg:text-lg mt-5  text-sm md:text-center md:w-[60%] font-medium  mx-auto text-justify text-black">
                     To support healthcare professionals and healthcare units by
                     providing high-quality, reliable medical equipment that
                     meets the evolving needs of modern medicine. We are
@@ -468,7 +468,7 @@ function Home() {
                   </h2>
                 </Fade>
                 <Fade direction="up" triggerOnce="true">
-                  <p className="lg:text-lg mt-5  text-sm text-center  mx-auto font-bold text-black">
+                  <p className="lg:text-lg mt-5  text-sm text-center  mx-auto font-medium text-black">
                     At Shelves Tech, our core values guide every aspect of our
                     business:
                   </p>
@@ -551,7 +551,7 @@ function Home() {
                 </div>
               </div>
 
-              <div className=" relative bg-graypowderlight h-[28rem] ">
+              <div className=" relative hidden lg:block bg-graypowderlight h-[28rem] ">
                 <img
                   src={OurVisionBg}
                   className="h-[28rem] w-[100%] opacity-28 object-cover"
@@ -560,7 +560,7 @@ function Home() {
                 <span className="h-[28rem] w-[100%] absolute top-0 bg-black opacity-[.9]"></span>
 
 
-                <div className="flex absolute top-0 py-6 flex-col lg:flex-row items-center justify-between  p-4 gap-4 w-full ">
+                <div className="flex absolute  top-0 py-6 flex-col lg:flex-row items-center justify-between  p-4 gap-4 w-full ">
                   <Fade direction="left" triggerOnce="true">
                     <div className="flex h-96 flex-col  shadow-xl rounded-md bg-cream  py-2 justify-center items-center  text-graydark px-2">
                       <Fade direction="up" triggerOnce="true">
