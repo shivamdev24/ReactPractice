@@ -6,6 +6,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -22,10 +24,7 @@ const socialLink = [
     path: "/",
     icon: <FacebookIcon />,
   },
-  {
-    path: "/",
-    icon: <XIcon />,
-  },
+  
   {
     path: "/",
     icon: <InstagramIcon />,
@@ -33,6 +32,10 @@ const socialLink = [
   {
     path: "/",
     icon: <LinkedInIcon />,
+  },
+  {
+    path: "/",
+    icon: <WhatsAppIcon />,
   },
 ];
 
@@ -116,7 +119,7 @@ export default function Contact() {
               <div>
                 <a
                   href="mailto:mukesh.panchal@shelvestech.com"
-                  className="bg-red-600  text-center text-white py-2.5 px-3.5 rounded hover:text-red-500 duration-500"
+                  className="bg-red  text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverRed duration-500"
                 >
                   {" "}
                   Connect on Mail.{" "}
@@ -126,7 +129,7 @@ export default function Contact() {
                 <a
                   href="https://wa.me/"
                   target="_blank"
-                  className="bg-green-500  text-center text-white py-2.5 px-3.5 rounded hover:text-green-600 duration-500"
+                  className="bg-green  text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverGreen duration-500"
                 >
                   {" "}
                   Connect on Whatsapp{" "}
