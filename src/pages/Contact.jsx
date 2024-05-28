@@ -131,8 +131,8 @@ export default function Contact() {
             <h1 className="text-3xl font-bold">Get In Touch With Us.</h1>
           </div>
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <Fade direction="up" triggerOnce="true">
               <div>
+            <Fade direction="up" triggerOnce="true">
                 <label
                   htmlFor="first-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
@@ -149,10 +149,10 @@ export default function Contact() {
                     defaultValue={`First Name`}
                   />
                 </div>
-              </div>
             </Fade>
-            <Fade direction="up" triggerOnce="true">
+              </div>
               <div>
+            <Fade direction="up" triggerOnce="true">
                 <label
                   htmlFor="last-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
@@ -169,10 +169,10 @@ export default function Contact() {
                     defaultValue={`Last Name`}
                   />
                 </div>
-              </div>
             </Fade>
-            <Fade direction="up" triggerOnce="true">
+              </div>
               <div className="sm:col-span-2">
+            <Fade direction="up" triggerOnce="true">
                 <label
                   htmlFor="company"
                   className="block text-sm font-semibold leading-6 text-gray-900"
@@ -189,10 +189,10 @@ export default function Contact() {
                     defaultValue={`Your Organization`}
                   />
                 </div>
-              </div>
             </Fade>
-            <Fade direction="up" triggerOnce="true">
+              </div>
               <div className="sm:col-span-2">
+            <Fade direction="up" triggerOnce="true">
                 <label
                   htmlFor="email"
                   className="block text-sm font-semibold leading-6 text-gray-900"
@@ -209,10 +209,10 @@ export default function Contact() {
                     defaultValue={`your@mail.com`}
                   />
                 </div>
-              </div>
             </Fade>
-            <Fade direction="up" triggerOnce="true">
+              </div>
               <div className="sm:col-span-2">
+            <Fade direction="up" triggerOnce="true">
                 <label
                   htmlFor="phone-number"
                   className="block text-sm font-semibold leading-6 text-gray-900"
@@ -229,10 +229,10 @@ export default function Contact() {
                     defaultValue={`+91 0000000000`}
                   />
                 </div>
-              </div>
             </Fade>
-            <Fade direction="up" triggerOnce="true">
+              </div>
               <div className="sm:col-span-2">
+            <Fade direction="up" triggerOnce="true">
                 <label
                   htmlFor="message"
                   className="block text-sm font-semibold leading-6 text-gray-900"
@@ -253,7 +253,6 @@ Best regards,
 Your Name`}
                   />
                 </div>
-              </div>
               <Field as="div" className="flex gap-x-4 sm:col-span-2">
                 <Label className="text-sm leading-6 text-gray-600">
                   By Submitting this Form, you agree to our{" "}
@@ -264,17 +263,18 @@ Your Name`}
                 </Label>
               </Field>
             </Fade>
+              </div>
           </div>
-          <Fade direction="up" triggerOnce="true">
             <div className="mt-10">
+          <Fade direction="up" triggerOnce="true">
               <button
                 type="submit"
                 className="block w-full bg-orange rounded px-3.5 py-2.5 text-center text-sm font-semibold text-white hover:bg-orangeshade"
               >
                 Let's talk
               </button>
-            </div>
           </Fade>
+            </div>
         </form>
       </div>
     </div>
