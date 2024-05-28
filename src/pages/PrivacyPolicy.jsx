@@ -1,6 +1,6 @@
 
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
-
+import { Fade } from "react-awesome-reveal";
 
 
 export default function PrivacyPolicy() {
@@ -28,14 +28,19 @@ export default function PrivacyPolicy() {
       </div>
 
       <div className=" w-[80%] mx-auto leading-6 py-8 text-justify">
+        <Fade direction="up" triggerOnce="true" >
         <h1 className="text-orange text-2xl font-bold py-4 md:text-3xl">
           Privacy Policy
         </h1>
+        </Fade>
 
         <div className="my-4 flex flex-col gap-2 ">
+          <Fade direction="up" triggerOnce="true" >
           <h2 className="text-md md:text-xl text-orange font-semibold">
             Information Collection{" "}
           </h2>
+           </Fade>
+          <Fade direction="up" triggerOnce="true" >
           <p className="my-4 text-sm md:text-lg flex flex-col gap-2 text-graylight ml-8">
             <span>
               - We collect personal information, such as name, email address,
@@ -47,11 +52,15 @@ export default function PrivacyPolicy() {
               usage data, to improve our services.
             </span>
           </p>
+           </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true" >
           <h2 className="text-md md:text-xl text-orange font-semibold">
             Information Use
           </h2>
+           </Fade>
+          <Fade direction="up" triggerOnce="true" >
           <p className="my-4 text-sm md:text-lg flex flex-col gap-2 text-graylight ml-8">
             <span>
               - We use the information collected to process orders, communicate
@@ -62,11 +71,15 @@ export default function PrivacyPolicy() {
               without your consent, except as required by law.
             </span>
           </p>
+           </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true" >
           <h2 className="text-md md:text-xl text-orange font-semibold">
             Data Security{" "}
           </h2>
+           </Fade>
+          <Fade direction="up" triggerOnce="true" >
           <p className="my-4 text-sm md:text-lg flex flex-col gap-2 text-graylight ml-8">
             <span>
               - We implement security measures to protect your information from
@@ -78,26 +91,35 @@ export default function PrivacyPolicy() {
               data.
             </span>
           </p>
+           </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2 ">
+          <Fade direction="up" triggerOnce="true" >
           <h2 className="text-md md:text-xl text-orange font-semibold">
             Cookie Policy{" "}
           </h2>
+           </Fade>
+          <Fade direction="up" triggerOnce="true" >
           <p className="my-4 text-sm md:text-lg flex flex-col gap-2 text-graylight ml-8">
             - Our website may use cookies to enhance user experience and track
             website analytics. By using our website, you consent to the use of
             cookies.
           </p>
+           </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true" >
           <h2 className="text-md md:text-xl text-orange font-semibold">
             Updates to Privacy Policy{" "}
           </h2>
+           </Fade>
+          <Fade direction="up" triggerOnce="true" >
           <p className="my-4 text-sm md:text-lg flex flex-col gap-2 text-graylight ml-8">
             - We reserve the right to update our Privacy Policy periodically.
             Any changes will be posted on our website, and your continued use of
             our services constitutes acceptance of the updated policy.
           </p>
+           </Fade>
         </div>
       </div>
     </div>

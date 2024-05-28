@@ -1,6 +1,6 @@
 
 import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
-
+import { Fade } from "react-awesome-reveal";
 
 
 export default function TermsConditions() {
@@ -28,25 +28,35 @@ export default function TermsConditions() {
       </div>
 
       <div className=" w-[80%] mx-auto leading-6 py-8">
-        <h1 className="text-orange text-2xl font-bold py-4 md:text-3xl">
-          Terms and Conditions
-        </h1>
+        <Fade direction="up" triggerOnce="true">
+          <h1 className="text-orange text-2xl font-bold py-4 md:text-3xl">
+            Terms and Conditions
+          </h1>
+        </Fade>
 
         <div className="my-4 flex flex-col gap-2">
-          <h2 className="text-lg md:text-xl text-orange font-semibold">
-            Introduction{" "}
-          </h2>
-          <p className="text-graylight text-sm md:text-lg ml-8">
-            Welcome to Shelves Tech. These Terms and Conditions govern your use
-            of our website and services provided by Shelves Tech. By accessing
-            and using our website, you agree to comply with these Terms and
-            Conditions.
-          </p>
+          <Fade direction="up" triggerOnce="true">
+            <h2 className="text-lg md:text-xl text-orange font-semibold">
+              Introduction{" "}
+            </h2>
+          </Fade>
+          <Fade direction="up" triggerOnce="true">
+            <p className="text-graylight text-sm md:text-lg ml-8">
+              Welcome to Shelves Tech. These Terms and Conditions govern your
+              use of our website and services provided by Shelves Tech. By
+              accessing and using our website, you agree to comply with these
+              Terms and Conditions.
+            </p>
+          </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true">
+
           <h2 className="text-lg md:text-xl text-orange font-semibold">
             Products and Services{" "}
           </h2>
+        </Fade>
+          <Fade direction="up" triggerOnce="true">
           <p className="text-graylight text-sm md:text-lg ml-8">
             Shelves Tech specializes in the trading of medical equipment,
             including PSA oxygen plants, refurbished CT scan and MRI machines,
@@ -54,11 +64,15 @@ export default function TermsConditions() {
             to provide high-quality products and services to meet the needs of
             healthcare facilities.
           </p>
+          </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true">
           <h2 className="text-lg md:text-xl text-orange font-semibold">
             Ordering and Payment{" "}
           </h2>
+          </Fade>
+          <Fade direction="up" triggerOnce="true">
           <p className="my-4 flex flex-col text-sm md:text-lg gap-2 text-graylight ml-8">
             <span>
               - When you place an order through our website, you agree to
@@ -73,11 +87,15 @@ export default function TermsConditions() {
               notice.
             </span>
           </p>
+          </Fade>
         </div>
         <div className="my-4 flex flex-col gap-2 ">
+          <Fade direction="up" triggerOnce="true">
           <h2 className="text-lg md:text-xl text-orange font-semibold">
             Shipping and Delivery{" "}
           </h2>
+          </Fade>
+          <Fade direction="up" triggerOnce="true">
           <p className="my-4 flex flex-col text-sm md:text-lg gap-2 text-graylight ml-8">
             <span>
               - We aim to process and ship orders promptly, but delivery times
@@ -89,12 +107,14 @@ export default function TermsConditions() {
               information. Any additional fees incurred due to incorrect
               information will be the responsibility of the customer.
             </span>
-          </p>
+          </p></Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true">
           <h2 className="text-lg md:text-xl text-orange font-semibold">
             Returns and Refunds{" "}
-          </h2>
+          </h2></Fade>
+          <Fade direction="up" triggerOnce="true">
           <p className="my-4 flex flex-col gap-2 text-sm md:text-lg text-graylight ml-8">
             <span>
               - We accept returns of products within a specified return period,
@@ -104,12 +124,14 @@ export default function TermsConditions() {
               - Refunds will be issued in accordance with our Refund Policy,
               provided that returned products meet the specified criteria.
             </span>
-          </p>
+          </p></Fade>
         </div>
         <div className="my-4 flex flex-col gap-2">
+          <Fade direction="up" triggerOnce="true">
           <h2 className="text-lg md:text-xl text-orange font-semibold">
             Intellectual Property{" "}
-          </h2>
+          </h2></Fade>
+          <Fade direction="up" triggerOnce="true">
           <p className="my-4 flex flex-col gap-2 text-sm md:text-lg text-graylight ml-8">
             <span>
               - All content on our website, including text, images, logos, and
@@ -120,7 +142,7 @@ export default function TermsConditions() {
               - You may not use, reproduce, or distribute our content without
               prior written consent.
             </span>
-          </p>
+          </p></Fade>
         </div>
       </div>
     </div>
