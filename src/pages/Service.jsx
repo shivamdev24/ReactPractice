@@ -5,18 +5,16 @@ import AboutImg from "../assets/img/AboutUs/AboutUs.jpg"
 
 import { Collapse } from "antd";
 
-const collapseList = [
+const psaList = [
  {
   items: [
    {
     key: "1",
-    label: "This is panel header 1",
+    label: "Expert Technicians for PSA Oxygen Plant Servicing",
     children: (
      <p>
       {" "}
-      A dog is a type of domesticated animal. Known for its loyalty and
-      faithfulness, it can be found as a welcome guest in many households across
-      the world.
+      Our team of skilled technicians specializes in servicing PSA oxygen plants to ensure uninterrupted and efficient oxygen production
      </p>
     ),
    },
@@ -26,13 +24,12 @@ const collapseList = [
   items: [
    {
     key: "1",
-    label: "This is panel header 1",
+    label: "Comprehensive Maintenance Services",
     children: (
      <p>
       {" "}
-      A dog is a type of domesticated animal. Known for its loyalty and
-      faithfulness, it can be found as a welcome guest in many households across
-      the world.
+      We offer regular maintenance checks, calibration, and repair services to keep your oxygen plant operating at peak performance.
+
      </p>
     ),
    },
@@ -42,13 +39,11 @@ const collapseList = [
   items: [
    {
     key: "1",
-    label: "This is panel header 1",
+    label: "Reliable AMC and CMC Packages",
     children: (
      <p>
       {" "}
-      A dog is a type of domesticated animal. Known for its loyalty and
-      faithfulness, it can be found as a welcome guest in many households across
-      the world.
+      With our AMC and CMC packages, you can rest assured that your PSA oxygen plant is in safe hands
      </p>
     ),
    },
@@ -56,6 +51,95 @@ const collapseList = [
  },
 ];
 
+const ctList = [
+  {
+   items: [
+    {
+     key: "1",
+     label: "Ensuring Accurate Diagnostic Imaging",
+     children: (
+      <p>
+       {" "}
+       Our team of skilled technicians specializes in servicing PSA oxygen plants to ensure uninterrupted and efficient oxygen production
+      </p>
+     ),
+    },
+   ],
+  },
+  {
+   items: [
+    {
+     key: "1",
+     label: "Comprehensive CT Scan Maintenance",
+     children: (
+      <p>
+       {" "}
+       We offer regular maintenance checks, calibration, and repair services to keep your oxygen plant operating at peak performance.
+ 
+      </p>
+     ),
+    },
+   ],
+  },
+  {
+   items: [
+    {
+     key: "1",
+     label: "Reliable Maintenance Contracts",
+     children: (
+      <p>
+       {" "}
+       With our AMC and CMC packages, you can rest assured that your PSA oxygen plant is in safe hands
+      </p>
+     ),
+    },
+   ],
+  },
+ ];
+
+ const mriList = [
+  {
+   items: [
+    {
+     key: "1",
+     label: "Specialized MRI Care",
+     children: (
+      <p>
+       {" "}
+       Our team of skilled technicians specializes in servicing PSA oxygen plants to ensure uninterrupted and efficient oxygen production
+      </p>
+     ),
+    },
+   ],
+  },
+  {
+   items: [
+    {
+     key: "1",
+     label: "Comprehensive MRI Maintenance",
+     children: (
+      <p>
+       {" "}
+       We offer comprehensive maintenance services for MRI scan machines, including coil testing, magnet cooling system checks, and RF shield inspections. 
+      </p>
+     ),
+    },
+   ],
+  },
+  {
+   items: [
+    {
+     key: "1",
+     label: "Extend MRI Lifespan with AMC/CMC",
+     children: (
+      <p>
+       {" "}
+       Opt for our AMC or CMC services to prolong the lifespan of your MRI machine and avoid costly repairs.      </p>
+     ),
+    },
+   ],
+  },
+ ];
 
 
 
@@ -95,10 +179,10 @@ const Service = () => {
        <Fade triggerOnce={true} direction="up">
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
 
-          MANAGEMENT CONSULTING
+         PSA Oxygen Plant Maintenance
          </h1>
          </Fade>
-         {collapseList.map((props, index) => (
+         {psaList.map((props, index) => (
             <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
@@ -121,10 +205,10 @@ const Service = () => {
        
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
 
-          MANAGEMENT CONSULTING
+         CT Scan Machine Maintenance
          </h1>
          </Fade>
-         {collapseList.map((props, index) => (
+         {ctList.map((props, index) => (
             <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
@@ -147,10 +231,10 @@ const Service = () => {
 
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
 
-          MANAGEMENT CONSULTING
+         MRI Scan Machine Maintenance
          </h1>
          </Fade>
-         {collapseList.map((props, index) => (
+         {mriList.map((props, index) => (
             <Fade triggerOnce={true} direction="up">
           <div key={index}>
            <div>
@@ -167,26 +251,6 @@ const Service = () => {
        <div className="">
        <div className="flex  py-10  justify-around">
         <div className=" w-[80%]  flex flex-col gap-4">
-
-        <Fade triggerOnce={true} direction="up">
-         
-         <h1 className="mb-4 font-bold text-orange md:text-4xl">
-
-          MANAGEMENT CONSULTING
-         </h1>
-         </Fade>
-         {collapseList.map((props, index) => (
-            <Fade triggerOnce={true} direction="up">
-          <div key={index}>
-           <div>
-            <Collapse
-             items={props.items}
-             className="text-red-500 w-full border-none "
-            />
-           </div>
-          </div>
-          </Fade>
-         ))}
         </div>
        </div>
       </div>
