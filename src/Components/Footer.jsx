@@ -131,6 +131,7 @@ function Footer() {
             >
               Software Solutions
             </Link>
+
             <Link
               className=" hover:text-orange duration-300"
               to="/Onco-Radiations-Products"
@@ -149,6 +150,7 @@ function Footer() {
               to="/Lab-solutions"
             >
               Laboratory Solutions
+
             </Link>
           </div>
         </div>
