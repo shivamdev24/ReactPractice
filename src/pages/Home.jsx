@@ -569,7 +569,7 @@ function Home() {
                     <div className="flex h-96 flex-col  shadow-xl rounded-md bg-cream  py-2 justify-center items-center  text-graydark px-2">
                       <Fade direction="up" triggerOnce="true">
                         <h1 className="lg:text-3xl text-xl text-center text-orange font-bold ">
-                          Our Team
+                          Testimonials Demo
                         </h1>
                       </Fade>
 
@@ -577,14 +577,7 @@ function Home() {
                         <Fade direction="up" triggerOnce="true">
                           <div className="relative flex flex-col items-center  mx-auto py-6  rounded px-8   overflow-hidden scale-105 transition duration-500">
                             <p className="text-sm text-justify ">
-                              Our team comprises seasoned professionals with
-                              extensive experience in the medical equipment
-                              industry. From engineers and technicians to
-                              customer service specialists, each member of our
-                              team is dedicated to ensuring you receive the best
-                              products and support. We work closely with leading
-                              manufacturers and industry experts to stay ahead
-                              of the curve and bring you the latest innovations.
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cumque illo voluptas laboriosam dignissimos saepe molestias vero tempora ea possimus.
                             </p>
                           </div>
                         </Fade>
@@ -595,7 +588,7 @@ function Home() {
                     <div className="flex flex-col  shadow-xl rounded-md bg-cream  h-96  py-5  justify-center items-center   ">
                       <Fade direction="up" triggerOnce="true">
                         <h1 className="lg:text-2xl mx-auto  w-[80%] text-xl text-center font-bold text-orange ">
-                          Join Us on Our Journey
+                         Testimonial demo2
                         </h1>
                       </Fade>
 
@@ -603,12 +596,7 @@ function Home() {
                         <Fade direction="up" triggerOnce="true">
                           <div className="relative flex flex-col items-center  mx-auto py-6  px-8   overflow-hidden scale-105 transition duration-500">
                             <p className="text-sm text-justify ">
-                              At ShelvesTech, we are more than just a supplier;
-                              we are your partner in healthcare innovation. We
-                              invite you to join us on our journey to enhance
-                              healthcare and improve patient outcomes. Together,
-                              we can make a significant impact on the health and
-                              well-being of communities worldwide.
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at pariatur quos recusandae repudiandae ratione nam, earum officia ipsum eveniet quidem sequi, possimus fugit commodi distinctio error sapiente, ut quis!
                             </p>
                           </div>
                         </Fade>
@@ -619,7 +607,7 @@ function Home() {
                     <div className="flex flex-col shadow-xl  bg-cream rounded-md h-96 py-5  justify-center   items-center ">
                       <Fade direction="up" triggerOnce="true">
                         <h1 className="lg:text-2xl text-xl text-center font-bold text-orange">
-                          Global Reach, Local Touch
+                          Testimonial demo3
                         </h1>
                       </Fade>
 
@@ -627,14 +615,7 @@ function Home() {
                         <Fade direction="up" triggerOnce="true">
                           <div className="relative flex flex-col items-center  mx-auto py-8   rounded px-10   overflow-hidden scale-105 transition duration-500">
                             <p className="text-sm text-justify text-black">
-                              While we serve clients around the globe, we
-                              understand the importance of a personalized
-                              approach. We take the time to understand your
-                              specific needs and provide tailored solutions that
-                              fit your unique requirements. Our global network
-                              of partners and distributors ensures that we can
-                              deliver our products and services efficiently and
-                              effectively, no matter where you are.
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis laudantium quae ab deleniti suscipit qui, impedit, nobis labore magnam voluptatem doloribus ut veritatis tempore optio molestias corrupti rem tenetur consequuntur at quibusdam aspernatur minima? Possimus nisi nobis consequatur voluptatem.
                             </p>
                           </div>
                         </Fade>
