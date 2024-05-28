@@ -96,19 +96,6 @@ function Footer() {
             </Link>
             <Link className=" hover:text-orange duration-300" to="/Onco-Radiations-Products">
             Onco Radiations Products
-
-            <Link
-              className=" hover:text-orange duration-300"
-              to="/medical-consumable"
-            >
-              Medical Consumables
-            </Link>
-            <Link
-              className=" hover:text-orange duration-300"
-              to="/Lab-solutions"
-            >
-              Laboratory Solutions
-
             </Link>
           </div>
         </div>

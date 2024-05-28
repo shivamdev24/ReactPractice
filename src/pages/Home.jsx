@@ -204,6 +204,7 @@ const OurProductsandServices = [
         />
       </svg>
     ),
+    link: "/PSA-Oxygen-Plant"
   },
   {
     title: "Refurbished CT and MRI Machines",
@@ -228,6 +229,7 @@ const OurProductsandServices = [
         />
       </svg>
     ),
+    link: "/Refurbished-CT-MRI-Machines"
   },
   {
     title: "Hospital Management Software",
@@ -247,6 +249,7 @@ const OurProductsandServices = [
         />
       </svg>
     ),
+    link: "/Software-Solutions"
   },
   {
     title: "Onco Radiation Products",
@@ -266,6 +269,7 @@ const OurProductsandServices = [
         />
       </svg>
     ),
+    link: "/Onco-Radiations-Products"
   },
 ];
 const WhyChooseUs = [
@@ -510,7 +514,7 @@ function Home() {
 
                 <div className="flex mt-10 flex-col lg:flex-row px-5 gap-4">
                   {OurProductsandServices.map((props, index) => (
-                    <Link to="/" key={index}>
+                    <Link to={props.link} key={index}>
                       <Fade direction="up" triggerOnce="true">
                         <div className="relative flex flex-col items-center w-80 py-6 bg-white rounded-lg border hover:shadow-md overflow-hidden hover:scale-105 hover:text-orange transition duration-500">
                           <span className="border-2 p-2 rounded-md">
