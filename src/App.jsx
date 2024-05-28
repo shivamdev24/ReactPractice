@@ -5,20 +5,25 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
-import LaboratorySolutions from "./pages/LaboratorySolutions";
-import ProductOutlet from "./pages/productPage/mseProductPage/ProductOutlet";
-import ProductOnePage from "./pages/productPage/mseProductPage/ProductOnePage";
-import MCOutlet from "./pages/productPage/medicalConsumablesPage/MCOutlet";
-import Disposables from "./pages/productPage/medicalConsumablesPage/Disposables";
-import RubberProducts from "./pages/productPage/medicalConsumablesPage/RubberProducts";
-import BloodCollection from "./pages/productPage/medicalConsumablesPage/BloodCollection";
-import Ortho from "./pages/productPage/mseProductPage/Ortho";
-import Diagno from "./pages/productPage/mseProductPage/Diagno";
-import MaseProductPage from "./pages/productPage/mseProductPage/MaseProductPage";
-import MscProductPage from "./pages/productPage/medicalConsumablesPage/MscProductPage";
+import ProductOutlet from "./pages/productPage/Refurbished-MRI-CT-Page/ProductOutlet";
+import SSOutlet from "./pages/productPage/SoftwareSolutionsPage/SSOutlet";
+import HMS from "./pages/productPage/SoftwareSolutionsPage/HMS";
+import EHR from "./pages/productPage/SoftwareSolutionsPage/EHR";
+import MedicalBilling from "./pages/productPage/SoftwareSolutionsPage/MedicalBilling";
+import RefurbishedMRI from "./pages/productPage/Refurbished-MRI-CT-Page/RefurbishedMRI";
+import MRI_CTProductPage from "./pages/productPage/Refurbished-MRI-CT-Page/MRI_CTProductPage";
+import SSProductPage from "./pages/productPage/SoftwareSolutionsPage/SSProductPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import ProductPortfolio from "./pages/ProductPortfolio";
+import PSA from "./pages/productPage/PSAOxygenPlant/PSA";
+import RefurbishedCT from "./pages/productPage/Refurbished-MRI-CT-Page/RefurbishedCT";
+import Telemedicine from "./pages/productPage/SoftwareSolutionsPage/Telemedicine";
+import RadiationSafety from "./pages/productPage/OncoPage/RadiationSafety";
+import RadiationPlanning from "./pages/productPage/OncoPage/RadiationPlanning";
+import LinearAccelerator from "./pages/productPage/OncoPage/LinearAccelator";
+import OncoProductPage from "./pages/productPage/OncoPage/OncoProductPage";
+import OncoOutlet from "./pages/productPage/OncoPage/OncoOutlet";
 
 const router = createBrowserRouter([
   {
@@ -50,52 +55,74 @@ const router = createBrowserRouter([
         element: <TermsConditions />,
       },
       {
-        path: "mseProduct",
+        path: "Refurbished-CT-MRI-Machines",
         element: <ProductOutlet />,
         children: [
           {
             path: "",
-            element: <MaseProductPage />,
+            element: <MRI_CTProductPage/>,
           },
           {
-            path: "MedicalFurniture",
-            element: <ProductOnePage />,
+            path: "Refurbished-CT",
+            element: <RefurbishedCT/>,
           },
           {
-            path: "ortho",
-            element: <Ortho />,
-          },
-          {
-            path: "diagno",
-            element: <Diagno />,
+            path: "Refurbished-MRI",
+            element: <RefurbishedMRI/>,
           },
         ],
       },
       {
-        path: "medical-consumables",
-        element: <MCOutlet />,
+        path: "Software-Solutions",
+        element: <SSOutlet />,
         children: [
           {
             path: "",
-            element: <MscProductPage />,
+            element: <SSProductPage />,
           },
           {
-            path: "medical-disposables",
-            element: <Disposables />,
+            path: "Hospital-Management-System",
+            element: <HMS />,
           },
           {
-            path: "rubber-products",
-            element: <RubberProducts />,
+            path: "Electronic-Health-Records",
+            element: <EHR/>,
           },
           {
-            path: "blood-collection",
-            element: <BloodCollection />,
+            path: "Medical-Billing",
+            element: <MedicalBilling />,
           },
+          {
+            path: "Telemedicine",
+            element: <Telemedicine />,
+          }
         ],
       },
       {
-        path: "Lab-Solutions",
-        element: <LaboratorySolutions />,
+        path: "Onco-Radiations-Products",
+        element: <OncoOutlet />,
+        children: [
+          {
+            path: "",
+            element: <OncoProductPage />,
+          },
+          {
+            path: "Linear-Accelerator",
+            element: <LinearAccelerator />,
+          },
+          {
+            path: "Radiation-Planning-Software",
+            element: <RadiationPlanning />,
+          },
+          {
+            path: "Radiation-Safety-Accessories",
+            element: <RadiationSafety />,
+          }
+        ]
+      },
+      {
+        path: "PSA-Oxygen-Plant",
+        element: <PSA />,
       },
       {
         path: "contact",
