@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import AboutImg from "../../../assets/img/AboutUs/AboutUs.jpg";
+import OncoImg from "../../../assets/Image/MRI.jpg";
 import OncoSideBar from "./OncoSideBar";
 
 
@@ -11,8 +11,8 @@ export default function ProductOutlet() {
       <div className="relative">
         <div className="overlay h-[29rem] opacity-[.6] bg-graydark absolute w-full "></div>
         <img
-          src={AboutImg}
-          className="h-[29rem] object-top w-full object-cover  "
+          src={OncoImg}
+          className="h-[29rem] object-center w-full object-cover  "
           alt=""
         />
         <div className="absolute top-48 left-[30px] md:left-[11rem]">
@@ -22,7 +22,9 @@ export default function ProductOutlet() {
             <span>Onco Radiation Products</span>
           </div>
           <div className="mt-4">
-            <span className="text-6xl font-bold text-white">ONCO RADIATIONS PRODUCTS</span>
+            <span className="text-6xl font-bold text-white">
+              ONCO RADIATIONS PRODUCTS
+            </span>
           </div>
         </div>
       </div>
@@ -30,7 +32,7 @@ export default function ProductOutlet() {
       <div className="flex justify-around my-5">
         <div className="w-[80%] flex flex-col lg:flex-row justify-around">
           <div className="">
-            <OncoSideBar/>
+            <OncoSideBar />
           </div>
           <div className=" px-5">
             <Outlet />

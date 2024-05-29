@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom"
 import SSSidebar from "./SSSidebar";
 import { useEffect } from "react";
 
-import AboutImg from "../../../assets/img/AboutUs/AboutUs.jpg";
+import SSPIMG from "../../../assets/Image/ourVisionbg.jpg";
 
 
 export default function SSOutlet() {
@@ -11,7 +11,7 @@ export default function SSOutlet() {
       <div className="relative">
         <div className="overlay h-[29rem] opacity-[.6] bg-graydark absolute w-full "></div>
         <img
-          src={AboutImg}
+          src={SSPIMG}
           className="h-[29rem] object-top w-full object-cover  "
           alt=""
         />

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
-import AboutImg from "../assets/img/AboutUs/AboutUs.jpg"
+import AboutImg from "../assets/Image/MRI.jpg"
 
 
 import { Collapse } from "antd";
@@ -155,11 +155,11 @@ const Service = () => {
     return (
      <div>
       <div className="relative mb-8">
-       <div className="overlay h-[29rem] opacity-[.6] bg-graydark absolute w-full "></div>
+       <div className="overlay h-[35rem] opacity-[.6] bg-graydark absolute w-full "></div>
        <img
         src={AboutImg}
-        className="h-[29rem] object-top w-full object-cover  "
-        alt=""
+        className="h-[35rem] object-top w-full object-cover  "
+        alt="MRI"
        />
        <div className="absolute top-48 left-[30px] md:left-[11rem]">
         <div className="flex gap-4 items-center font-bold text-white">

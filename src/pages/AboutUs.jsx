@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import AboutImg from "../assets/img/AboutUs/AboutUs.jpg";
+import AboutImg from "../assets/Image/ourVisionbg.jpg";
 import { Fade } from "react-awesome-reveal";
 import { useEffect } from "react";
 
@@ -13,10 +13,10 @@ export default function AboutUs() {
     <div>
       <div>
         <div className="relative">
-          <div className="overlay h-[29rem] opacity-[.6] bg-graydark absolute w-full "></div>
+          <div className="overlay h-[35rem] opacity-[.6] bg-graydark absolute w-full "></div>
           <img
             src={AboutImg}
-            className="h-[29rem] object-top w-full object-cover  "
+            className="h-[35rem] object-top w-full object-cover  "
             alt=""
           />
           <div className="absolute top-48 left-[30px] md:left-[11rem]">
@@ -152,7 +152,7 @@ export default function AboutUs() {
 
           <div className="md:w-[80%] mx-auto  w-full flex flex-col gap-4 md:gap-8">
             <Fade direction="up" triggerOnce="true">
-              <h1 className="text-ornage md:text-4xl text-xl  font-bold">
+              <h1 className="text-orange md:text-4xl text-xl  font-bold">
                 Our Core Values
               </h1>
             </Fade>

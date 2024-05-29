@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import AboutImg from "../../../assets/img/AboutUs/AboutUs.jpg";
+import AboutImg from "../../../assets/Image/MRI.jpg";
 import RefurbishedSidebar from "./RefurbishedSidebar";
 
 
