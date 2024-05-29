@@ -1,359 +1,111 @@
-/* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
 
-import OT from "../assets/img/ot.jpg";
-import MC from "../assets/img/mc.jpg";
-import Lab from "../assets/img/lab.jpg";
-import SlideShow from "../Components/components/SlideShow/SlideShow";
+import { Link } from "react-router-dom";
+import img1 from "../assets/Image/STImages/1.png"
+import img2 from "../assets/Image/STImages/2.png"
+import img3 from "../assets/Image/STImages/3.png"
+import img4 from "../assets/Image/STImages/4.png"
+import img5 from "../assets/Image/STImages/5.png"
+import img6 from "../assets/Image/STImages/6.png"
+import img7 from "../assets/Image/STImages/7.png"
+import img8 from "../assets/Image/STImages/8.png"
+import img9 from "../assets/Image/STImages/9.png"
+import img10 from "../assets/Image/STImages/10.png"
+
+// import SlideShow from "../Components/components/SlideShow/SlideShow";
 import { Fade } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 
-import OurVisionBg from "../assets/img/ourVisionbg.jpg";
+import CTSmachine from "/src/assets/Image/CTScanMachine.jpg";
+import OurVision from "../assets/Image/ourVisionbg.jpg";
+import PSAOxygen from "../assets/Image/PSAOxygen.jpeg";
+import MRI from "../assets/Image/MRI.jpg";
+import LinearAccelerator from "../assets/Image/LinearAccelerator.jpg";
+import HeroSection from "../Components/components/hero/HeroSection";
 
 const OurMission = [
   {
     title: "Quality",
     text: "Ensuring that every product we offer meets the highest standards of performance and safety.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg>
-    ),
+    Icon: img1,
   },
   {
     title: "Innovation",
     text: "Continually updating our inventory with the latest advancements in medical technology.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
-        />
-      </svg>
-    ),
+    Icon: img2,
   },
   {
     title: "Service",
     text: "Providing exceptional customer support and technical assistance to maximize the value of your investment.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-        />
-      </svg>
-    ),
+    Icon: img3,
   },
   {
     title: "Affordability",
     text: "Offering competitive pricing and flexible financing options to make top-tier equipment accessible to all.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-        />
-      </svg>
-    ),
+    Icon: img9,
   },
 ];
 const OurCoreValues = [
   {
     title: "Integrity",
     text: "We conduct our business with honesty, transparency, and respect for our clients and partners.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg>
-    ),
+    Icon: img7,
   },
   {
     title: "Excellence",
     text: "We strive for excellence in everything we do, from product selection to customer service.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
-        />
-      </svg>
-    ),
+    Icon: img8,
   },
   {
     title: "Collaboration",
     text: "We believe in building strong, long-lasting relationships with our clients, partners, and the medical community.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-        />
-      </svg>
-    ),
+    Icon: img6,
   },
   {
     title: "Innovation",
     text: "We are committed to staying at the forefront of medical technology to provide the best solutions for our clients.",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-        />
-      </svg>
-    ),
+    Icon: img2,
   },
 ];
 const OurProductsandServices = [
   {
     title: "PSA Oxygen Plants",
 
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg>
-    ),
-    link: "/PSA-Oxygen-Plant"
+    Icon: PSAOxygen,
+    link: "/PSA-Oxygen-Plant",
   },
   {
     title: "Refurbished CT and MRI Machines",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
-        />
-      </svg>
-    ),
-    link: "/Refurbished-CT-MRI-Machines"
+    Icon: MRI,
+    link: "/Refurbished-CT-MRI-Machines",
   },
   {
     title: "Hospital Management Software",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-        />
-      </svg>
-    ),
-    link: "/Software-Solutions"
+    Icon: OurVision,
+    link: "/Software-Solutions",
   },
   {
     title: "Onco Radiation Products",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-        />
-      </svg>
-    ),
-    link: "/Onco-Radiations-Products"
+    Icon: LinearAccelerator,
+    link: "/Onco-Radiations-Products",
   },
 ];
 const WhyChooseUs = [
   {
     title: "Quality Assurance",
 
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg>
-    ),
+    Icon: img8,
   },
   {
     title: "Cost-Effective Solutions",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
-        />
-      </svg>
-    ),
+    Icon: img9,
   },
   {
     title: "Technical Support and Maintenance",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-        />
-      </svg>
-    ),
+    Icon: img3,
   },
   {
     title: "Customized Solutions",
-    Icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-20 h-20"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-        />
-      </svg>
-    ),
+    Icon: img4,
   },
 ];
 
@@ -369,7 +121,8 @@ function Home() {
   return (
     <>
       <div className="">
-        <SlideShow />
+        {/* <SlideShow /> */}
+        <HeroSection />
       </div>
 
       <div>
@@ -395,8 +148,8 @@ function Home() {
 
             <div className="flex relative justify-between w-full lg:justify-around">
               <img
-                src={OurVisionBg}
-                className="h-[26rem] w-[100%] opacity-28 object-cover"
+                src={CTSmachine}
+                className="h-[26rem] w-[100%] opacity-28  object-cover"
                 alt=""
               />
               <span className="h-[26rem] w-[100%] absolute top-0 bg-black opacity-[.9]"></span>
@@ -441,21 +194,28 @@ function Home() {
                   {OurMission.map((props, index) => (
                     <Link to="/" key={index}>
                       <Fade direction="up" triggerOnce="true">
-                        <div className="relative flex flex-col items-center w-80 py-6 bg-orange rounded-lg border hover:shadow-md overflow-hidden hover:scale-105 hover:text-white transition duration-500">
+                        <div className="relative flex flex-col items-center w-80 py-8 bg-orange rounded-lg border border-orange hover:shadow-md overflow-hidden hover:scale-105 hover:text-white transition duration-500">
                           <div className="flex items-center justify-center w-80 bg-white h-[16rem] flex-col transform hover:opacity-0 absolute top-0 duration-500">
-                            <span className="border-2 p-2 rounded-md">
-                              {props.Icon}
+                            <span className="">
+                              <img
+                                src={props.Icon}
+                                alt="img"
+                                className="w-36 "
+                              />
                             </span>
-                            <span className="mt-4 text-sm font-medium text-center">
+                            <span className=" text-xl text-orange font-medium text-center">
                               {props.title}
                             </span>
                           </div>
                           <div className="overflow-hidden w-[20rem]  top-0 h-[12rem]   ">
-                            <p className="text-lg text-center px-5 py-10 flex flex-col">
-                              <span className="text-xl font-bold">
+                            <p className=" text-center px-5  py-10 flex flex-col">
+                              <span className="text-2xl font-bold">
                                 {props.title}
                               </span>
-                              <span>{props.text}</span>
+                              <span className="text-justify">
+                                {" "}
+                                {props.text}
+                              </span>
                             </p>
                           </div>
                         </div>
@@ -481,21 +241,25 @@ function Home() {
                   {OurCoreValues.map((props, index) => (
                     <Link to="/" key={index}>
                       <Fade direction="up" triggerOnce="true">
-                        <div className="relative flex flex-col items-center w-80 py-6 bg-orange rounded-lg border hover:shadow-md overflow-hidden hover:scale-105 hover:text-white transition duration-500">
+                        <div className="relative flex flex-col items-center w-80 py-8 bg-orange rounded-lg border border-orange hover:shadow-md overflow-hidden hover:scale-105 hover:text-white transition duration-500">
                           <div className="flex items-center justify-center w-80 bg-white h-[16rem] flex-col transform hover:opacity-0 absolute top-0 duration-500">
-                            <span className="border-2 p-2 rounded-md">
-                              {props.Icon}
+                            <span className="">
+                              <img
+                                src={props.Icon}
+                                alt="img"
+                                className="w-36 "
+                              />
                             </span>
-                            <span className="mt-4 text-sm font-medium text-center">
+                            <span className="text-xl text-orange font-medium text-center">
                               {props.title}
                             </span>
                           </div>
                           <div className="overflow-hidden w-[20rem]  top-0 h-[12rem]   ">
-                            <p className="text-lg text-center px-5 py-10 flex flex-col">
-                              <span className="text-xl font-bold">
+                            <p className=" text-center px-5 py-10 flex flex-col">
+                              <span className="text-2xl font-bold">
                                 {props.title}
                               </span>
-                              <span>{props.text}</span>
+                              <span className="text-justify">{props.text}</span>
                             </p>
                           </div>
                         </div>
@@ -516,11 +280,15 @@ function Home() {
                   {OurProductsandServices.map((props, index) => (
                     <Link to={props.link} key={index}>
                       <Fade direction="up" triggerOnce="true">
-                        <div className="relative flex flex-col items-center w-80 py-6 bg-white rounded-lg border hover:shadow-md overflow-hidden hover:scale-105 hover:text-orange transition duration-500">
-                          <span className="border-2 p-2 rounded-md">
-                            {props.Icon}
+                        <div className="relative flex flex-col items-center w-80 h-80  bg-white rounded-lg  hover:shadow-md overflow-hidden hover:scale-105 hover:text-orange transition duration-500">
+                          <span className=" w-80 h-72">
+                            <img
+                              src={props.Icon}
+                              alt="img"
+                              className="w-80 h-64 rounded object-cover"
+                            />
                           </span>
-                          <span className="mt-4 text-md font-medium text-center">
+                          <span className="text-xl text-orange font-medium text-center">
                             {props.title}
                           </span>
                         </div>
@@ -541,11 +309,11 @@ function Home() {
                   {WhyChooseUs.map((props, index) => (
                     <Link to="/" key={index}>
                       <Fade direction="up" triggerOnce="true">
-                        <div className="relative flex flex-col items-center w-80 py-6 bg-white rounded-lg border hover:shadow-md overflow-hidden hover:scale-105 hover:text-orange transition duration-500">
-                          <span className="border-2 p-2 rounded-md">
-                            {props.Icon}
+                        <div className="relative flex flex-col items-center w-80 py-8 bg-white rounded-lg border border-orange hover:shadow-md overflow-hidden hover:scale-105 hover:text-orange transition duration-500">
+                          <span className="">
+                            <img src={props.Icon} alt="img" className="w-36 " />
                           </span>
-                          <span className="mt-4 text-md font-medium text-center">
+                          <span className="text-lg text-orange font-medium text-center">
                             {props.title}
                           </span>
                         </div>
@@ -557,14 +325,13 @@ function Home() {
 
               <div className=" relative hidden lg:block bg-graypowderlight h-[28rem] ">
                 <img
-                  src={OurVisionBg}
+                  src={OurVision}
                   className="h-[28rem] w-[100%] opacity-28 object-cover"
                   alt=""
                 />
                 <span className="h-[28rem] w-[100%] absolute top-0 bg-black opacity-[.9]"></span>
 
-
-                <div className="flex absolute  top-0 py-6 flex-col lg:flex-row items-center justify-between  p-4 gap-4 w-full ">
+                <div className="flex absolute left-[30%] w-[40%] mx-auto top-0 py-6 flex-col lg:flex-row items-center justify-between  p-4 gap-4 w-full ">
                   <Fade direction="left" triggerOnce="true">
                     <div className="flex h-96 flex-col  shadow-xl rounded-md bg-cream  py-2 justify-center items-center  text-graydark px-2">
                       <Fade direction="up" triggerOnce="true">
@@ -577,14 +344,17 @@ function Home() {
                         <Fade direction="up" triggerOnce="true">
                           <div className="relative flex flex-col items-center  mx-auto py-6  rounded px-8   overflow-hidden scale-105 transition duration-500">
                             <p className="text-sm text-justify ">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cumque illo voluptas laboriosam dignissimos saepe molestias vero tempora ea possimus.
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Neque cumque illo voluptas
+                              laboriosam dignissimos saepe molestias vero
+                              tempora ea possimus.
                             </p>
                           </div>
                         </Fade>
                       </div>
                     </div>
                   </Fade>
-                  <Fade direction="down" triggerOnce="true">
+                  {/* <Fade direction="down" triggerOnce="true">
                     <div className="flex flex-col  shadow-xl rounded-md bg-cream  h-96  py-5  justify-center items-center   ">
                       <Fade direction="up" triggerOnce="true">
                         <h1 className="lg:text-2xl mx-auto  w-[80%] text-xl text-center font-bold text-orange ">
@@ -621,7 +391,7 @@ function Home() {
                         </Fade>
                       </div>
                     </div>
-                  </Fade>
+                  </Fade> */}
                 </div>
               </div>
             </div>
