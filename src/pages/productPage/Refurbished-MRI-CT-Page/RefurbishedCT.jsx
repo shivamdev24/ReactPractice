@@ -4,13 +4,6 @@ import CTScanMachine from "../../../assets/Image/CTScanMachine.jpg"
 function RefurbishedCT() {
   return (
     <>
-      <Fade direction="up" triggerOnce="true">
-        <img
-          src={CTScanMachine}
-          className="w-full h-[30rem] object-cover"
-          alt="CT Scan Machine"
-        />
-      </Fade>
       <div className="flex flex-col items-center justify-center min-h-screen p-5">
         <div className="w-full max-w-7xl mx-auto">
           <Fade triggerOnce direction="up">
@@ -18,7 +11,7 @@ function RefurbishedCT() {
               <h2 className="text-3xl font-bold text-orange">
                 About Refurbished CT Scan Machines
               </h2>
-              <p className="mt-2 text-base">
+              <p className="mt-2 ml-4 text-base">
                 At Shelves Tech we deal in refurbished or pre-owned CT Scan
                 Machines. We specialize in providing high-quality refurbished CT
                 scanner equipment to medical facilities, hospitals, clinics, and
@@ -29,42 +22,53 @@ function RefurbishedCT() {
               </p>
             </div>
           </Fade>
+          <Fade direction="up" triggerOnce="true">
+            <img
+              src={CTScanMachine}
+              className="w-full h-[30rem] rounded-md object-cover"
+              alt="CT Scan Machine"
+            />
+          </Fade>
           <Fade triggerOnce direction="up">
-            <div className="mb-8">
+            <div className="my-8">
               <h2 className="text-3xl font-bold text-orange">
                 Why Choose Refurbished CT Scan Machines
               </h2>
               <div className="mt-2 text-base">
-                <h3 className="text-2xl font-bold mt-4">
+                <h3 className="text-2xl ml-4 font-bold mt-4">
                   1. Quality Assurance
                 </h3>
-                <p className="mt-2">
+                <p className="mt-2 ml-10">
                   Our team of experienced technicians carefully inspects,
                   refurbishes, and tests each CT scanner to ensure that it meets
                   the highest quality standards. We stand behind the quality of
                   our machines and offer warranty and service packages to
                   provide you with peace of mind.
                 </p>
-                <h3 className="text-2xl font-bold mt-4">
+                <h3 className="text-2xl ml-4 font-bold mt-4">
                   2. Cost-Effectiveness
                 </h3>
-                <p className="mt-2">
+                <p className="mt-2 ml-10">
                   Purchasing a refurbished CT scanner can offer significant cost
                   savings compared to buying new equipment. Our refurbished
                   machines are priced competitively without compromising on
                   performance or image quality, allowing you to upgrade your
                   imaging capabilities within your budget.
                 </p>
-                <h3 className="text-2xl font-bold mt-4">3. Wide Selection</h3>
-                <p className="mt-2">
+                <h3 className="text-2xl ml-4 font-bold mt-4">
+                  3. Wide Selection
+                </h3>
+                <p className="mt-2 ml-10">
                   We carry a diverse range of refurbished CT scan machines from
                   leading manufacturers, including GE, Siemens, Philips,
                   Toshiba, and more. Whether you are looking for a 4-slice,
                   16-slice, 64-slice, or even higher slice count CT scanner, we
                   have options to suit your specific clinical needs.
                 </p>
-                <h3 className="text-2xl font-bold mt-4">4. Expert Support</h3>
-                <p className="mt-2">
+                <h3 className="text-2xl ml-4 font-bold mt-4">
+                  4. Expert Support
+                </h3>
+                <p className="mt-2 ml-10">
                   Our knowledgeable team is dedicated to helping you find the
                   right CT scanner for your facility. From initial consultation
                   to installation and ongoing technical support, we are here to

@@ -4,10 +4,11 @@ import Logo from "../assets/img/logo-dark.png";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
+// import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const socialLink = [
   {
@@ -16,7 +17,7 @@ const socialLink = [
   },
   {
     path: "/",
-    icon: <XIcon />,
+    icon: <WhatsAppIcon />,
   },
   {
     path: "/",
@@ -139,26 +140,14 @@ function Footer() {
               Onco Radiations Products
             </Link>
 
-            <Link
-              className=" hover:text-orange duration-300"
-              to="/medical-consumable"
-            >
-              Medical Consumables
-            </Link>
-            <Link
-              className=" hover:text-orange duration-300"
-              to="/Lab-solutions"
-            >
-              Laboratory Solutions
-
-            </Link>
+           
           </div>
         </div>
       </div>
-      <div className="bg-orange flex flex-col md:flex-row justify-evenly">
+      <div className="bg-orange flex flex-col md:flex-row justify-evenly py-4 font-medium">
         <div className="bg-orange flex flex-col sm:flex-row justify-center text-center py-2 gap-1 text-xs sm:text-sm text-white">
-          <span>© 2019 All Right Reserved.</span>
-          <span>Created by Intellio healthcare solutions</span>
+          <span>Copyright © 2024 Shelves Tech All Rights Reserved.</span>
+          <span></span>
         </div>
         <div className="bg-orange flex items-center sm:flex-row justify-center text-center py-2 gap-1 text-xs sm:text-sm text-white">
           <Link to="/terms-condition">Terms & Condition</Link>

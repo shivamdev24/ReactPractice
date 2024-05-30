@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
+// import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -127,7 +127,7 @@ export default function Contact() {
               </div>
               <div>
                 <a
-                  href="https://wa.me/"
+                  href="https://wa.me/+919899730901"
                   target="_blank"
                   className="bg-green  text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverGreen duration-500"
                 >

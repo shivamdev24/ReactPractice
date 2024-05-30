@@ -13,7 +13,7 @@ export default function ProductOutlet() {
         <img
           src={AboutImg}
           className="h-[29rem] object-top w-full object-cover  "
-          alt=""
+          alt="Product"
         />
         <div className="absolute top-48 left-[30px] md:left-[11rem]">
           <div className="flex gap-4 items-center font-bold text-white">

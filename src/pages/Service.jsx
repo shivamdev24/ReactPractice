@@ -188,7 +188,7 @@ const Service = () => {
            <div>
             <Collapse
              items={props.items}
-             className="text-red-500 text-md w-full border-none "
+             className="text-red-500 text-md  w-full border-none "
             />
            </div>
           </div>
@@ -205,8 +205,8 @@ const Service = () => {
        
          <h1 className="mb-4 font-bold text-orange md:text-4xl">
 
-         CT Scan Machine Maintenance
-         </h1>
+         CT Scan Machine Maintenance 
+         </h1>               
          </Fade>
          {ctList.map((props, index) => (
             <Fade triggerOnce={true} direction="up">

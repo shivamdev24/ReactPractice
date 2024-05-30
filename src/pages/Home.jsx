@@ -4,12 +4,12 @@ import img1 from "../assets/Image/STImages/1.png"
 import img2 from "../assets/Image/STImages/2.png"
 import img3 from "../assets/Image/STImages/3.png"
 import img4 from "../assets/Image/STImages/4.png"
-import img5 from "../assets/Image/STImages/5.png"
+// import img5 from "../assets/Image/STImages/5.png"
 import img6 from "../assets/Image/STImages/6.png"
 import img7 from "../assets/Image/STImages/7.png"
 import img8 from "../assets/Image/STImages/8.png"
 import img9 from "../assets/Image/STImages/9.png"
-import img10 from "../assets/Image/STImages/10.png"
+// import img10 from "../assets/Image/STImages/10.png"
 
 // import SlideShow from "../Components/components/SlideShow/SlideShow";
 import { Fade } from "react-awesome-reveal";
@@ -285,10 +285,10 @@ function Home() {
                             <img
                               src={props.Icon}
                               alt="img"
-                              className="w-80 h-64 rounded object-cover"
+                              className="w-80 h-64 rounded-t object-cover"
                             />
                           </span>
-                          <span className="text-xl text-orange font-medium text-center">
+                          <span className="text-lg px-2 pb-5  text-center">
                             {props.title}
                           </span>
                         </div>

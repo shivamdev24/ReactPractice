@@ -1,4 +1,4 @@
-import AboutImg from "../../../assets/Image/ourVisionbg.jpg";
+import AboutImg from "../../../assets/Image/PSAOxygen.jpeg";
 import PsaOxygen from "../../../assets/Image/PsaOxygen.jpeg";
 import { Fade } from "react-awesome-reveal";
 import { Link } from 'react-router-dom';
@@ -7,10 +7,10 @@ export default function PSA() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="relative w-full">
-        <div className="overlay h-[29rem] opacity-[.6] bg-graydark absolute w-full"></div>
+        <div className="overlay h-[35rem] opacity-[.8] bg-graydark absolute w-full"></div>
         <img
           src={AboutImg}
-          className="h-[29rem] object-top w-full object-cover"
+          className="h-[35rem] object-center w-full object-cover"
           alt="About Us"
         />
         <div className="absolute top-48 left-[30px] md:left-[11rem]">
@@ -19,23 +19,49 @@ export default function PSA() {
             <hr className="h-4 w-[2px] bg-white" />
             <span>PSA Oxygen Plant</span>
           </div>
+          <div className="mt-4">
+            <span className="text-3xl lg:text-6xl font-bold text-white">
+              PSA Oxygen Plant
+            </span>
+          </div>
         </div>
       </div>
       <div className="p-5 w-full">
-        <img
-          src={PsaOxygen}
-          className="w-[82%] mx-auto h-[40rem] object-cover"
-          alt=""
-        />
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto text-justify">
           <Fade direction="up" triggerOnce="true">
-            <h1 className="text-5xl my-8 font-bold text-orange">
+            <h1 className="text-4xl lg:text-5xl my-4 font-bold text-orange">
               PSA Oxygen Plant
             </h1>
-            <Fade triggerOnce direction="up"></Fade>
-            <div className="mb-8">
-              <h2 className="text-3xl font-bold text-orange">Background</h2>
-              <p className="mt-2 text-base">
+          </Fade>
+          <Fade direction="up" triggerOnce="true">
+            <h1 className="text-base font-medium text-orange">
+              Shelves Tech – Empowering Healthcare, One Innovation at a Time.
+            </h1>
+          </Fade>
+          <Fade triggerOnce direction="up">
+            <p className="mb-4  text-graylight ml-4 text-sm md:text-base ">
+              Ensure a continuous and reliable oxygen supply for your hospital
+              with our cutting-edge PSA oxygen plants. Experience cost-effective
+              on-site oxygen production with high-purity output to support
+              critical care units, surgical procedures, and patient care. To
+              know more link to the brochure. A Case study on the pager page for
+              PSA oxygen plant. Case Study: Installation of PSA Oxygen Plant in
+              a Hospital
+            </p>
+          </Fade>
+          <Fade direction="up" triggerOnce="true">
+            <img
+              src={PsaOxygen}
+              className="w-[100%] mx-auto rounded-md h-[40rem] object-cover"
+              alt="PsaOxygen"
+            />
+          </Fade>
+          <Fade triggerOnce direction="up">
+            <div className="my-8">
+              <Fade triggerOnce direction="up">
+                <h2 className="text-3xl font-bold text-orange">Background</h2>
+              </Fade>
+              <p className="mt-2 text-graylight ml-4 text-sm md:text-base">
                 A reputable hospital in a bustling city faces challenges in
                 managing and refilling a significant number of oxygen cylinders
                 to meet the demands of their patients. The monthly expenditure
@@ -53,8 +79,10 @@ export default function PSA() {
           </Fade>
           <Fade triggerOnce direction="up">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-orange">Solution</h2>
-              <p className="mt-2 text-base">
+              <Fade triggerOnce direction="up">
+                <h2 className="text-3xl font-bold text-orange">Solution</h2>
+              </Fade>
+              <p className="mt-2 text-graylight ml-4 text-sm md:text-base">
                 To address these challenges and streamline their operations, the
                 hospital decides to invest in a PSA (Pressure Swing Adsorption)
                 oxygen plant. The installation of a PSA oxygen plant is
@@ -74,8 +102,10 @@ export default function PSA() {
           </Fade>
           <Fade triggerOnce direction="up">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-orange">Impact</h2>
-              <p className="mt-2 text-base">
+              <Fade triggerOnce direction="up">
+                <h2 className="text-3xl font-bold text-orange">Impact</h2>
+              </Fade>
+              <p className="mt-2 text-graylight ml-4 text-sm md:text-base">
                 The installation of the PSA oxygen plant has brought about
                 significant benefits to the hospital. Not only has it eliminated
                 the hassle of managing and refilling oxygen cylinders, but it
@@ -92,8 +122,10 @@ export default function PSA() {
           </Fade>
           <Fade triggerOnce direction="up">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-orange">Conclusion</h2>
-              <p className="mt-2 text-base">
+              <Fade triggerOnce direction="up">
+                <h2 className="text-3xl font-bold text-orange">Conclusion</h2>
+              </Fade>
+              <p className="mt-2 text-graylight ml-4 text-sm md:text-base">
                 The successful implementation of the PSA oxygen plant has not
                 only saved the hospital substantial costs but has also enhanced
                 operational efficiency and patient care. By investing in this
@@ -107,10 +139,47 @@ export default function PSA() {
               </p>
             </div>
           </Fade>
+          <Fade triggerOnce direction="up">
+            <div className="mb-8">
+              <p className="mt-2 text-graylight ml-4 text-sm md:text-base">
+                At Shelves Tech, we understand the challenges and opportunities
+                that healthcare facilities face in their quest for excellence.
+                That&apos;s why we offer a comprehensive range of cutting-edge
+                capital medical equipment solutions designed to meet the unique
+                needs of our clients. Our PSA oxygen plants provide a reliable
+                and cost-effective source of oxygen for hospitals, clinics, and
+                medical centers, ensuring uninterrupted supply for critical care
+                situations. Additionally, our refurbished CT and MRI machines
+                offer high-quality imaging capabilities at a fraction of the
+                cost, enabling facilities to upgrade their diagnostic
+                capabilities without breaking the bank.
+                <br />
+                <br />
+                In the realm of hospital management, our software solutions
+                streamline administrative processes, optimize resource
+                allocation, and improve overall efficiency. From patient
+                scheduling and billing to inventory management and EMR
+                integration, our software suite is tailored to meet the specific
+                needs of healthcare facilities of all sizes. Furthermore, our
+                Onco radiation products deliver advanced treatment options for
+                cancer patients, offering state-of-the-art technology to support
+                oncology departments in their mission to provide the best
+                possible care.
+                <br />
+                <br />
+                As we navigate the complexities of healthcare delivery in
+                today&apos;s world, the importance of leveraging advanced
+                medical equipment solutions cannot be understated. By partnering
+                with Shelvestech, healthcare facilities can unlock growth
+                opportunities, enhance patient outcomes, and elevate the quality
+                of care they provide. Together, let&apos;s embrace innovation,
+                foster collaboration, and drive positive change in the
+                healthcare industry.
+              </p>
+            </div>
+          </Fade>
         </div>
       </div>
-      <div className="h-50"></div>{" "}
-      {/* This div adds space between the content and the footer */}
     </div>
   );
 }

@@ -6,10 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import ProductOutlet from "./pages/productPage/Refurbished-MRI-CT-Page/ProductOutlet";
-import SSOutlet from "./pages/productPage/SoftwareSolutionsPage/SSOutlet";
-import HMS from "./pages/productPage/SoftwareSolutionsPage/HMS";
-import EHR from "./pages/productPage/SoftwareSolutionsPage/EHR";
-import MedicalBilling from "./pages/productPage/SoftwareSolutionsPage/MedicalBilling";
+
 import RefurbishedMRI from "./pages/productPage/Refurbished-MRI-CT-Page/RefurbishedMRI";
 import MRI_CTProductPage from "./pages/productPage/Refurbished-MRI-CT-Page/MRI_CTProductPage";
 import SSProductPage from "./pages/productPage/SoftwareSolutionsPage/SSProductPage";
@@ -18,12 +15,7 @@ import TermsConditions from "./pages/TermsConditions";
 import ProductPortfolio from "./pages/ProductPortfolio";
 import PSA from "./pages/productPage/PSAOxygenPlant/PSA";
 import RefurbishedCT from "./pages/productPage/Refurbished-MRI-CT-Page/RefurbishedCT";
-import Telemedicine from "./pages/productPage/SoftwareSolutionsPage/Telemedicine";
-import RadiationSafety from "./pages/productPage/OncoPage/RadiationSafety";
-import RadiationPlanning from "./pages/productPage/OncoPage/RadiationPlanning";
-import LinearAccelerator from "./pages/productPage/OncoPage/LinearAccelator";
 import OncoProductPage from "./pages/productPage/OncoPage/OncoProductPage";
-import OncoOutlet from "./pages/productPage/OncoPage/OncoOutlet";
 
 const router = createBrowserRouter([
   {
@@ -74,51 +66,13 @@ const router = createBrowserRouter([
       },
       {
         path: "Software-Solutions",
-        element: <SSOutlet />,
-        children: [
-          {
-            path: "",
-            element: <SSProductPage />,
-          },
-          {
-            path: "Hospital-Management-System",
-            element: <HMS />,
-          },
-          {
-            path: "Electronic-Health-Records",
-            element: <EHR/>,
-          },
-          {
-            path: "Medical-Billing",
-            element: <MedicalBilling />,
-          },
-          {
-            path: "Telemedicine",
-            element: <Telemedicine />,
-          }
-        ],
+        element: <SSProductPage />,
+        
       },
       {
         path: "Onco-Radiations-Products",
-        element: <OncoOutlet />,
-        children: [
-          {
-            path: "",
-            element: <OncoProductPage />,
-          },
-          {
-            path: "Linear-Accelerator",
-            element: <LinearAccelerator />,
-          },
-          {
-            path: "Radiation-Planning-Software",
-            element: <RadiationPlanning />,
-          },
-          {
-            path: "Radiation-Safety-Accessories",
-            element: <RadiationSafety />,
-          }
-        ]
+        element: <OncoProductPage />,
+       
       },
       {
         path: "PSA-Oxygen-Plant",
