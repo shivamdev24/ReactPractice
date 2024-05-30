@@ -4,14 +4,14 @@ import MRIMachine from "../../../assets/Image/MriScanMachine.jpg"
 function RefurbishedMRI() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen p-5">
-        <div className="w-full max-w-7xl mx-auto">
+      <div className="flex flex-col items-center  justify-center min-h-screen ">
+        <div className=" lg:mx-auto">
           <Fade triggerOnce direction="up">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-orange">
+              <h2 className="text-xl lg:text-3xl font-bold text-orange">
                 About Refurbished MRI Machines
               </h2>
-              <p className="mt-2 ml-4 text-graylight text-base">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 At Shelves Tech, we specialize in providing high-quality
                 refurbished MRI machines to medical facilities worldwide. Our
                 mission is to offer cutting-edge imaging technology at
@@ -24,27 +24,27 @@ function RefurbishedMRI() {
           <Fade triggerOnce direction="up">
             <img
               src={MRIMachine}
-              className="w-full h-[30rem] rounded-md object-cover"
+              className="w-full lg:h-[30rem] rounded-md object-cover"
               alt="MRI Machine"
             />
           </Fade>
           <Fade triggerOnce direction="up">
             <div className="my-8">
-              <h2 className="text-3xl font-bold text-orange">
+              <h2 className="text-xl lg:text-3xl font-bold text-orange">
                 Why Choose Refurbished CT Scan Machines
               </h2>
               <div className="mt-2 text-base">
-                <h3 className="text-2xl ml-4 font-bold mt-4">
+                <h3 className="text-lg lg:text-2xl ml-4 font-bold mt-4">
                   1. Quality Assurance
                 </h3>
-                <p className="mt-2 text-graylight ml-10">
+                <p className="mt-2 text-sm lg:text-base text-graylight ml-10">
                   Each MRI machine in our inventory undergoes a rigorous
                   refurbishment process conducted by our team of expert
                   technicians. We ensure that every component is thoroughly
                   inspected, repaired, or replaced to meet industry standards
                   and deliver optimal performance.
                 </p>
-                <h3 className="text-2xl ml-4 font-bold mt-4">
+                <h3 className="text-lg lg:text-2xl ml-4 font-bold mt-4">
                   2. Cost-Effectiveness
                 </h3>
                 <p className="mt-2 text-graylight ml-10">
@@ -53,7 +53,7 @@ function RefurbishedMRI() {
                   imaging capabilities. Our machines offer exceptional value for
                   money without compromising on quality or reliability{" "}
                 </p>
-                <h3 className="text-2xl ml-4 font-bold mt-4">
+                <h3 className="text-lg lg:text-2xl ml-4 font-bold mt-4">
                   3. Extensive Selection
                 </h3>
                 <p className="mt-2 text-graylight ml-10">
@@ -63,7 +63,7 @@ function RefurbishedMRI() {
                   leading manufacturers, ensuring you have access to the latest
                   technological advancements in imaging.
                 </p>
-                <h3 className="text-2xl ml-4 font-bold mt-4">
+                <h3 className="text-lg lg:text-2xl ml-4 font-bold mt-4">
                   4. Customization Options
                 </h3>
                 <p className="mt-2 text-graylight ml-10">
@@ -74,7 +74,7 @@ function RefurbishedMRI() {
                   configurations, we can accommodate your requests to ensure
                   seamless integration with your existing infrastructure.
                 </p>
-                <h3 className="text-2xl ml-4 font-bold mt-4">
+                <h3 className="text-lg lg:text-2xl ml-4 font-bold mt-4">
                   5. Comprehensive Support
                 </h3>
                 <p className="mt-2 text-graylight ml-10">

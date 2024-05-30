@@ -20,7 +20,7 @@ export default function OncoProductPage() {
               <span>Onco Radiation Products</span>
             </div>
             <div className="mt-4">
-              <span className="text-6xl font-bold text-white">
+              <span className="text-3xl lg:text-6xl font-bold text-white">
                 ONCO RADIATIONS PRODUCTS
               </span>
             </div>
@@ -31,13 +31,10 @@ export default function OncoProductPage() {
       <div className="text-black flex flex-col gap-2 w-[80%] mx-auto pb-10">
         <Fade triggerOnce={true} direction="up">
           <div className="my-5">
-            <h1 className="text-4xl font-bold uppercase text-orange">
+            <h1 className="text-2xl lg:text-4xl font-bold uppercase text-orange">
               Onco Radiation Products
             </h1>
-            <h3 className="text-sm mt-1 ml-3 text-orange">
-              Shelves tech is an authorised dealer with Panacea Technologies, an
-              Indian manufacturer for Onco Radiation Products
-            </h3>
+            
 
             <p className="text-graylight mt-2 ml-4 text-justify">
               At Shelves Tecch, we are dedicated to providing cutting-edge
@@ -52,7 +49,7 @@ export default function OncoProductPage() {
         <Fade direction="up" triggerOnce="ture">
           <img
             src={OncoImg}
-            className="w-[100%] mx-auto rounded-md h-[40rem] object-cover"
+            className="w-[100%] mx-auto rounded-md lg:h-[40rem] object-cover"
             alt="OncoImg"
           />
         </Fade>
@@ -67,7 +64,7 @@ export default function OncoProductPage() {
               <h3 className="text-lg font-semibold ml-4 mt-2">
                 1. Linear Accelerators
               </h3>
-              <p className="text-graylight  ml-10  text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 We offer a range of advanced linear accelerators for external
                 beam radiation therapy, including models from an Indian
                 manufacturer Panacea Technologies are designed to deliver
@@ -81,7 +78,7 @@ export default function OncoProductPage() {
               <h3 className="text-lg font-semibold ml-4 mt-2">
                 2. Radiation Planning Software
               </h3>
-              <p className="text-graylight  ml-10  text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 Streamline your treatment planning process with our
                 state-of-the-art radiation planning software. These innovative
                 tools help oncologists and radiation therapists optimize
@@ -95,7 +92,7 @@ export default function OncoProductPage() {
               <h3 className="text-lg font-semibold ml-4 mt-2">
                 3. Radiation Safety Accessories
               </h3>
-              <p className="text-graylight  ml-10  text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 Ensure patient and staff safety with our radiation safety
                 accessories, including lead aprons, thyroid shields, goggles,
                 and radiation monitoring devices. These products are designed to
@@ -113,7 +110,7 @@ export default function OncoProductPage() {
           <h3 className="text-lg font-semibold ml-4 mt-2">
             1. Quality and Reliability
           </h3>
-          <p className="text-graylight  ml-10  text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             We partner with reputable Indian manufacturers to offer high-quality
             radiation therapy equipment that meets industry standards and
             regulations. Our products undergo rigorous testing and quality
@@ -123,7 +120,7 @@ export default function OncoProductPage() {
 
         <Fade triggerOnce={true} direction="up">
           <h3 className="text-lg font-semibold ml-4 mt-2">2. Expert Support</h3>
-          <p className="text-graylight  ml-10  text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             Our team of experienced professionals is committed to providing
             personalized support and guidance to help you select the right
             radiation therapy solutions for your facility. From product
@@ -136,7 +133,7 @@ export default function OncoProductPage() {
           <h3 className="text-lg font-semibold ml-4 mt-2">
             3. Innovation and Advancement
           </h3>
-          <p className="text-graylight  ml-10  text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             We stay at the forefront of technological advancements in radiation
             therapy to bring you the latest products and solutions that can
             enhance the quality of care for your patients. Our commitment to

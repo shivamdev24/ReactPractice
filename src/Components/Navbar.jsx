@@ -115,7 +115,7 @@ export default function Navbar() {
            <div className="font-3xl">
              <img
                src={Logodark}
-               className="w-32 sm:w-72"
+               className="w-48 sm:w-72"
                alt="Logo"
              />
              
@@ -155,12 +155,12 @@ export default function Navbar() {
                  {showSubmenu &&
                    currentSubmenuIndex === index &&
                    item.subItems && (
-                     <div className="absolute bg-orange text-white w-64 rounded-b-lg rounded-l-lg top-19">
+                     <div className="absolute bg-cream text-orange border border-orange w-64 rounded-b-lg rounded-l-lg top-19">
                        <ul className="p-2 flex flex-col gap-2">
                          {item.subItems.map((subItem, subIndex) => (
                            <li key={subIndex}>
                              <Link
-                               className="w-full flex rounded hover:bg-white font-semibold hover:text-orange px-2 duration-300 py-1"
+                               className="w-full flex rounded hover:bg-orange font-semibold hover:text-white px-2 duration-300 py-1"
                                to={subItem.to}
                              >
                                {subItem.title}
@@ -176,7 +176,7 @@ export default function Navbar() {
          </div>
        </div>
        {mobileMenuOpen && (
-         <div className="lg:hidden absolute top-12 h-screen left-0 w-full bg-orange text-white shadow-md z-40">
+         <div className="lg:hidden absolute top-12 h-screen left-0 w-full bg-cream text-black shadow-md z-40">
            <div className="flex flex-col gap-2 mt-4 p-4">
              {navlink.map((item, index) => (
                <div key={index}>
@@ -192,7 +192,7 @@ export default function Navbar() {
                      {item.subItems.map((subItem, subIndex) => (
                        <Link
                          key={subIndex}
-                         className="flex gap-1 p-3 font-semibold hover:text-orange duration-300"
+                         className="flex gap-1 p-3 text-orange font-semibold hover:text-orange duration-300"
                          to={subItem.to}
                          onClick={() => setMobileMenuOpen(false)}
                        >

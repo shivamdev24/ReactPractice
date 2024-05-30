@@ -115,26 +115,24 @@ export default function Contact() {
             </Fade>
           </div>
           <Fade direction="up" triggerOnce="true">
-            <div className="w-full flex gap-2 py-5">
-              <div>
+            <div className="w-full flex gap-4 py-5">
                 <a
                   href="mailto:mukesh.panchal@shelvestech.com"
-                  className="bg-red  text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverRed duration-500"
+                  className="bg-red w-46 text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverRed duration-500"
                 >
                   {" "}
                   Connect on Mail.{" "}
                 </a>
-              </div>
-              <div>
+             
                 <a
                   href="https://wa.me/+919899730901"
                   target="_blank"
-                  className="bg-green  text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverGreen duration-500"
+                  className="bg-green w-42 text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverGreen duration-500"
                 >
                   {" "}
                   Connect on Whatsapp{" "}
                 </a>
-              </div>
+              
             </div>
           </Fade>
         </div>

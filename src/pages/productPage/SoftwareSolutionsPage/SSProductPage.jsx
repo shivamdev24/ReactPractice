@@ -20,7 +20,7 @@ export default function SSProductPage() {
             <span>Software Solutions</span>
           </div>
           <div className="mt-4">
-            <span className="text-6xl font-bold text-white">
+            <span className="text-3xl lg:text-6xl font-bold text-white">
               SOFTWARE SOLUTIONS
             </span>
           </div>
@@ -33,7 +33,7 @@ export default function SSProductPage() {
           </h1>
         </Fade>
         <Fade triggerOnce={true} direction="up">
-          <p className="text-gray-700 ml-4 pb-10 text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             At Shelves Tech, we specialize in providing innovative and
             comprehensive software solutions designed to streamline operations,
             enhance patient care, and improve efficiency in healthcare
@@ -62,7 +62,7 @@ export default function SSProductPage() {
               <h1 className="text-lg ml-4 font-semibold mt-2">
                 1. Electronic Health Records (EHR)
               </h1>
-              <p className="text-gray-700 ml-10 text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 Our EHR software is designed to digitize and centralize patient
                 health records, making it easier for healthcare providers to
                 access, update, and share patient information securely. With
@@ -77,7 +77,7 @@ export default function SSProductPage() {
               <h1 className="text-lg ml-4 font-semibold mt-2">
                 2. Hospital Management System
               </h1>
-              <p className="text-gray-700 ml-10 text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 Our hospital management system integrates various administrative
                 and clinical functions within a healthcare facility, including
                 patient registration, appointment scheduling, billing and
@@ -93,7 +93,7 @@ export default function SSProductPage() {
               <h1 className="text-lg ml-4 font-semibold mt-2">
                 3. Medical Billing and Revenue Cycle Management
               </h1>
-              <p className="text-gray-700 ml-10 text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 Simplify the billing process and maximize revenue with our
                 medical billing software. Our solutions automate billing tasks,
                 verify insurance eligibility, track claims, and generate reports
@@ -107,7 +107,7 @@ export default function SSProductPage() {
               <h1 className="text-lg ml-4 font-semibold mt-2">
                 4. Telemedicine Platform
               </h1>
-              <p className="text-gray-700 ml-10 text-justify">
+              <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
                 Enhance patient access to care with our telemedicine platform,
                 which enables remote consultations, virtual visits, and
                 telemonitoring services. Our secure and user-friendly
@@ -129,7 +129,7 @@ export default function SSProductPage() {
           </h3>
         </Fade>
         <Fade triggerOnce={true} direction="up">
-          <p className="text-gray-700 ml-10 text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             Our software solutions are highly customizable and scalable to meet
             the specific needs and requirements of your healthcare facility.
             Whether you run a small clinic or a large hospital, our team can
@@ -143,7 +143,7 @@ export default function SSProductPage() {
           </h3>
         </Fade>
         <Fade triggerOnce={true} direction="up">
-          <p className="text-gray-700 ml-10 text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             We prioritize data security and compliance with industry
             regulations, such as HIPAA, to ensure the confidentiality and
             integrity of patient information. Our software solutions are
@@ -157,7 +157,7 @@ export default function SSProductPage() {
           </h3>
         </Fade>
         <Fade triggerOnce={true} direction="up">
-          <p className="text-gray-700 ml-10 text-justify">
+          <p className="mt-2 ml-4 text-justify text-graylight text-sm md:text-base">
             Our dedicated team of support professionals is available to provide
             technical assistance, training, and ongoing support to help you
             maximize the value of our software solutions. We are committed to
