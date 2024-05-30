@@ -283,7 +283,7 @@ export default function AboutUs() {
         </div>
         <div className=" w-full bg-orange p-6">
           <Fade direction="up" triggerOnce="true">
-            <h2 className="text-3xl md:w-[80%] text-center font-bold text-white  mx-auto">
+            <h2 className="text-xl md:text-3xl md:w-[80%] text-center font-bold text-white  mx-auto">
               Shelves Tech – Empowering Healthcare, One Innovation at a Time.
             </h2>
           </Fade>
