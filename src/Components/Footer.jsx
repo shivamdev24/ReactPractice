@@ -12,20 +12,17 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const socialLink = [
   {
-    path: "/",
+    path: "https://www.facebook.com/profile.php?id=61559498143603&mibextid=rS40aB7S9Ucbxw6v",
     icon: <FacebookIcon />,
   },
+  
   {
-    path: "/",
-    icon: <WhatsAppIcon />,
-  },
-  {
-    path: "/",
-    icon: <InstagramIcon />,
-  },
-  {
-    path: "/",
+    path: "https://www.linkedin.com/company/infoshelvestech/",
     icon: <LinkedInIcon />,
+  },
+  {
+    path: "https://wa.me/+919899730901",
+    icon: <WhatsAppIcon />,
   },
 ];
 
@@ -66,13 +63,13 @@ function Footer() {
           <div>
             <div className="flex gap-2">
               {socialLink.map((props, index) => (
-                <Link
+                <a
                   className="hover:text-orange duration-300"
                   key={index}
-                  to={props.path}
+                  href={props.path}
                 >
                   {props.icon}
-                </Link>
+                </a>
               ))}
             </div>
           </div>

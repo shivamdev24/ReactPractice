@@ -2,6 +2,10 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 // import XIcon from "@mui/icons-material/X";
@@ -25,20 +29,16 @@ import emailjs from '@emailjs/browser';
 
 const socialLink = [
   {
-    path: "/",
+    path: "https://www.facebook.com/profile.php?id=61559498143603&mibextid=rS40aB7S9Ucbxw6v",
     icon: <FacebookIcon />,
   },
   
   {
-    path: "/",
-    icon: <InstagramIcon />,
-  },
-  {
-    path: "/",
+    path: "https://www.linkedin.com/company/infoshelvestech/",
     icon: <LinkedInIcon />,
   },
   {
-    path: "/",
+    path: "https://wa.me/+919899730901",
     icon: <WhatsAppIcon />,
   },
 ];
@@ -53,6 +53,29 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(form.current);
+    const firstName = formData.get('first_name');
+    const lastName = formData.get('last_name');
+    const company = formData.get('company');
+    const email = formData.get('email');
+    const phoneNumber = formData.get('phone_number');
+    const message = formData.get('message');
+
+    if (!firstName || !lastName || !company || !email || !phoneNumber || !message) {
+      toast.error('Please Filled All Field!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      return;
+    }
+    
+
     emailjs
       .sendForm("shelvestechdotcom", "shelvestechid", form.current, {
         publicKey: "2N5ZLEcfnbey6MySJ",
@@ -60,9 +83,21 @@ export default function Contact() {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast.success('Submit Successfully', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
+          
         },
       );
   };
@@ -134,13 +169,13 @@ export default function Contact() {
           <div className="flex gap-2 mt-3">
             <Fade direction="up" triggerOnce="true">
               {socialLink.map((props, index) => (
-                <Link
+                <a
                   className=" text-graydark hover:text-orange  flex  rounded-lg duration-500"
                   key={index}
-                  to={props.path}
+                  href={props.path}
                 >
                   {props.icon}
-                </Link>
+                </a>
               ))}
             </Fade>
           </div>
@@ -187,7 +222,8 @@ export default function Contact() {
                     id="first-name"
                     autoComplete="given-name"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
-                    defaultValue={`First Name`}
+                    placeholder="First Name"
+                    
                   />
                 </div>
               </Fade>
@@ -207,7 +243,8 @@ export default function Contact() {
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
-                    defaultValue={`Last Name`}
+                    placeholder="Last Name"
+                    
                   />
                 </div>
               </Fade>
@@ -227,7 +264,8 @@ export default function Contact() {
                     id="company"
                     autoComplete="organization"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
-                    defaultValue={`Your Organization`}
+                    placeholder="Your Company"
+                    
                   />
                 </div>
               </Fade>
@@ -247,7 +285,8 @@ export default function Contact() {
                     id="email"
                     autoComplete="email"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
-                    defaultValue={`your@mail.com`}
+                    placeholder="Email"
+                    
                   />
                 </div>
               </Fade>
@@ -267,7 +306,8 @@ export default function Contact() {
                     id="phone-number"
                     autoComplete="tel"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
-                    defaultValue={`+91 0000000000`}
+                    placeholder="Phone Number"
+                    
                   />
                 </div>
               </Fade>
@@ -286,12 +326,8 @@ export default function Contact() {
                     id="message"
                     rows={4}
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
-                    defaultValue={`I hope this message finds you well I am reaching out to inquire about your services and how they might benefit my needs. I would appreciate any information or assistance you can provide.
-
-Thank you for your time and consideration. I look forward to your response.
-
-Best regards,
-Your Name`}
+                    placeholder="Message"
+                    
                   />
                 </div>
                 <Field as="div" className="flex gap-x-4 sm:col-span-2">
@@ -317,6 +353,7 @@ Your Name`}
             </Fade>
           </div>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );
