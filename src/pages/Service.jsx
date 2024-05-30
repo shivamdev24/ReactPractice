@@ -6,49 +6,58 @@ import AboutImg from "../assets/Image/MRI.jpg"
 import { Collapse } from "antd";
 
 const psaList = [
- {
-  items: [
-   {
-    key: "1",
-    label: "Expert Technicians for PSA Oxygen Plant Servicing",
-    children: (
-     <p>
-      {" "}
-      Our team of skilled technicians specializes in servicing PSA oxygen plants to ensure uninterrupted and efficient oxygen production
-     </p>
-    ),
-   },
-  ],
- },
- {
-  items: [
-   {
-    key: "1",
-    label: "Comprehensive Maintenance Services",
-    children: (
-     <p>
-      {" "}
-      We offer regular maintenance checks, calibration, and repair services to keep your oxygen plant operating at peak performance.
-
-     </p>
-    ),
-   },
-  ],
- },
- {
-  items: [
-   {
-    key: "1",
-    label: "Reliable AMC and CMC Packages",
-    children: (
-     <p>
-      {" "}
-      With our AMC and CMC packages, you can rest assured that your PSA oxygen plant is in safe hands
-     </p>
-    ),
-   },
-  ],
- },
+  {
+    items: [
+      {
+        key: "1",
+        label: "Expert Technicians for PSA Oxygen Plant Servicing",
+        children: (
+          <div>
+            <p>
+              - Our team of skilled technicians specializes in servicing PSA
+              oxygen plants to ensure uninterrupted and efficient oxygen
+              production.
+            </p>
+            <p>
+              - We offer regular maintenance checks, calibration, and repair
+              services to keep your oxygen plant operating at peak performance.
+            </p>
+            <p></p>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        key: "1",
+        label: "Comprehensive Maintenance Services",
+        children: (
+          <p>
+            {" "}
+            We offer regular maintenance checks, calibration, and repair
+            services to keep your oxygen plant operating at peak performance.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        key: "1",
+        label: "Reliable AMC and CMC Packages",
+        children: (
+          <p>
+            {" "}
+            With our AMC and CMC packages, you can rest assured that your PSA
+            oxygen plant is in safe hands
+          </p>
+        ),
+      },
+    ],
+  },
 ];
 
 const ctList = [

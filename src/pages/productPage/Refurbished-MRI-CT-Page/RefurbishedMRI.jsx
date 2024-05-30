@@ -1,13 +1,37 @@
 import {Fade} from "react-awesome-reveal";
 import MRIMachine from "../../../assets/Image/MriScanMachine.jpg"
+import { Link } from "react-router-dom";
+import AboutImg from "../../../assets/Image/MRI.jpg";
 
 function RefurbishedMRI() {
   return (
     <>
-      <div className="flex flex-col items-center  justify-center min-h-screen ">
+      <div className="relative">
+        <div className="overlay h-[29rem] opacity-[.6] bg-graydark absolute w-full "></div>
+        <img
+          src={AboutImg}
+          className="h-[29rem] object-top w-full object-cover  "
+          alt="Product"
+        />
+        <div className="absolute top-48 left-[30px] md:left-[11rem]">
+          <div className="flex gap-4 items-center font-bold text-white">
+            <Link to="/">Home</Link>
+            <hr className="h-4 w-[2px] bg-white" />
+            <span className="text-sm lg:text-base font-bold text-white">
+              Refurbished CT and MRI Machines
+            </span>
+          </div>
+          <div className="mt-4">
+            <span className="text-3xl lg:text-6xl font-bold text-white">
+              REFURBISHED CT AND MRI MACHINES
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-[80%] mx-auto items-center  justify-center min-h-screen ">
         <div className=" lg:mx-auto">
           <Fade triggerOnce direction="up">
-            <div className="mb-8">
+            <div className="my-8">
               <h2 className="text-xl lg:text-3xl font-bold text-orange">
                 About Refurbished MRI Machines
               </h2>

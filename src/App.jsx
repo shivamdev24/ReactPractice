@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
-import ProductOutlet from "./pages/productPage/Refurbished-MRI-CT-Page/ProductOutlet";
+
 
 import RefurbishedMRI from "./pages/productPage/Refurbished-MRI-CT-Page/RefurbishedMRI";
 import MRI_CTProductPage from "./pages/productPage/Refurbished-MRI-CT-Page/MRI_CTProductPage";
@@ -48,31 +48,23 @@ const router = createBrowserRouter([
       },
       {
         path: "Refurbished-CT-MRI-Machines",
-        element: <ProductOutlet />,
-        children: [
-          {
-            path: "",
-            element: <MRI_CTProductPage/>,
-          },
-          {
-            path: "Refurbished-CT",
-            element: <RefurbishedCT/>,
-          },
-          {
-            path: "Refurbished-MRI",
-            element: <RefurbishedMRI/>,
-          },
-        ],
+        element: <MRI_CTProductPage />,
+      },
+      {
+        path: "Refurbished-CT",
+        element: <RefurbishedCT />,
+      },
+      {
+        path: "Refurbished-MRI",
+        element: <RefurbishedMRI />,
       },
       {
         path: "Software-Solutions",
         element: <SSProductPage />,
-        
       },
       {
         path: "Onco-Radiations-Products",
         element: <OncoProductPage />,
-       
       },
       {
         path: "PSA-Oxygen-Plant",

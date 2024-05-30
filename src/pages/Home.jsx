@@ -9,18 +9,16 @@ import img6 from "../assets/Image/STImages/6.png"
 import img7 from "../assets/Image/STImages/7.png"
 import img8 from "../assets/Image/STImages/8.png"
 import img9 from "../assets/Image/STImages/9.png"
-// import img10 from "../assets/Image/STImages/10.png"
 
-// import SlideShow from "../Components/components/SlideShow/SlideShow";
+import SlideShow from "../Components/components/SlideShow/SlideShow";
 import { Fade } from "react-awesome-reveal";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import CTSmachine from "/src/assets/Image/CTScanMachine.jpg";
 import OurVision from "../assets/Image/ourVisionbg.jpg";
 import PSAOxygen from "../assets/Image/PSAOxygen.jpeg";
 import MRI from "../assets/Image/MRI.jpg";
 import LinearAccelerator from "../assets/Image/LinearAccelerator.jpg";
-import HeroSection from "../Components/components/hero/HeroSection";
 
 const OurMission = [
   {
@@ -121,31 +119,13 @@ function Home() {
   return (
     <>
       <div className="">
-        {/* <SlideShow /> */}
-        <HeroSection />
+        <SlideShow />
+        {/* <HeroSection /> */}
       </div>
 
       <div>
         <div className="relative ">
           <div className="flex flex-col-reverse md:flex-row items-center justify-between ">
-            {/* <div className="flex flex-col z-20 gap-1">
-              {sectTwo.map((props, index) => (
-                <Fade direction="up" triggerOnce="true">
-                <div key={index} className="flex flex-col gap-1 relative">
-                  <div className="bg-orange md:w-[27rem] w-[25rem] rounded md:rounded-none h-64 overflow-hidden transition duration-500 hover:bg-darknavyblue text-white">
-                    <Link
-                      to={props.to}
-                      className="flex flex-col items-center mt-16 gap-3 text-2xl font-bold"
-                    >
-                      <span>{props.icon}</span>
-                      <span>{props.title}</span>
-                    </Link>
-                  </div>
-                </div>
-                </Fade>
-              ))}
-            </div> */}
-
             <div className="flex relative justify-between w-full lg:justify-around">
               <img
                 src={CTSmachine}
@@ -182,14 +162,7 @@ function Home() {
                     Our Mission
                   </h2>
                 </Fade>
-                <Fade direction="up" triggerOnce="true">
-                  <p className="lg:text-lg mt-5  text-sm md:text-center md:w-[60%] font-medium  mx-auto text-justify text-black">
-                    To support healthcare professionals and healthcare units by
-                    providing high-quality, reliable medical equipment that
-                    meets the evolving needs of modern medicine. We are
-                    committed to:
-                  </p>
-                </Fade>
+
                 <div className="flex mt-10 flex-col lg:flex-row px-5 gap-4">
                   {OurMission.map((props, index) => (
                     <Link to="/" key={index}>
@@ -231,12 +204,7 @@ function Home() {
                     Our Core Values
                   </h2>
                 </Fade>
-                <Fade direction="up" triggerOnce="true">
-                  <p className="lg:text-lg mt-5  text-sm text-center  mx-auto font-medium text-black">
-                    At Shelves Tech, our core values guide every aspect of our
-                    business:
-                  </p>
-                </Fade>
+
                 <div className="flex mt-10 flex-col lg:flex-row px-5 gap-4">
                   {OurCoreValues.map((props, index) => (
                     <Link to="/" key={index}>
@@ -323,75 +291,33 @@ function Home() {
                 </div>
               </div>
 
-              <div className=" relative hidden lg:block bg-graypowderlight h-[28rem] ">
+              <div className=" relative h-[28rem] ">
                 <img
                   src={OurVision}
-                  className="h-[28rem] w-[100%] opacity-28 object-cover"
-                  alt=""
+                  className="h-[28rem] absolute top-0 bg-black  object-cover w-full"
                 />
-                <span className="h-[28rem] w-[100%] absolute top-0 bg-black opacity-[.9]"></span>
-
-                <div className="flex absolute left-[30%] w-[40%] mx-auto top-0 py-6 flex-col lg:flex-row items-center justify-between  p-4 gap-4 w-full ">
+                <div className="h-[28rem] absolute top-0 bg-black opacity-[.9] w-full"></div>
+                <div className="w-[80%] mx-auto py-20">
                   <Fade direction="left" triggerOnce="true">
-                    <div className="flex h-96 flex-col  shadow-xl rounded-md bg-cream  py-2 justify-center items-center  text-graydark px-2">
-                      <Fade direction="up" triggerOnce="true">
-                        <h1 className="lg:text-3xl text-xl text-center text-orange font-bold ">
-                          Testimonials Demo
-                        </h1>
-                      </Fade>
-
-                      <div className="flex mt-1   px-2 gap-4">
-                        <Fade direction="up" triggerOnce="true">
-                          <div className="relative flex flex-col items-center  mx-auto py-6  rounded px-8   overflow-hidden scale-105 transition duration-500">
-                            <p className="text-sm text-justify ">
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit. Neque cumque illo voluptas
-                              laboriosam dignissimos saepe molestias vero
-                              tempora ea possimus.
-                            </p>
-                          </div>
-                        </Fade>
+                    <div className="w-96 bg-white p-4 flex flex-col gap-2 border-b-4 border-orange  shadow-md shadow-orange  rounded">
+                      <p className="text-sm text-justify italic">
+                        <q>
+                          ShelvesTech has been an absolute game-changer for our
+                          business. Their innovative shelving solutions have
+                          revolutionized our storage capabilities, maximizing
+                          our space efficiency and organization. The quality of
+                          their products is unmatched, and their customer
+                          service is exceptional. Working with ShelvesTech has
+                          truly been a pleasure, and we look forward to
+                          continuing our partnership for years to come.
+                        </q>
+                      </p>
+                      <div className="italic  text-sm">
+                        <p>Piyush Sanawar</p>
+                        <p className="text-xs">Sanawar Hospital</p>
                       </div>
                     </div>
                   </Fade>
-                  {/* <Fade direction="down" triggerOnce="true">
-                    <div className="flex flex-col  shadow-xl rounded-md bg-cream  h-96  py-5  justify-center items-center   ">
-                      <Fade direction="up" triggerOnce="true">
-                        <h1 className="lg:text-2xl mx-auto  w-[80%] text-xl text-center font-bold text-orange ">
-                         Testimonial demo2
-                        </h1>
-                      </Fade>
-
-                      <div className="flex mt-1   px-2 gap-4">
-                        <Fade direction="up" triggerOnce="true">
-                          <div className="relative flex flex-col items-center  mx-auto py-6  px-8   overflow-hidden scale-105 transition duration-500">
-                            <p className="text-sm text-justify ">
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at pariatur quos recusandae repudiandae ratione nam, earum officia ipsum eveniet quidem sequi, possimus fugit commodi distinctio error sapiente, ut quis!
-                            </p>
-                          </div>
-                        </Fade>
-                      </div>
-                    </div>
-                  </Fade>
-                  <Fade direction="right" triggerOnce="true">
-                    <div className="flex flex-col shadow-xl  bg-cream rounded-md h-96 py-5  justify-center   items-center ">
-                      <Fade direction="up" triggerOnce="true">
-                        <h1 className="lg:text-2xl text-xl text-center font-bold text-orange">
-                          Testimonial demo3
-                        </h1>
-                      </Fade>
-
-                      <div className="flex mt-1   px-2 gap-4">
-                        <Fade direction="up" triggerOnce="true">
-                          <div className="relative flex flex-col items-center  mx-auto py-8   rounded px-10   overflow-hidden scale-105 transition duration-500">
-                            <p className="text-sm text-justify text-black">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis laudantium quae ab deleniti suscipit qui, impedit, nobis labore magnam voluptatem doloribus ut veritatis tempore optio molestias corrupti rem tenetur consequuntur at quibusdam aspernatur minima? Possimus nisi nobis consequatur voluptatem.
-                            </p>
-                          </div>
-                        </Fade>
-                      </div>
-                    </div>
-                  </Fade> */}
                 </div>
               </div>
             </div>

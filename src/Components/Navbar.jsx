@@ -41,8 +41,16 @@ const navlink = [
         to: "/PSA-Oxygen-Plant",
       },
       {
-        title: "Refurbished CT and MRI Machines",
+        title: "Refurbished Machines",
         to: "/Refurbished-CT-MRI-Machines",
+      },
+      {
+        title: "Refurbished CT Machines",
+        to: "/Refurbished-CT",
+      },
+      {
+        title: "Refurbished MRI Machines",
+        to: "/Refurbished-MRI",
       },
       {
         title: "Software Solutions",
@@ -51,8 +59,7 @@ const navlink = [
       {
         title: "Onco Radiations Products",
         to: "/Onco-Radiations-Products",
-      }
-      
+      },
     ],
   },
   {

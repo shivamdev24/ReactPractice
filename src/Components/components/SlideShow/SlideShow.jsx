@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Img1 from "../../../assets/img/img1.jpg";
-import Img2 from "../../../assets/img/img2.jpg";
-import Img3 from "../../../assets/img/img3.jpg";
-import Img4 from "../../../assets/img/img4.jpg";
+import PSA from "../../../assets/Image/PsaOxygen.jpeg";
+import LA from "../../../assets/Image/LinearAccelerator.jpg";
+import MRI from "../../../assets/Image/MRI.jpg";
+import CTSCAN from "../../../assets/Image/CTScanMachine.jpg";
 import Typewriter from "typewriter-effect";
 import "./SildeShow.css";
 
@@ -11,24 +11,24 @@ const SlideShow = () => {
   const slides = [
     {
       number: "1 / 4",
-      src: Img1,
+      src: PSA,
       caption: "Empowering ",
     },
     {
       number: "2 / 4",
-      src: Img2,
-      caption: "SHealthcare ",
+      src: MRI,
+      caption: "Healthcare & Excellence",
     },
     {
       number: "3 / 4",
-      src: Img3,
-      caption: "Excellence",
-    },
-    {
-      number: "4 / 4",
-      src: Img4,
+      src: LA,
       caption: "Capital Medical Solutions.",
     },
+    // {
+    //   number: "4 / 4",
+    //   src: CTSCAN,
+    //   caption: "",
+    // },
   ];
 
   useEffect(() => {
@@ -52,12 +52,11 @@ const SlideShow = () => {
             key={index}
             className={`mySlides fade ${slideIndex === index ? "block" : "none"}`}
           >
-            <div className="black-overlay md:h-[700px] h-[630px]"></div>
+            <div className="black-overlay md:h-[750px] h-[630px]"></div>
             <img
               src={slide.src}
-              style={{ width: "100%" }}
               alt={`Slide ${index + 1}`}
-              className="w-full md:h-[700px] h-[630px] object-cover"
+              className="w-full md:h-[750px] h-[630px] object-center object-cover"
             />
             <div className="text flex justify-center items-center lg:text-7xl text-3xl font-bold ">
               <div className="w-64 text-white md:w-full">
