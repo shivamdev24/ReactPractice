@@ -19,6 +19,10 @@ import { Fade } from "react-awesome-reveal";
 import { Field, Label } from "@headlessui/react";
 
 
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
 const socialLink = [
   {
     path: "/",
@@ -40,6 +44,32 @@ const socialLink = [
 ];
 
 export default function Contact() {
+
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("shelvestechdotcom", "shelvestechid", form.current, {
+        publicKey: "2N5ZLEcfnbey6MySJ",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  };
+
+
+
+
 
   useEffect(() => {
     console.log("Component re-rendered");
@@ -137,7 +167,7 @@ export default function Contact() {
           </Fade>
         </div>
 
-        <form action="#" method="POST" className="max-w-6xl ">
+        <form ref={form} onSubmit={sendEmail} className="max-w-6xl ">
           <div className="py-4">
             <h1 className="text-3xl font-bold">Get In Touch With Us.</h1>
           </div>
@@ -153,7 +183,7 @@ export default function Contact() {
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="first-name"
+                    name="first_name"
                     id="first-name"
                     autoComplete="given-name"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
@@ -173,7 +203,7 @@ export default function Contact() {
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="last-name"
+                    name="last_name"
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
@@ -233,7 +263,7 @@ export default function Contact() {
                 <div className="relative mt-2.5">
                   <input
                     type="tel"
-                    name="phone-number"
+                    name="phone_number"
                     id="phone-number"
                     autoComplete="tel"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
@@ -282,7 +312,7 @@ Your Name`}
                 type="submit"
                 className="block w-full bg-orange rounded px-3.5 py-2.5 text-center text-sm font-semibold text-white hover:bg-orangeshade"
               >
-                Let's talk
+                Send
               </button>
             </Fade>
           </div>
