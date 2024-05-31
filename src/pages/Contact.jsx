@@ -77,13 +77,18 @@ export default function Contact() {
     
 
     emailjs
-      .sendForm("shelvestechdotcom", "shelvestechid", form.current, {
-        publicKey: "2N5ZLEcfnbey6MySJ",
-      })
+      .sendForm(
+        "process.env.EMAILJS_SERVICE_ID",
+        "process.env.EMAILJS_TEMPLATE_ID",
+        form.current,
+        {
+          publicKey: "process.env.EMAILJS_PUBLIC_KEY",
+        },
+      )
       .then(
         () => {
           console.log("SUCCESS!");
-          toast.success('Submit Successfully', {
+          toast.success("Submit Successfully", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -92,12 +97,11 @@ export default function Contact() {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+          });
           form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
-          
         },
       );
   };
