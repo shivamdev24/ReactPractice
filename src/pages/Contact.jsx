@@ -77,14 +77,9 @@ export default function Contact() {
     
 
     emailjs
-      .sendForm(
-        "process.env.EMAILJS_SERVICE_ID",
-        "process.env.EMAILJS_TEMPLATE_ID",
-        form.current,
-        {
-          publicKey: "process.env.EMAILJS_PUBLIC_KEY",
-        },
-      )
+      .sendForm("shelvestechdotcom", "shelvestechid", form.current, {
+        publicKey: "2N5ZLEcfnbey6MySJ",
+      })
       .then(
         () => {
           console.log("SUCCESS!");
