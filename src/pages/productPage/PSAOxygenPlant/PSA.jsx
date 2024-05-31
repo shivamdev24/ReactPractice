@@ -30,7 +30,7 @@ export default function PSA() {
         <div className="w-full max-w-7xl mx-auto text-justify">
           <Fade direction="up" triggerOnce="true">
             <h1 className="text-4xl lg:text-5xl my-4 font-bold text-orange">
-              PSA Oxygen Plant
+            PSA Oxygen Generation Plant
             </h1>
           </Fade>
           <Fade direction="up" triggerOnce="true">

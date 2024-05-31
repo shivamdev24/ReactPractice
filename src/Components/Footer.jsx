@@ -76,7 +76,7 @@ function Footer() {
         </div>
         <div className="flex flex-col gap-6">
           <h1 className="md:text-xl text-md text-orange font-bold">
-            Quicl Links
+            Quick Links
           </h1>
           <div className="flex flex-col text-sm md:text-md gap-3">
             <Link className=" hover:text-orange duration-300" to="/">
