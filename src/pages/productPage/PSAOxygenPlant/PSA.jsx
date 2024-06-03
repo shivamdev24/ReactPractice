@@ -1,4 +1,4 @@
-import AboutImg from "../../../assets/Image/PSAOxygen.jpeg";
+import AboutImg from "../../../assets/Image/PSA.jpeg";
 import PsaOxygen from "../../../assets/Image/PsaOxygen.jpeg";
 import { Fade } from "react-awesome-reveal";
 import { Link } from 'react-router-dom';

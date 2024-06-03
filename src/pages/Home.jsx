@@ -16,7 +16,7 @@ import { useEffect } from "react";
 
 import CTSmachine from "/src/assets/Image/CTScanMachine.jpg";
 import OurVision from "../assets/Image/ourVisionbg.jpg";
-import PSAOxygen from "../assets/Image/PSAOxygen.jpeg";
+import PSAOxygen from "../assets/Image/PSA.jpeg";
 import MRI from "../assets/Image/MRI.jpg";
 import LinearAccelerator from "../assets/Image/LinearAccelerator.jpg";
 

@@ -36,11 +36,7 @@ function Footer() {
           </div>
           <div>
             <p className=" text-sm md:text-md text-justify text-graylight">
-              At Shelves Tech, we understand that the heart of exceptional
-              healthcare lies in the quality and reliability of the equipment
-              used. Founded over a decade ago, our company has grown into a
-              leading supplier of capital medical equipment, dedicated to
-              empowering healthcare providers with the tools they need to
+              Empowering healthcare providers with the tools they need to
               deliver outstanding patient care.
             </p>
           </div>
@@ -91,18 +87,7 @@ function Footer() {
             <Link className=" hover:text-orange duration-300" to="/contact">
               Contact US
             </Link>
-            <Link
-              className=" hover:text-orange duration-300"
-              to="/terms-condition"
-            >
-              Terms & Conditions
-            </Link>
-            <Link
-              className=" hover:text-orange duration-300"
-              to="/privacy-policy"
-            >
-              Privacy Policy
-            </Link>
+           
           </div>
         </div>
         <div className="flex flex-col gap-6">
