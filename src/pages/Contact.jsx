@@ -77,14 +77,14 @@ export default function Contact() {
     
 
     emailjs
-      .sendForm("shelvestechdotcom", "shelvestechid", form.current, {
-        publicKey: "2N5ZLEcfnbey6MySJ",
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
       })
       .then(
         () => {
           console.log("SUCCESS!");
           toast.success("Submit Successfully", {
-            position: "top-right",
+            position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -97,6 +97,16 @@ export default function Contact() {
         },
         (error) => {
           console.log("FAILED...", error.text);
+          toast.error("Server Down! Please Contact Us Direct.", {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         },
       );
   };

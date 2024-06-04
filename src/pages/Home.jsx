@@ -20,6 +20,10 @@ import PSAOxygen from "../assets/Image/PSA.jpeg";
 import MRI from "../assets/Image/MRI.jpg";
 import LinearAccelerator from "../assets/Image/LinearAccelerator.jpg";
 
+
+
+
+
 const OurMission = [
   {
     title: "Quality",
@@ -108,6 +112,36 @@ const WhyChooseUs = [
 ];
 
 
+
+
+
+
+ 
+const testimonials = [
+  {
+    text: "We recently installed a PSA oxygen plant from Shelves Tech to meet the growing demand for medical oxygen in our hospital. The plant has been a game-changer for us, providing a reliable and continuous supply of high-quality oxygen to our patients. The installation process was smooth, and the team at Shelves Tech provided excellent support and service throughout. We are extremely satisfied with the performance of the PSA oxygen plant and would highly recommend it to other healthcare facilities in India. The plant not only reduced our ongoing cost  also help us to get rid of storing and managing cylinders",
+    name: "Dr. Aslam, Director",
+    title: "Gaurav hospital Bilaspur Chhattisgarh",
+  },
+  {
+    text: "Our diagnostic center and hospital recently implemented software from Shelves Tech, and it has transformed the way we manage patient records and streamline our operations. The software is user-friendly, comprehensive, and tailored to meet the specific needs of healthcare providers in Myanmar. The seamless integration of electronic health records, appointment scheduling, billing, and reporting functionalities has significantly improved our efficiency and patient care delivery. The customer support team at Shelves Tech has been exceptional, providing timely assistance and training to ensure a smooth transition to the new software. We appreciate their dedication to customer satisfaction and ongoing support. I highly recommend the hospital software from Shelves Tech to other healthcare providers in Myanmar looking to enhance their operational efficiency and deliver quality care to patients.",
+    name: "Dr. Aung, Chief Medical Officer",
+    title: "Nini Hospitals and diagnostic center, Yangon, Myanmar",
+  },
+  {
+    text: "We recently purchased and installed a refurbished CT machine from Shelvestech at our New Hospital in Maharashtra, India. The quality of the machine exceeded our expectations, providing us with high-resolution imaging capabilities at a fraction of the cost of a new machine. The installation process was seamless, and the technical team at Shelves Tech ensured that the machine was up and running in no time. Since the installation, the refurbished CT machine has been instrumental in improving our diagnostic capabilities and patient care. The images produced are clear and accurate, allowing our radiologists to make precise diagnoses efficiently. The machine has been a valuable addition to our facility, enabling us to offer advanced diagnostic services to our patients in Maharashtra. We are extremely satisfied with the performance of the refurbished CT machine and the service provided by Shelves Tech. I would highly recommend their refurbished medical equipment to other healthcare facilities looking to upgrade their imaging capabilities while staying within budget",
+    name: "Dr. Patel, Radiology Department Head",
+    title: "Sai Mauli Hospital, Maharashtra, India",
+  },
+];
+ 
+
+
+
+
+
+
+ 
 
 
 function Home() {
@@ -291,33 +325,31 @@ function Home() {
                 </div>
               </div>
 
-              <div className=" relative h-[28rem] ">
-                <img
-                  src={OurVision}
-                  className="h-[28rem] absolute top-0 bg-black  object-cover w-full"
-                />
-                <div className="h-[28rem] absolute top-0 bg-black opacity-[.9] w-full"></div>
-                <div className="w-[80%] mx-auto py-20">
-                  <Fade direction="left" triggerOnce="true">
-                    <div className="w-96 bg-white p-4 flex flex-col gap-2 border-b-4 border-orange  shadow-md shadow-orange  rounded">
-                      <p className="text-sm text-justify italic">
-                        <q>
-                          ShelvesTech has been an absolute game-changer for our
-                          business. Their innovative shelving solutions have
-                          revolutionized our storage capabilities, maximizing
-                          our space efficiency and organization. The quality of
-                          their products is unmatched, and their customer
-                          service is exceptional. Working with ShelvesTech has
-                          truly been a pleasure, and we look forward to
-                          continuing our partnership for years to come.
+              <div className=" relative h-auto  bg-white border-t border-graypowder py-10 ">
+                <h1 className="text-4xl text-center font-bold text-orange">
+                  Testimonials
+                </h1>
+                <div className="flex flex-wrap  justify-center gap-4 py-5">
+                  {testimonials.map((props, indx) => (
+                    <div
+                      className="w-[24rem] h-auto flex flex-col justify-between bg-cream p-4 rounded shadow-lg"
+                      key={indx}
+                    >
+                      <p className="text-sm italic  text-grapowderlight  text-justify">
+                        <q>{" "}
+                        {props.text}{" "}
                         </q>
                       </p>
-                      <div className="italic  text-sm">
-                        <p>Piyush Sanawar</p>
-                        <p className="text-xs">Sanawar Hospital</p>
+                      <div className="py-4">
+                        <p className="text-sm font-bold text-orange">
+                          {props.name}
+                        </p>
+                        <p className="text-sm italic text-graypowder">
+                          {props.title}
+                        </p>
                       </div>
                     </div>
-                  </Fade>
+                  ))}
                 </div>
               </div>
             </div>
