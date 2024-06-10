@@ -78,7 +78,7 @@ export default function Contact() {
 
     emailjs
       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+        publicKey: "dRFg3INipQfjEHd-j",
       })
       .then(
         () => {
@@ -189,7 +189,13 @@ export default function Contact() {
             </Fade>
           </div>
           <Fade direction="up" triggerOnce="true">
-            <div className="w-full flex gap-4 py-5">
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex items-center ">
+                <hr className="w-28 h-[1px] bg-black" />
+                <span>Contact Us On</span>
+                <hr className="w-28 h-[1px] bg-black" />
+              </div>
+              <div className="w-full flex gap-4 py-5">
                 <a
                   href="mailto:mukesh.panchal@shelvestech.com"
                   className="bg-red w-46 text-center text-white py-2.5 px-3.5 rounded hover:bg-hoverRed duration-500"
@@ -197,7 +203,7 @@ export default function Contact() {
                   {" "}
                   Connect on Mail.{" "}
                 </a>
-             
+
                 <a
                   href="https://wa.me/+919899730901"
                   target="_blank"
@@ -206,7 +212,7 @@ export default function Contact() {
                   {" "}
                   Connect on Whatsapp{" "}
                 </a>
-              
+              </div>
             </div>
           </Fade>
         </div>
@@ -232,7 +238,6 @@ export default function Contact() {
                     autoComplete="given-name"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
                     placeholder="First Name"
-                    
                   />
                 </div>
               </Fade>
@@ -253,7 +258,6 @@ export default function Contact() {
                     autoComplete="family-name"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
                     placeholder="Last Name"
-                    
                   />
                 </div>
               </Fade>
@@ -274,7 +278,6 @@ export default function Contact() {
                     autoComplete="organization"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
                     placeholder="Your Company"
-                    
                   />
                 </div>
               </Fade>
@@ -295,7 +298,6 @@ export default function Contact() {
                     autoComplete="email"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
                     placeholder="Email"
-                    
                   />
                 </div>
               </Fade>
@@ -316,7 +318,6 @@ export default function Contact() {
                     autoComplete="tel"
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
                     placeholder="Phone Number"
-                    
                   />
                 </div>
               </Fade>
@@ -336,7 +337,6 @@ export default function Contact() {
                     rows={4}
                     className="block w-full rounded border border-orange px-3.5 py-2 text-gray-900 shadow-sm   sm:text-sm sm:leading-6"
                     placeholder="Message"
-                    
                   />
                 </div>
                 <Field as="div" className="flex gap-x-4 sm:col-span-2">

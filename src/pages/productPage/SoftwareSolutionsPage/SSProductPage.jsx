@@ -17,11 +17,11 @@ export default function SSProductPage() {
           <div className="flex gap-4 items-center font-bold text-white">
             <Link to="/">Home</Link>
             <hr className="h-4 w-[2px] bg-white" />
-            <span>Software Solutions</span>
+            <span>Hospital Managment Software Solutions</span>
           </div>
           <div className="mt-4">
-            <span className="text-3xl lg:text-6xl font-bold text-white">
-              SOFTWARE SOLUTIONS
+            <span className="text-3xl lg:text-6xl uppercase font-bold text-white">
+              Hospital Managment Software Solutions
             </span>
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function SSProductPage() {
       <div className="text-black flex flex-col w-[80%] mx-auto gap-2 py-10">
         <Fade triggerOnce={true} direction="up">
           <h1 className="text-2xl font-bold uppercase text-orange">
-            Software Solutions
+            Hospital Managment Software Solutions
           </h1>
         </Fade>
         <Fade triggerOnce={true} direction="up">

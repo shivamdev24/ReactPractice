@@ -1,6 +1,5 @@
 import  { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import Logo from "../assets/img/logo.png";
 import Logodark from "../assets/img/logo-dark.png";
 
 const navlink = [
@@ -37,12 +36,8 @@ const navlink = [
     ),
     subItems: [
       {
-        title: "PSA Oxygen Plant",
+        title: "PSA Oxygen Generation Plant",
         to: "/PSA-Oxygen-Plant",
-      },
-      {
-        title: "Refurbished Machines",
-        to: "/Refurbished-CT-MRI-Machines",
       },
       {
         title: "Refurbished CT Machines",
@@ -53,7 +48,7 @@ const navlink = [
         to: "/Refurbished-MRI",
       },
       {
-        title: "Software Solutions",
+        title: "Hospital Managment Software Solutions",
         to: "/Software-Solutions",
       },
       {

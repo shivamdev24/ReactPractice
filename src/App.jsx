@@ -8,7 +8,6 @@ import Contact from "./pages/Contact";
 
 
 import RefurbishedMRI from "./pages/productPage/Refurbished-MRI-CT-Page/RefurbishedMRI";
-import MRI_CTProductPage from "./pages/productPage/Refurbished-MRI-CT-Page/MRI_CTProductPage";
 import SSProductPage from "./pages/productPage/SoftwareSolutionsPage/SSProductPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
@@ -45,10 +44,6 @@ const router = createBrowserRouter([
       {
         path: "terms-condition",
         element: <TermsConditions />,
-      },
-      {
-        path: "Refurbished-CT-MRI-Machines",
-        element: <MRI_CTProductPage />,
       },
       {
         path: "Refurbished-CT",

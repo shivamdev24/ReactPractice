@@ -18,12 +18,12 @@ function RefurbishedMRI() {
             <Link to="/">Home</Link>
             <hr className="h-4 w-[2px] bg-white" />
             <span className="text-sm lg:text-base font-bold text-white">
-              Refurbished CT and MRI Machines
+              Refurbished MRI Machines
             </span>
           </div>
           <div className="mt-4">
             <span className="text-3xl lg:text-6xl font-bold text-white">
-              REFURBISHED CT AND MRI MACHINES
+              REFURBISHED MRI MACHINES
             </span>
           </div>
         </div>

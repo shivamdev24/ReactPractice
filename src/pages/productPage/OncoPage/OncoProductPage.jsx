@@ -1,6 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
-import OncoImg from "../../../assets/Image/MRI.jpg";
+import OncoImg from "../../../assets/Image/LinearAccelerator.jpg";
 
 export default function OncoProductPage() {
   return (
